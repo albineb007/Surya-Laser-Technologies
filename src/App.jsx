@@ -46,7 +46,7 @@ import { isOfflineMode } from './utils/offlineMode';
 import HelpButton from './components/HelpButton';
 import { lockNow } from './utils/appLock';
 import { getPrintSettings } from './utils/printSettings';
-import { BRAND_NAME, BRAND_LOGO, UPDATE_REPOSITORY } from './brand';
+import { BRAND_NAME, BRAND_LOGO, BRAND_TAGLINE, UPDATE_REPOSITORY } from './brand';
 
 const openDocs = () => window.open(DOCS_URL, '_blank', 'noopener,noreferrer');
 
