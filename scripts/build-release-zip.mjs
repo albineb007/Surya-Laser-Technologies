@@ -38,7 +38,7 @@ const __filename = fileURLToPath(import.meta.url);
 const REPO_ROOT = resolve(__filename, '..', '..');
 const outArg = process.argv.find(a => a.startsWith('--outDir='));
 const OUT_DIR = resolve(REPO_ROOT, outArg ? outArg.split('=')[1] : 'release-build');
-const STAGING = join(OUT_DIR, 'Free-GST-Billing');
+const STAGING = join(OUT_DIR, 'Surya-Laser-Technologies');
 const SYSTEM = join(STAGING, '_system');
 
 console.log('\n  Free GST Billing — Release ZIP Builder\n');
@@ -153,6 +153,7 @@ mkdirSync(join(SYSTEM, 'src', 'utils'), { recursive: true });
 copyFileSync(join(REPO_ROOT, 'src', 'utils', 'errorReport.js'), join(SYSTEM, 'src', 'utils', 'errorReport.js'));
 // The cash book endpoints check entries with the form's own rules (imports ../utils.js only).
 copyFileSync(join(REPO_ROOT, 'src', 'utils', 'cashBook.js'), join(SYSTEM, 'src', 'utils', 'cashBook.js'));
+copyFileSync(join(REPO_ROOT, 'src', 'brand.js'), join(SYSTEM, 'src', 'brand.js'));
 // Supplier payments are checked on save (#123): purchasePayments.js imports
 // purchaseOrders.js, which imports ../utils.js only.
 // v1.10.84 - the books folder (home.txt), the one-server-per-books lock, and
