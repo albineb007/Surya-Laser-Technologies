@@ -15,7 +15,6 @@ import BulkCsvImport from './BulkCsvImport';
 import PrintPreviewModal from './PrintPreviewModal';
 import InvoiceTrash from './InvoiceTrash';
 import SupportNudge from './SupportNudge';
-import WelcomeCard from './WelcomeCard';
 import { toast } from './Toast';
 import { confirmAction } from './ConfirmModal';
 import { useCostCentres } from './useCostCentres';
@@ -1471,8 +1470,6 @@ export default function Dashboard({ onNew, onEdit, onPrint, onDuplicate, onConve
           two. This stays until the work is actually done, ticks itself off
           from real data rather than from "have you seen this screen", and
           removes itself for good once everything is set up. */}
-      {onOpenSupport && <WelcomeCard invoiceCount={bills.length} onOpenSupport={onOpenSupport} />}
-
       {startedSteps && (
         <div className="glass-panel p-6 mb-6">
           <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', marginBottom: '0.9rem' }}>

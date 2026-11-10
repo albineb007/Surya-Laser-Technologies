@@ -93,8 +93,8 @@ VersionInfoProductName=Surya Laser Technologies
 VersionInfoCompany=Surya Laser Technologies
 
 [Tasks]
-Name: desktopicon; Description: "Put a Free GST Billing icon on the Desktop"
-Name: startup; Description: "Open Free GST Billing when Windows starts"; Flags: unchecked
+Name: desktopicon; Description: "Create a Surya Laser Technologies icon on the Desktop"
+Name: startup; Description: "Open Surya Laser Technologies when Windows starts"; Flags: unchecked
 
 [Files]
 ; First, so Setup can unpack them quickly to look for an earlier copy.
@@ -141,7 +141,7 @@ Type: dirifempty; Name: "{code:HostDataDir}"
 [Code]
 const
   TestPortDefault = '47461';
-  LogName = 'Free GST Billing - install log.txt';
+  LogName = 'Surya Laser Technologies - install log.txt';
   IconName = 'Surya Laser Technologies.lnk';
 
 var
@@ -187,8 +187,8 @@ end;
 
 function HostDataDir(Param: String): String;
 begin
-  if IsTest then Result := TestRoot + '\LocalAppData\Free GST Billing'
-  else Result := ExpandConstant('{localappdata}\Free GST Billing');
+  if IsTest then Result := TestRoot + '\LocalAppData\Surya Laser Technologies'
+  else Result := ExpandConstant('{localappdata}\Surya Laser Technologies');
 end;
 
 function IconDir(Param: String): String;
@@ -206,14 +206,14 @@ begin
   end;
 end;
 
-{ The user's own folder (C:\Users\<name>\Free GST Billing), not Documents:
+{ The user's own folder (C:\Users\<name>\Surya Laser Technologies), not Documents:
   Windows Security's "Controlled folder access" blocks unknown programs from
   writing in Documents and Desktop, so books there could not be saved (seen on
   the maintainer's PC, 4 Nov 2026). }
 function BooksHome: String;
 begin
-  if IsTest then Result := TestRoot + '\Free GST Billing'
-  else Result := ExpandConstant('{%USERPROFILE}\Free GST Billing');
+  if IsTest then Result := TestRoot + '\Surya Laser Technologies'
+  else Result := ExpandConstant('{%USERPROFILE}\Surya Laser Technologies');
 end;
 
 { A desktop that Windows will not let Setup write on: skip the Desktop icon
@@ -338,12 +338,19 @@ end;
   so a Setup copy then goes to "...\Free GST Billing App". }
 procedure SettleAppDir;
 var
-  Base: String;
+  Base, LegacyBase: String;
 begin
-  if IsTest then Base := TestRoot + '\Programs\Free GST Billing'
-  else Base := ExpandConstant('{localappdata}\Programs\Free GST Billing');
+  if IsTest then begin
+    Base := TestRoot + '\Programs\Surya Laser Technologies';
+    LegacyBase := TestRoot + '\Programs\Free GST Billing';
+  end else begin
+    Base := ExpandConstant('{localappdata}\Programs\Surya Laser Technologies');
+    LegacyBase := ExpandConstant('{localappdata}\Programs\Free GST Billing');
+  end;
   if FileExists(Base + '\installed.txt') then AppDirValue := Base
   else if FileExists(Base + ' App\installed.txt') then AppDirValue := Base + ' App'
+  else if FileExists(LegacyBase + '\installed.txt') then AppDirValue := LegacyBase
+  else if FileExists(LegacyBase + ' App\installed.txt') then AppDirValue := LegacyBase + ' App'
   else if DirExists(Base) then AppDirValue := Base + ' App'
   else AppDirValue := Base;
 end;
@@ -440,7 +447,7 @@ begin
     if FileExists(Dest) and not DeleteFile(Dest) then
       Dest := F + '.' + GetDateTimeString('yyyymmddhhnnss', #0, #0) + '.old';
     if not RenameFile(F, Dest) then begin
-      Result := 'The file ' + F + ' could not be set aside for the update. Close Free GST Billing and run the update again.';
+      Result := 'The file ' + F + ' could not be set aside for the update. Close Surya Laser Technologies and run the update again.';
       exit;
     end;
     AddStr(SetAside, F);
@@ -775,7 +782,7 @@ begin
   SrcSys := '';
   if (Mode = 'keep') or (Mode = 'move') then begin
     if OldHome = '' then begin
-      Result := 'No earlier copy of Free GST Billing with books was found. Use /DATAMODE=new or /DATAMODE=choose.';
+      Result := 'No earlier copy of Surya Laser Technologies with business data was found. Use /DATAMODE=new or /DATAMODE=choose.';
       exit;
     end;
     SrcHome := OldHome;
@@ -785,7 +792,7 @@ begin
   else if Mode = 'move' then begin
     Home := TargetHome;
     if IsInside(Home, SrcHome) or IsInside(SrcHome, Home) then begin
-      Result := 'Your books are already in ' + SrcHome + '. Choose "Keep using my books where they are".';
+      Result := 'Your business data is already in ' + SrcHome + '. Choose "Keep using my business data where it is".';
       exit;
     end;
   end else if Mode = 'choose' then begin
@@ -842,7 +849,7 @@ begin
   if (OldCount > 1) and ((Mode = '') or (((Mode = 'keep') or (Mode = 'move')) and (OldDir = ''))) then begin
     List := '';
     for I := 0 to OldCount - 1 do List := List + #13#10 + '  ' + CopyHome[I] + ' (' + CopyInv[I] + ' invoices, last changed ' + CopyChanged[I] + ')';
-    Result := 'Free GST Billing was found more than once:' + List + #13#10 +
+    Result := 'Surya Laser Technologies was found more than once:' + List + #13#10 +
       'Run Setup without /SILENT to choose, or give /DATAMODE=keep or move with /OLDDIR=<one of these folders>. Nothing was changed.';
     exit;
   end;
@@ -863,7 +870,7 @@ begin
     Edge is optional (the default browser is used without it). PowerShell
     starts the app, and is part of every Windows 10/11 - unless removed. }
   if not FileExists(ExpandConstant('{sys}\WindowsPowerShell\v1.0\powershell.exe')) then begin
-    MsgBox('Windows PowerShell is missing on this computer, and Free GST Billing needs it to start.' + #13#10#13#10 +
+    MsgBox('Windows PowerShell is missing on this computer, and Surya Laser Technologies needs it to start.' + #13#10#13#10 +
       'Turn it back on in Settings > System > Optional features (Windows PowerShell), then run Setup again. Nothing was changed.', mbError, MB_OK);
     Result := False;
     exit;
@@ -888,8 +895,8 @@ begin
   end;
   SettleAppDir;
   IsUpgrade := FileExists(GetAppDir('') + '\installed.txt') and (ReadFirstLine(GetAppDir('') + '\home.txt') <> '');
-  if IsTest then AddLog('Free GST Billing Setup {#AppVersion} - TEST MODE in ' + TestRoot)
-  else AddLog('Free GST Billing Setup {#AppVersion}');
+  if IsTest then AddLog('Surya Laser Technologies Setup {#AppVersion} - TEST MODE in ' + TestRoot)
+  else AddLog('Surya Laser Technologies Setup {#AppVersion}');
   AddLog('Program folder: ' + GetAppDir(''));
   if IsUpgrade then begin
     Home := ReadFirstLine(GetAppDir('') + '\home.txt');
@@ -905,7 +912,7 @@ end;
 
 function DataIntro: String;
 begin
-  Result := 'Free GST Billing is already on this computer. Its books (' + OldInvoices + ' invoices) are in:' + #13#10 + OldHome + #13#10#13#10 +
+  Result := 'Surya Laser Technologies is already on this computer. Its business data (' + OldInvoices + ' invoices) is in:' + #13#10 + OldHome + #13#10#13#10 +
     'Setup never changes or deletes anything in that folder. What should the new app use?';
 end;
 
@@ -917,28 +924,28 @@ begin
   if IsUpgrade then exit;
   After := wpWelcome;
   if OldCount > 1 then begin
-    WhichPage := CreateInputOptionPage(wpWelcome, 'Your books', 'Free GST Billing was found more than once',
-      'Which books do you use now? The one changed last is first. Nothing in any of these folders is changed.', True, False);
+    WhichPage := CreateInputOptionPage(wpWelcome, 'Business data', 'Surya Laser Technologies was found more than once',
+      'Which business data do you use now? The one changed last is first. Nothing in any of these folders is changed.', True, False);
     for I := 0 to OldCount - 1 do
       WhichPage.Add(CopyHome[I] + '  -  ' + CopyInv[I] + ' invoices, last changed ' + CopyChanged[I]);
     WhichPage.SelectedValueIndex := 0;
     After := WhichPage.ID;
   end;
   if OldCount > 0 then begin
-    DataPage := CreateInputOptionPage(After, 'Your books', 'Where your invoices, clients and settings are kept', DataIntro, True, False);
-    DataPage.Add('Keep using my books where they are (do not delete or move that folder afterwards)');
-    DataPage.Add('Copy my books to ' + BooksHome + ' (the old folder stays as it is, as a backup)');
-    DataPage.Add('Use books in another folder (browse)');
+    DataPage := CreateInputOptionPage(After, 'Business data', 'Where your invoices, clients and settings are kept', DataIntro, True, False);
+    DataPage.Add('Keep using my business data where it is (do not delete or move that folder afterwards)');
+    DataPage.Add('Copy my business data to ' + BooksHome + ' (the old folder stays as it is, as a backup)');
+    DataPage.Add('Use business data in another folder (browse)');
     DataPage.SelectedValueIndex := 0;
   end else begin
-    DataPage := CreateInputOptionPage(After, 'Your books', 'Where your invoices, clients and settings are kept',
+    DataPage := CreateInputOptionPage(After, 'Business data', 'Where your invoices, clients and settings are kept',
       'Your invoices, clients and settings will be kept in:' + #13#10 + BooksHome + #13#10#13#10 +
-      'If you already use Free GST Billing on this computer, choose the folder that holds its books instead.', True, False);
-    DataPage.Add('Start new books in ' + BooksHome);
-    DataPage.Add('I already have my books in another folder (browse)');
+      'If you already use Surya Laser Technologies on this computer, choose the folder that holds its business data instead.', True, False);
+    DataPage.Add('Start new business data in ' + BooksHome);
+    DataPage.Add('I already have my business data in another folder (browse)');
     DataPage.SelectedValueIndex := 0;
   end;
-  BrowsePage := CreateInputDirPage(DataPage.ID, 'Your books', 'Which folder holds your books?',
+  BrowsePage := CreateInputDirPage(DataPage.ID, 'Business data', 'Which folder holds your business data?',
     'Choose the folder that has the "data" folder in it. For the ZIP version, that is the "_system" folder inside the app folder. Setup uses the books where they are and changes nothing in that folder.', False, '');
   BrowsePage.Add('');
   BrowsePage.Values[0] := ExpandConstant('{%USERPROFILE}');
@@ -995,7 +1002,7 @@ begin
   end;
   if CurPageID = wpFinished then
     WizardForm.FinishedLabel.Caption := WizardForm.FinishedLabel.Caption + #13#10#13#10 +
-      'Your books are in:' + #13#10 + Home + #13#10#13#10 + 'What Setup did is written in:' + #13#10 + LogFile;
+      'Your business data is in:' + #13#10 + Home + #13#10#13#10 + 'What Setup did is written in:' + #13#10 + LogFile;
 end;
 
 function UpdateReadyMemo(Space, NewLine, MemoUserInfoInfo, MemoDirInfo, MemoTypeInfo, MemoComponentsInfo, MemoGroupInfo, MemoTasksInfo: String): String;
@@ -1007,7 +1014,7 @@ begin
   else if Mode = 'move' then What := 'Copied (and checked file by file) from ' + SrcHome + ' to ' + Home + NewLine + Space + 'The old folder is not changed.'
   else if Mode = 'choose' then What := 'Used where they are: ' + Home
   else What := 'New books in ' + Home;
-  Result := 'Your books:' + NewLine + Space + What + NewLine + NewLine + MemoDirInfo + NewLine + NewLine + MemoTasksInfo;
+  Result := 'Business data:' + NewLine + Space + What + NewLine + NewLine + MemoDirInfo + NewLine + NewLine + MemoTasksInfo;
 end;
 
 function Stop_(Why: String): String;
@@ -1089,7 +1096,7 @@ begin
     if Mode = 'move' then begin
       if IsTest then CopyPort := TestPort else CopyPort := '47371';
       if not RunHelper('copy ' + Q(SrcHome) + ' ' + Q(Home) + ' ' + CopyPort, Res) then begin
-        Result := Stop_('Your books could not be copied: ' + ValueOf(Res, 'error') + #13#10 +
+        Result := Stop_('Your business data could not be copied: ' + ValueOf(Res, 'error') + #13#10 +
           'Nothing was switched over; your books are still in ' + SrcHome + ' and work as before.');
         exit;
       end;
@@ -1121,7 +1128,7 @@ begin
     SaveStringsToUTF8File(ExpandConstant('{app}\home.txt'), A, False);
   end;
   SetArrayLength(A, 0);
-  AddStr(A, 'Installed by Free GST Billing Setup {#AppVersion}. Updates come as a new Setup (Update now in the app).');
+  AddStr(A, 'Installed by Surya Laser Technologies Setup {#AppVersion}. Updates come as a new Setup (Update now in the app).');
   if IsTest then AddStr(A, 'testroot=' + TestRoot);
   SaveStringsToUTF8File(ExpandConstant('{app}\installed.txt'), A, False);
   { Review M5: the old version's leftovers go only now, with every new file in place. }
@@ -1135,7 +1142,7 @@ begin
       AddLog('No Desktop icon: Windows did not let Setup write on the Desktop (Controlled folder access?). The Start menu icon was made.');
       if not WizardSilent then
         MsgBox('Windows Security did not let Setup put an icon on the Desktop (its "Controlled folder access" protection is on).' + #13#10#13#10 +
-          'Open Free GST Billing from the Start menu instead. Everything else was installed.', mbInformation, MB_OK);
+          'Open Surya Laser Technologies from the Start menu instead. Everything else was installed.', mbInformation, MB_OK);
     end;
     MoveOldShortcutsIn(IconDir('programs'), 'Start menu', True);
     MoveOldShortcutsIn(IconDir('startup'), 'Startup', False);
@@ -1206,7 +1213,7 @@ begin
       DeleteBooks := Lowercase(ExpandConstant('{param:DELETEBOOKS|no}')) = 'yes'
     else if not FileExists(AddBackslash(UHome) + 'server.js') then
       DeleteBooks := MsgBox('Also delete your books (invoices, clients, settings and saved PDFs)?' + #13#10#13#10 + UHome + #13#10#13#10 +
-        'Choose No to keep them (recommended): installing Free GST Billing again finds them.', mbConfirmation, MB_YESNO or MB_DEFBUTTON2) = IDYES;
+        'Choose No to keep them (recommended): installing Surya Laser Technologies again finds them.', mbConfirmation, MB_YESNO or MB_DEFBUTTON2) = IDYES;
     { Even after a Yes, only a folder that plainly holds books, and only its
       data, Saved Invoices and Trash. }
     Why := '';
@@ -1216,7 +1223,7 @@ begin
     if Why <> '' then begin
       if DeleteBooks or (not UninstallSilent and FileExists(AddBackslash(UHome) + 'server.js')) then begin
         Log('Books not deleted: ' + UHome + ' - ' + Why);
-        if not UninstallSilent then MsgBox('Your books stay where they are, in:' + #13#10 + UHome + #13#10#13#10 + 'They are not deleted because ' + Why + '.', mbInformation, MB_OK);
+        if not UninstallSilent then MsgBox('Your business data stays where it is, in:' + #13#10 + UHome + #13#10#13#10 + 'It is not deleted because ' + Why + '.', mbInformation, MB_OK);
       end;
       DeleteBooks := False;
     end;

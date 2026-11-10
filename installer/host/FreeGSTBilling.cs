@@ -73,8 +73,8 @@ static class Program
         AppDir = Path.GetDirectoryName(Application.ExecutablePath);
         string testRoot = ReadTestRoot();
         DataDir = testRoot != null
-            ? Path.Combine(testRoot, "LocalAppData", "Free GST Billing")
-            : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Free GST Billing");
+            ? Path.Combine(testRoot, "LocalAppData", "Surya Laser Technologies")
+            : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Surya Laser Technologies");
         // The same id is on the Setup's shortcuts ([Icons] AppUserModelID), so a
         // pinned taskbar icon is this program with its own icon.
         Aumid = testRoot != null ? "DiceCodes.FreeGSTBilling.Test" : "DiceCodes.FreeGSTBilling";
@@ -463,7 +463,7 @@ class MainForm : Form
             Program.Trace("hidden");
             if (!File.Exists(tipFile))
             {
-                tray.ShowBalloonTip(8000, "Free GST Billing", "Free GST Billing is still running. Click the icon near the clock to open it.", ToolTipIcon.Info);
+                tray.ShowBalloonTip(8000, "Surya Laser Technologies", "Surya Laser Technologies is still running. Click the icon near the clock to open it.", ToolTipIcon.Info);
                 try { Directory.CreateDirectory(Program.DataDir); File.WriteAllText(tipFile, DateTime.Now.ToString("s")); } catch (Exception) { }
                 Program.Trace("tip");
             }
@@ -521,10 +521,10 @@ class MainForm : Form
         try
         {
             Match m = Regex.Match(File.ReadAllText(Path.Combine(Program.AppDir, "package.json")), "\"version\"\\s*:\\s*\"([^\"]+)\"");
-            if (m.Success) return "Free GST Billing " + m.Groups[1].Value;
+            if (m.Success) return "Surya Laser Technologies " + m.Groups[1].Value;
         }
         catch (Exception) { }
-        return "Free GST Billing";
+        return "Surya Laser Technologies";
     }
 
     // Script for the app's page; kept until the page is there.
@@ -559,8 +559,8 @@ class MainForm : Form
     // The app's own backup (Control Panel > Backup Data: backup-windows.ps1 through the server).
     async void BackupNow()
     {
-        if (origin.Length == 0) { tray.ShowBalloonTip(6000, "Free GST Billing", "The app is still starting. Try again in a moment.", ToolTipIcon.Info); return; }
-        tray.ShowBalloonTip(4000, "Free GST Billing", "Making a backup of your books...", ToolTipIcon.Info);
+        if (origin.Length == 0) { tray.ShowBalloonTip(6000, "Surya Laser Technologies", "The app is still starting. Try again in a moment.", ToolTipIcon.Info); return; }
+        tray.ShowBalloonTip(4000, "Surya Laser Technologies", "Making a backup of your business data...", ToolTipIcon.Info);
         string o = origin;
         string said = await Task.Run(() =>
         {
@@ -591,7 +591,7 @@ class MainForm : Form
             catch (Exception ex) { return "The backup did not work: " + ex.Message; }
         });
         Program.Trace("backup " + said);
-        tray.ShowBalloonTip(10000, "Free GST Billing", said, ToolTipIcon.Info);
+        tray.ShowBalloonTip(10000, "Surya Laser Technologies", said, ToolTipIcon.Info);
     }
 
     async void OnHealthTick(object sender, EventArgs e)
@@ -781,7 +781,7 @@ class MainForm : Form
             a.Handled = true;
             CoreWebView2Notification n = a.Notification;
             lastNote = n;
-            tray.ShowBalloonTip(10000, n.Title.Length > 0 ? n.Title : "Free GST Billing", n.Body.Length > 0 ? n.Body : " ", ToolTipIcon.Info);
+            tray.ShowBalloonTip(10000, n.Title.Length > 0 ? n.Title : "Surya Laser Technologies", n.Body.Length > 0 ? n.Body : " ", ToolTipIcon.Info);
             try { n.ReportShown(); } catch (Exception) { }
             Program.Trace("notify " + n.Title);
         };
@@ -793,7 +793,7 @@ class MainForm : Form
                 // Review L2: a page that crashes every time is not reloaded for ever.
                 if ((DateTime.Now - lastRenderCrash).TotalMinutes > 5) renderCrashes = 0;
                 lastRenderCrash = DateTime.Now;
-                if (++renderCrashes > 3) Problem("The app's page keeps stopping. Close this window and open Free GST Billing again.");
+                if (++renderCrashes > 3) Problem("The app's page keeps stopping. Close this window and open Surya Laser Technologies again.");
                 else core.Reload();
             }
         };
@@ -898,7 +898,7 @@ class MainForm : Form
         box.ScrollBars = ScrollBars.Vertical;
         box.Dock = DockStyle.Fill;
         box.Font = new Font("Segoe UI", 11f);
-        box.Text = "Free GST Billing could not start.\r\n\r\n" + text.Replace("\r\n", "\n").Replace("\n", "\r\n");
+        box.Text = "Surya Laser Technologies could not start.\r\n\r\n" + text.Replace("\r\n", "\n").Replace("\n", "\r\n");
         status.Visible = false;
         web.Visible = false;
         Controls.Add(box);
@@ -976,7 +976,7 @@ class Splash : Control
         BackColor = Back;
         try
         {
-            using (MemoryStream ms = new MemoryStream(File.ReadAllBytes(Path.Combine(Program.AppDir, "dist", "icons", "icon-512.png"))))
+            using (MemoryStream ms = new MemoryStream(File.ReadAllBytes(Path.Combine(Program.AppDir, "dist", "surya-logo.jpg"))))
             using (Image img = Image.FromStream(ms)) logo = new Bitmap(img);
         }
         catch (Exception)
@@ -1002,9 +1002,8 @@ class Splash : Control
         int logoSize = (int)(72 * s), gap1 = (int)(18 * s), gap2 = (int)(20 * s);
         int barW = (int)(180 * s), barH = Math.Max(2, (int)(3 * s));
         using (Font name = new Font("Segoe UI Semibold", 18f))
-        using (Font by = new Font("Segoe UI", 9f))
         {
-            const string title = "Free GST Billing";
+            const string title = "Surya Laser Technologies";
             SizeF ts = g.MeasureString(title, name);
             int block = logoSize + gap1 + (int)ts.Height + gap2 + barH;
             int top = Math.Max((int)(12 * s), (Height - block) / 2 - (int)(24 * s));
@@ -1020,8 +1019,6 @@ class Splash : Control
             g.SetClip(bar);
             using (Brush b = new SolidBrush(blue)) g.FillRectangle(b, x, bar.Y, seg, barH);
             g.ResetClip();
-            SizeF bs = g.MeasureString("by DiceCodes", by);
-            using (Brush b = new SolidBrush(muted)) g.DrawString("by DiceCodes", by, b, cx - bs.Width / 2, Height - bs.Height - (int)(28 * s));
         }
     }
 

@@ -907,11 +907,10 @@ function App() {
             {ownBrand ? <img src={menuLogo} alt="" />
                 : <FileText size={22} />}
           </div>
-          {/* "by DiceCodes" always stays, under their name too. "Free forever" is
-              in the top bar; on a phone (no top bar) it stays here. */}
+          {/* The client brand remains the only product identity in the menu. */}
           <div className="sidebar-brand-text">
             <h2 className={`sidebar-title${ownBrand ? ' sidebar-title-own' : ''}`} title={ownBrand ? `${brand.businessName} - ${BRAND_NAME}` : undefined}>{ownBrand ? brand.businessName : BRAND_NAME}</h2>
-            <p className="sidebar-subtitle" title="Free forever. Works on this computer, even offline. No tracking, no ads."><span className="sidebar-free sidebar-free-phone">Free forever<br /></span>by DiceCodes</p>
+            <p className="sidebar-subtitle">{BRAND_TAGLINE}</p>
           </div>
           {/* Auto-hide as a ☰ button (was a text checkbox): pressed = the menu
               shrinks to icons and opens when pointed at. */}
@@ -1048,8 +1047,6 @@ function App() {
 
       <div className="main-content">
         <div className="app-topbar">
-          {/* v1.10.83 - the promise, on every screen (it was under the app name in the menu). */}
-          <span className="topbar-free" title="Free forever: no paid version, no locked features, no ads, no tracking. Works on this computer, even offline.">Free forever</span>
           {topActions}
         </div>
         {/* v1.10.83 - a screen that throws shows "ran into a problem" here
