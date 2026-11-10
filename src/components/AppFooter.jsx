@@ -4,17 +4,15 @@
 // it; it is never printed on an invoice. The version comes from the local
 // server, so it works offline.
 import { useEffect, useState } from 'react';
-import { Heart } from 'lucide-react';
 import { BRAND_NAME, BRAND_TAGLINE } from '../brand';
 
-export default function AppFooter({ onOpenSupport }) {
+export default function AppFooter() {
   const [version, setVersion] = useState('');
   useEffect(() => {
     let live = true;
     fetch('/api/version').then((r) => r.json()).then((d) => { if (live && d?.current) setVersion(d.current); }).catch(() => {});
     return () => { live = false; };
   }, []);
-  const link = { color: 'inherit', textDecoration: 'none', fontWeight: 600 };
   return (
     <footer style={{
       // v1.10.76 (#83) - below the invoice table, not floating over it.
@@ -29,11 +27,6 @@ export default function AppFooter({ onOpenSupport }) {
         <span>{BRAND_NAME}{version ? ` v${version}` : ''}</span>
         <span aria-hidden="true">·</span>
         <span>{BRAND_TAGLINE}</span>
-        <span aria-hidden="true">·</span>
-        <button type="button" onClick={onOpenSupport}
-          style={{ ...link, background: 'none', border: 0, padding: 0, font: 'inherit', fontWeight: 600, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 3 }}>
-          <Heart size={11} style={{ color: '#e11d48', fill: '#e11d48' }} /> Support
-        </button>
       </span>
     </footer>
   );
