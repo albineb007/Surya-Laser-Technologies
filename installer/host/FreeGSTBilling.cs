@@ -940,7 +940,7 @@ class MainForm : Form
 }
 
 // The start screen, also shown over the page while the app starts again: the
-// app's icon, its name, a thin moving bar and "by DiceCodes". Light or dark
+// app's icon and name with a thin moving bar. Light or dark
 // like the app's own theme (Settings; kept in the books folder's
 // data\local-prefs.json, light when not set) and the app's own background,
 // so there is no flash. The logo is read into memory (never left open), so an
