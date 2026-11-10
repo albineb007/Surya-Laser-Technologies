@@ -801,7 +801,6 @@ function App() {
         <img src="/icons/icon-192.png" alt="" width={72} height={72} onError={(e) => { e.currentTarget.style.display = 'none'; }} />
         <h2 style={{ margin: 0, fontSize: '1.5rem', fontWeight: 600 }}>{BRAND_NAME}</h2>
         <div className="server-down-waiting"><div className="server-down-spinner" /><span>Starting again…</span></div>
-        <p style={{ position: 'absolute', bottom: 28, margin: 0, fontSize: '0.8rem', color: darkMode ? '#94a3b8' : '#64748b' }}>by DiceCodes</p>
       </div>
     );
   }
