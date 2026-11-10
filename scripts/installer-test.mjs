@@ -55,7 +55,7 @@ try {
   put(`${zipRoot}/_system/package.json`, APP_PKG);
   put(`${zipRoot}/_system/start-windows.ps1`, '');
   for (const n of [1, 2, 3]) put(`${zipRoot}/_system/data/bills/INV-${n}.json`, JSON.stringify({ id: `INV-${n}`, total: n * 1000 }));
-  put(`${zipRoot}/_system/data/profile.json`, JSON.stringify({ businessName: 'DiceCodes', gstin: '29ABCDE1234F1ZW' }));
+  put(`${zipRoot}/_system/data/profile.json`, JSON.stringify({ businessName: 'Surya Laser Technologies', gstin: '29ABCDE1234F1ZW' }));
   put(`${zipRoot}/_system/Saved Invoices/General/INV-1.pdf`, '%PDF-1.4 demo');
   put(`${zipRoot}/_system/data/backups/2026-11-01/bills/INV-1.json`, '{}');
   const zipSys = at(`${zipRoot}/_system`);

@@ -191,8 +191,8 @@ engine every Windows 10/11 has).
 | Tray menu | The version (greyed), **Open Free GST Billing**, **Check for updates** (opens Settings on its Updates tab, the app's own check), **Open books folder** (the `home.txt` folder in Explorer), **Make a backup now** (the app's own backup, Control Panel > Backup Data: `backup-windows.ps1` into Documents\FreeGSTBill Backups; the result is shown near the clock), **Quit (stop the app)**: Quit closes the window and the tray icon and stops this install's server by its own id (`stop-app.ps1 -Sys`, as the uninstaller), never "all node.exe". |
 | Start with Windows | The Startup icon runs `Free GST Billing.exe /tray`: the server starts and the app waits near the clock, no window. |
 | Events | `Local\FreeGSTBillingHost-<first 8 bytes of SHA-1 of the lower-case program folder>` + `-show` (a second start), `-close` (the uninstaller: `stop-app.ps1 -CloseWindow`, which kills only if the window has not closed within 5 s) and `-quit`. |
-| Title | The page's `document.title` ("Invoices - DiceCodes"). |
-| Taskbar | AppUserModelID `DiceCodes.FreeGSTBilling` on the window and on the Setup's icons ([Icons] `AppUserModelID`), so a pin is this program with its icon (test mode: `DiceCodes.FreeGSTBilling.Test`). |
+| Title | The page's `document.title` ("Invoices - Surya Laser Technologies"). |
+| Taskbar | AppUserModelID `SuryaLaserTechnologies.FreeGSTBilling` on the window and on the Setup's icons ([Icons] `AppUserModelID`), so a pin is this program with its icon (test mode: `SuryaLaserTechnologies.FreeGSTBilling.Test`). |
 | One window | A mutex per program folder; a second start brings the open window forward. |
 | Size and place | `%LOCALAPPDATA%\Free GST Billing\window.txt` (place, size, maximized). |
 | WebView2 profile | `%LOCALAPPDATA%\Free GST Billing\WebView2` (never Documents - ERR-082 - or the program folder). Test mode: `<test folder>\LocalAppData\Free GST Billing`. |

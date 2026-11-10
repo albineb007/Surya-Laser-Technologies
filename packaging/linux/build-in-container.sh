@@ -37,7 +37,7 @@ build_deb() {
   cp -a "$A" "$R/opt/free-gst-billing"
   echo deb > "$R/opt/free-gst-billing/install-kind.txt"
   ln -s /opt/free-gst-billing/free-gst-billing "$R/usr/bin/free-gst-billing"
-  install -m 644 "$P/free-gst-billing.desktop" "$R/usr/share/applications/com.dicecodes.free-gst-billing.desktop"
+  install -m 644 "$P/free-gst-billing.desktop" "$R/usr/share/applications/com.surya-laser-technologies.free-gst-billing.desktop"
   install -m 644 "$A/dist/icons/icon-512.png" "$R/usr/share/icons/hicolor/512x512/apps/free-gst-billing.png"
   install -m 644 "$A/dist/icons/icon-192.png" "$R/usr/share/icons/hicolor/192x192/apps/free-gst-billing.png"
   install -m 644 "$A/LICENSE" "$R/usr/share/doc/free-gst-billing/copyright"
@@ -47,7 +47,7 @@ build_deb() {
 Package: free-gst-billing
 Version: $V
 Architecture: amd64
-Maintainer: DiceCodes <Contact@dicecodes.com>
+Maintainer: Surya Laser Technologies <GitHub Issues>
 Installed-Size: $(du -sk "$R/opt" "$R/usr" | awk '{s += $1} END {print s}')
 Section: misc
 Priority: optional

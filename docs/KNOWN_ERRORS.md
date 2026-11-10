@@ -1365,7 +1365,7 @@ mode, and `assertPortableZip()` refuses a ZIP with a non-executable launcher;
 ## ERR-061 - The docs ZIP unpacked as flat files on the web host, every link 404
 
 **Version:** docs-site upload for v1.10.81 · fixed the same day
-**Reported by:** the maintainer, uploading to dicecodes.com
+**Reported by:** the maintainer, uploading to github.com/albineb007/Surya-Laser-Technologies
 
 **Symptom** - the host's file manager listed files named
 `free-gst-software-documentation\assets\docs.js`,

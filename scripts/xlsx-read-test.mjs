@@ -29,7 +29,7 @@ const vyapar = zipSync({
     + '<Relationship Id="rId2" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="worksheets/sheet2.xml"/>'
     + '<Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/worksheet" Target="/xl/worksheets/sheet1.xml"/>'
     + '<Relationship Id="rId3" Type="x" Target="sharedStrings.xml"/></Relationships>'),
-  'xl/sharedStrings.xml': xml(`<sst ${ns} count="5" uniqueCount="5"><si><t>DiceCodes</t></si><si><t>Invoice No.</t></si>`
+  'xl/sharedStrings.xml': xml(`<sst ${ns} count="5" uniqueCount="5"><si><t>Surya Laser Technologies</t></si><si><t>Invoice No.</t></si>`
     + '<si><r><t>Party </t></r><r><rPr><b/></rPr><t>Name</t></r></si><si><t xml:space="preserve"> Cash Sale </t></si><si><t>Total</t></si></sst>'),
   'xl/worksheets/sheet1.xml': xml(`<worksheet ${ns}><sheetData>`
     + '<row r="1"><c r="A1" t="s"><v>0</v></c></row>'
@@ -42,7 +42,7 @@ const vyapar = zipSync({
 const sheets = readXlsx(vyapar);
 eq(sheets.map((s) => s.name), ['Sale Report', 'Item Details'], 'sheets in workbook order, found through the relationships');
 eq(sheets[0].rows, [
-  ['DiceCodes'],
+  ['Surya Laser Technologies'],
   [],
   ['Invoice No.', '', 'Party Name'],
   ['101', '', ' Cash Sale ', 'TRUE', '101'],
@@ -66,8 +66,8 @@ try { readXlsx(zipSync({ 'a.txt': strToU8('x') })); } catch (e) { err = e.messag
 eq(/no sheets/i.test(err), true, 'a zip without a workbook says so');
 
 console.log('Which sheet the import screens open on (#130)');
-const cover = { name: 'Cover', rows: [['DiceCodes'], []] };
-const report = { name: 'Sale Report', rows: [['Invoice No', 'Party Name'], ['V-1', 'DiceCodes']] };
+const cover = { name: 'Cover', rows: [['Surya Laser Technologies'], []] };
+const report = { name: 'Sale Report', rows: [['Invoice No', 'Party Name'], ['V-1', 'Surya Laser Technologies']] };
 const items = { name: 'Item Details', rows: [['Invoice No', 'Item Name'], ['V-1', 'Pen'], ['V-1', 'Ink']] };
 const ready = (rows) => (rows[0]?.includes('Item Name') ? rows.length - 1 : 0);
 eq(bestSheet([cover, report, items], ready), 2, 'the sheet the screen can import the most from');

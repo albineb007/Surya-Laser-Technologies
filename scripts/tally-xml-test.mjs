@@ -1,5 +1,5 @@
 // v1.10.84 (#131) - Tally masters (Gateway of Tally > Export > Masters, XML)
-// read into clients and products. Demo data only (DiceCodes).
+// read into clients and products. Demo data only (Surya Laser Technologies).
 //
 // Run: `node scripts/tally-xml-test.mjs`
 
@@ -20,18 +20,18 @@ const XML = `<?xml version="1.0" encoding="UTF-16"?>
 <REQUESTDESC><REPORTNAME>All Masters</REPORTNAME></REQUESTDESC><REQUESTDATA>
 <TALLYMESSAGE xmlns:UDF="TallyUDF"><GROUP NAME="Bengaluru Creditors" RESERVEDNAME=""><PARENT>Sundry Creditors</PARENT></GROUP></TALLYMESSAGE>
 <TALLYMESSAGE xmlns:UDF="TallyUDF"><GROUP NAME="Sundry Debtors" RESERVEDNAME="Sundry Debtors"><PARENT>&#4; Primary</PARENT></GROUP></TALLYMESSAGE>
-<TALLYMESSAGE xmlns:UDF="TallyUDF"><LEDGER NAME="DiceCodes" RESERVEDNAME="">
+<TALLYMESSAGE xmlns:UDF="TallyUDF"><LEDGER NAME="Surya Laser Technologies" RESERVEDNAME="">
  <ADDRESS.LIST TYPE="String"><ADDRESS>12, Demo Road</ADDRESS><ADDRESS>Bengaluru</ADDRESS></ADDRESS.LIST>
  <PARENT>Sundry Debtors</PARENT><PARTYGSTIN>29ABCDE1234F1ZW</PARTYGSTIN><LEDSTATENAME>Karnataka</LEDSTATENAME>
- <PINCODE>560001</PINCODE><LEDGERPHONE>080-0000000</LEDGERPHONE><LEDGERMOBILE>9800000001</LEDGERMOBILE><EMAIL>accounts@dicecodes.example</EMAIL>
- <LANGUAGENAME.LIST><NAME.LIST TYPE="String"><NAME>DiceCodes</NAME></NAME.LIST></LANGUAGENAME.LIST>
+ <PINCODE>560001</PINCODE><LEDGERPHONE>080-0000000</LEDGERPHONE><LEDGERMOBILE>9800000001</LEDGERMOBILE><EMAIL>accounts@surya-laser-technologies.example</EMAIL>
+ <LANGUAGENAME.LIST><NAME.LIST TYPE="String"><NAME>Surya Laser Technologies</NAME></NAME.LIST></LANGUAGENAME.LIST>
 </LEDGER></TALLYMESSAGE>
-<TALLYMESSAGE xmlns:UDF="TallyUDF"><LEDGER NAME="DiceCodes Paper &amp; Ink" RESERVEDNAME="">
+<TALLYMESSAGE xmlns:UDF="TallyUDF"><LEDGER NAME="Surya Laser Technologies Paper &amp; Ink" RESERVEDNAME="">
  <PARENT>Bengaluru Creditors</PARENT>
  <LEDGSTREGDETAILS.LIST><APPLICABLEFROM>20170701</APPLICABLEFROM><GSTREGISTRATIONTYPE>Regular</GSTREGISTRATIONTYPE><STATE>Karnataka</STATE><GSTIN>29ABCDE1234F1ZW</GSTIN></LEDGSTREGDETAILS.LIST>
- <LEDMAILINGDETAILS.LIST><ADDRESS.LIST TYPE="String"><ADDRESS>4 Sample Street</ADDRESS></ADDRESS.LIST><APPLICABLEFROM>20170701</APPLICABLEFROM><PINCODE>560002</PINCODE><MAILINGNAME>DiceCodes Paper &amp; Ink</MAILINGNAME><STATE>Karnataka</STATE></LEDMAILINGDETAILS.LIST>
+ <LEDMAILINGDETAILS.LIST><ADDRESS.LIST TYPE="String"><ADDRESS>4 Sample Street</ADDRESS></ADDRESS.LIST><APPLICABLEFROM>20170701</APPLICABLEFROM><PINCODE>560002</PINCODE><MAILINGNAME>Surya Laser Technologies Paper &amp; Ink</MAILINGNAME><STATE>Karnataka</STATE></LEDMAILINGDETAILS.LIST>
 </LEDGER></TALLYMESSAGE>
-<TALLYMESSAGE xmlns:UDF="TallyUDF"><LEDGER NAME="DiceCodes Mumbai" RESERVEDNAME="">
+<TALLYMESSAGE xmlns:UDF="TallyUDF"><LEDGER NAME="Surya Laser Technologies Mumbai" RESERVEDNAME="">
  <PARENT>Sundry Debtors</PARENT><PARTYGSTIN>27ABCDE1234F1ZW</PARTYGSTIN><LEDSTATENAME>&#4; Not Applicable</LEDSTATENAME>
 </LEDGER></TALLYMESSAGE>
 <TALLYMESSAGE xmlns:UDF="TallyUDF"><LEDGER NAME="Cash" RESERVEDNAME="Cash"><PARENT>Cash-in-Hand</PARENT></LEDGER></TALLYMESSAGE>
@@ -44,7 +44,7 @@ const XML = `<?xml version="1.0" encoding="UTF-16"?>
    <RATEDETAILS.LIST><GSTRATEDUTYHEAD>Integrated Tax</GSTRATEDUTYHEAD><GSTRATE>12</GSTRATE></RATEDETAILS.LIST>
   </STATEWISEDETAILS.LIST></GSTDETAILS.LIST>
 </STOCKGROUP></TALLYMESSAGE>
-<TALLYMESSAGE xmlns:UDF="TallyUDF"><STOCKITEM NAME="DiceCodes Pen" RESERVEDNAME=""><PARENT>&#4; Primary</PARENT><BASEUNITS>Nos</BASEUNITS>
+<TALLYMESSAGE xmlns:UDF="TallyUDF"><STOCKITEM NAME="Surya Laser Technologies Pen" RESERVEDNAME=""><PARENT>&#4; Primary</PARENT><BASEUNITS>Nos</BASEUNITS>
  <GSTAPPLICABLE>&#4; Applicable</GSTAPPLICABLE>
  <GSTDETAILS.LIST><APPLICABLEFROM>20170701</APPLICABLEFROM><HSNCODE>9608</HSNCODE><TAXABILITY>Taxable</TAXABILITY>
   <STATEWISEDETAILS.LIST><STATENAME>&#4; Any</STATENAME>
@@ -58,17 +58,17 @@ const XML = `<?xml version="1.0" encoding="UTF-16"?>
  <STANDARDPRICELIST.LIST><DATE>20240401</DATE><RATE>22.00/Nos</RATE></STANDARDPRICELIST.LIST>
  <STANDARDPRICELIST.LIST><DATE>20250401</DATE><RATE>1,025.00/Nos</RATE></STANDARDPRICELIST.LIST>
 </STOCKITEM></TALLYMESSAGE>
-<TALLYMESSAGE xmlns:UDF="TallyUDF"><STOCKITEM NAME="DiceCodes Notebook" RESERVEDNAME=""><BASEUNITS>Pcs</BASEUNITS>
+<TALLYMESSAGE xmlns:UDF="TallyUDF"><STOCKITEM NAME="Surya Laser Technologies Notebook" RESERVEDNAME=""><BASEUNITS>Pcs</BASEUNITS>
  <GSTDETAILS.LIST><APPLICABLEFROM>20250922</APPLICABLEFROM><HSNCODE>4820</HSNCODE>
   <STATEWISEDETAILS.LIST><RATEDETAILS.LIST><GSTRATEDUTYHEAD>Central Tax</GSTRATEDUTYHEAD><GSTRATE>2.5</GSTRATE></RATEDETAILS.LIST>
   <RATEDETAILS.LIST><GSTRATEDUTYHEAD>State Tax</GSTRATEDUTYHEAD><GSTRATE>2.5</GSTRATE></RATEDETAILS.LIST></STATEWISEDETAILS.LIST></GSTDETAILS.LIST>
  <GSTDETAILS.LIST><APPLICABLEFROM>20170701</APPLICABLEFROM><HSNCODE>4820</HSNCODE>
   <STATEWISEDETAILS.LIST><RATEDETAILS.LIST><GSTRATEDUTYHEAD>Integrated Tax</GSTRATEDUTYHEAD><GSTRATE>12</GSTRATE></RATEDETAILS.LIST></STATEWISEDETAILS.LIST></GSTDETAILS.LIST>
 </STOCKITEM></TALLYMESSAGE>
-<TALLYMESSAGE xmlns:UDF="TallyUDF"><STOCKITEM NAME="DiceCodes Ink" RESERVEDNAME=""><PARENT>Inks</PARENT><BASEUNITS>Ltr</BASEUNITS>
+<TALLYMESSAGE xmlns:UDF="TallyUDF"><STOCKITEM NAME="Surya Laser Technologies Ink" RESERVEDNAME=""><PARENT>Inks</PARENT><BASEUNITS>Ltr</BASEUNITS>
  <OPENINGRATE>120/Ltr</OPENINGRATE>
 </STOCKITEM></TALLYMESSAGE>
-<TALLYMESSAGE xmlns:UDF="TallyUDF"><STOCKITEM NAME="DiceCodes Gift Card" RESERVEDNAME=""><BASEUNITS>Nos</BASEUNITS>
+<TALLYMESSAGE xmlns:UDF="TallyUDF"><STOCKITEM NAME="Surya Laser Technologies Gift Card" RESERVEDNAME=""><BASEUNITS>Nos</BASEUNITS>
  <GSTDETAILS.LIST><APPLICABLEFROM>20170701</APPLICABLEFROM><HSNCODE>4911</HSNCODE><TAXABILITY>Exempt</TAXABILITY></GSTDETAILS.LIST>
 </STOCKITEM></TALLYMESSAGE>
 </REQUESTDATA></IMPORTDATA></BODY></ENVELOPE>`;
@@ -86,9 +86,9 @@ eq(JSON.stringify(tallyMastersToRows(utf16)) === JSON.stringify(tallyMastersToRo
 const { clients, products } = tallyMastersToRows(XML);
 console.log('Ledgers -> clients');
 eq(clients[0], ['Name', 'GSTIN', 'Phone', 'Email', 'Address', 'State'], 'header the Clients import reads');
-eq(clients.slice(1).map((r) => r[0]), ['DiceCodes', 'DiceCodes Paper & Ink', 'DiceCodes Mumbai'],
+eq(clients.slice(1).map((r) => r[0]), ['Surya Laser Technologies', 'Surya Laser Technologies Paper & Ink', 'Surya Laser Technologies Mumbai'],
   'only Sundry Debtors / Sundry Creditors (and groups under them); Cash and Sales ledgers left out; &amp; decoded');
-eq(clients[1], ['DiceCodes', '29ABCDE1234F1ZW', '9800000001', 'accounts@dicecodes.example', '12, Demo Road, Bengaluru, 560001', 'Karnataka'],
+eq(clients[1], ['Surya Laser Technologies', '29ABCDE1234F1ZW', '9800000001', 'accounts@surya-laser-technologies.example', '12, Demo Road, Bengaluru, 560001', 'Karnataka'],
   'old Tally fields: GSTIN, mobile before phone, email, address lines and PIN, state');
 eq(clients[2].slice(1), ['29ABCDE1234F1ZW', '', '', '4 Sample Street, 560002', 'Karnataka'], 'TallyPrime GST and mailing lists');
 eq(clients[3][5], 'Maharashtra', 'state "Not Applicable" -> worked out from the GSTIN');
@@ -96,19 +96,19 @@ eq(clients[3][5], 'Maharashtra', 'state "Not Applicable" -> worked out from the 
 console.log('Stock items -> products');
 eq(products[0], ['Name', 'HSN/SAC', 'Unit', 'Purchase Price', 'Selling Price', 'GST %'], 'header the Products import reads');
 const byName = Object.fromEntries(products.slice(1).map((r) => [r[0], r.slice(1)]));
-eq(byName['DiceCodes Pen'], ['9608', 'Nos', '18.5', '1025', '18'], 'HSN, unit, cost and the latest selling price, Integrated Tax rate');
-eq(byName['DiceCodes Notebook'], ['4820', 'Pcs', '', '', '5'], 'the latest GST details win; Central + State when no Integrated Tax');
-eq(byName['DiceCodes Ink'], ['3215', 'Ltr', '120', '', '12'], 'HSN and GST from its stock group; opening rate as the cost');
-eq(byName['DiceCodes Gift Card'], ['4911', 'Nos', '', '', '0'], 'exempt is 0%');
+eq(byName['Surya Laser Technologies Pen'], ['9608', 'Nos', '18.5', '1025', '18'], 'HSN, unit, cost and the latest selling price, Integrated Tax rate');
+eq(byName['Surya Laser Technologies Notebook'], ['4820', 'Pcs', '', '', '5'], 'the latest GST details win; Central + State when no Integrated Tax');
+eq(byName['Surya Laser Technologies Ink'], ['3215', 'Ltr', '120', '', '12'], 'HSN and GST from its stock group; opening rate as the cost');
+eq(byName['Surya Laser Technologies Gift Card'], ['4911', 'Nos', '', '', '0'], 'exempt is 0%');
 
 console.log('Through the same import as a CSV (checks and duplicate rules)');
-const c = clientsCsvToList(clients, [{ name: 'dicecodes ' }]);
+const c = clientsCsvToList(clients, [{ name: 'surya-laser-technologies ' }]);
 eq([c.clients.length, c.skipped], [2, 1], 'a client already saved (any case) is skipped');
 eq(c.clients[0].gstin, '29ABCDE1234F1ZW', 'GSTIN carried');
 const p = productsCsvToList(products, []);
 eq(p.errors, [], 'no errors');
 eq(p.products.map((x) => `${x.name}|${x.hsn}|${x.unit}|${x.sellingPrice}|${x.purchasePrice}|${x.taxPercent}|${x.stock ?? '-'}`), [
-  'DiceCodes Pen|9608|Nos|1025|18.5|18|-', 'DiceCodes Notebook|4820|Pcs|0|0|5|-', 'DiceCodes Ink|3215|Ltr|0|120|12|-', 'DiceCodes Gift Card|4911|Nos|0|0|0|-',
+  'Surya Laser Technologies Pen|9608|Nos|1025|18.5|18|-', 'Surya Laser Technologies Notebook|4820|Pcs|0|0|5|-', 'Surya Laser Technologies Ink|3215|Ltr|0|120|12|-', 'Surya Laser Technologies Gift Card|4911|Nos|0|0|0|-',
 ], 'products made; stock left untracked (Tally\'s opening balance is not today\'s stock)');
 
 console.log('The file chooser (.xml)');
@@ -127,11 +127,11 @@ eq(err, '', 'UTF-8 file reads too');
 
 // Review: a name ending in "/" is not an empty tag; a bad character code does not stop the import.
 {
-  const odd = `<ENVELOPE><BODY><TALLYMESSAGE><LEDGER NAME="M/S DiceCodes/" RESERVEDNAME=""><PARENT>Sundry Debtors</PARENT><LEDSTATENAME>Karnataka</LEDSTATENAME></LEDGER></TALLYMESSAGE>
-<TALLYMESSAGE><LEDGER NAME="DiceCodes &#99999999;Two" RESERVEDNAME=""><PARENT>Sundry Debtors</PARENT></LEDGER></TALLYMESSAGE></BODY></ENVELOPE>`;
+  const odd = `<ENVELOPE><BODY><TALLYMESSAGE><LEDGER NAME="M/S Surya Laser Technologies/" RESERVEDNAME=""><PARENT>Sundry Debtors</PARENT><LEDSTATENAME>Karnataka</LEDSTATENAME></LEDGER></TALLYMESSAGE>
+<TALLYMESSAGE><LEDGER NAME="Surya Laser Technologies &#99999999;Two" RESERVEDNAME=""><PARENT>Sundry Debtors</PARENT></LEDGER></TALLYMESSAGE></BODY></ENVELOPE>`;
   let rows = null, oddErr = '';
   try { rows = tallyMastersToRows(odd).clients.slice(1).map((r) => r[0]); } catch (e) { oddErr = e.message; }
-  eq([oddErr, rows], ['', ['M/S DiceCodes/', 'DiceCodes Two']], 'NAME="M/S DiceCodes/" read; &#99999999; dropped, not a crash');
+  eq([oddErr, rows], ['', ['M/S Surya Laser Technologies/', 'Surya Laser Technologies Two']], 'NAME="M/S Surya Laser Technologies/" read; &#99999999; dropped, not a crash');
 }
 
 console.log(`\n${passed} passed, ${failed} failed`);

@@ -160,25 +160,25 @@ console.log('\n[#134] Importing products again fills in what is empty, never ove
 {
   // As left by v1.10.82: only Name, Unit and Stock were read.
   const existing = [
-    { id: 'p1', name: 'DiceCodes PVC Pipe', hsn: '', purchasePrice: 0, sellingPrice: 0, rate: 0, taxPercent: 0, unit: 'Ft', stock: 5, description: '' },
-    { id: 'p2', name: 'DiceCodes Pen ', hsn: '9608', purchasePrice: 0, sellingPrice: 10, rate: 10, taxPercent: 12, unit: 'Nos', description: 'blue' },
-    { id: 'p3', name: 'DiceCodes Exempt Book', hsn: '4901', purchasePrice: 40, sellingPrice: 50, rate: 50, taxPercent: 0, unit: 'Nos', stock: 2, description: 'x' },
+    { id: 'p1', name: 'Surya Laser Technologies PVC Pipe', hsn: '', purchasePrice: 0, sellingPrice: 0, rate: 0, taxPercent: 0, unit: 'Ft', stock: 5, description: '' },
+    { id: 'p2', name: 'Surya Laser Technologies Pen ', hsn: '9608', purchasePrice: 0, sellingPrice: 10, rate: 10, taxPercent: 12, unit: 'Nos', description: 'blue' },
+    { id: 'p3', name: 'Surya Laser Technologies Exempt Book', hsn: '4901', purchasePrice: 40, sellingPrice: 50, rate: 50, taxPercent: 0, unit: 'Nos', stock: 2, description: 'x' },
   ];
   const file = [
     'Name,HSN/SAC,Purchase price,Selling price,GST %,Unit,Stock,Description',
-    'DiceCodes PVC Pipe,39172390,822,850,18,Mtr,90,new',
-    'dicecodes pen,9999,6,99,18,Box,40,red',
-    'DiceCodes Exempt Book,4902,41,51,5,Box,9,y',
-    'DiceCodes Pen,1111,7,1,1,Kg,1,z',
-    'DiceCodes Brand New,4820,1,2,12,Nos,3,',
+    'Surya Laser Technologies PVC Pipe,39172390,822,850,18,Mtr,90,new',
+    'surya-laser-technologies pen,9999,6,99,18,Box,40,red',
+    'Surya Laser Technologies Exempt Book,4902,41,51,5,Box,9,y',
+    'Surya Laser Technologies Pen,1111,7,1,1,Kg,1,z',
+    'Surya Laser Technologies Brand New,4820,1,2,12,Nos,3,',
   ].join('\n');
   const r = productsCsvToList(file, existing);
-  eq(r.products.map((p) => p.name).join('|'), 'DiceCodes Brand New', 'a new name is added as before');
+  eq(r.products.map((p) => p.name).join('|'), 'Surya Laser Technologies Brand New', 'a new name is added as before');
   eq(r.updates.map((p) => p.id).join('|'), 'p1|p2', 'saved products with empty details are updated (same id, no duplicate)');
   const [pipe, pen] = r.updates;
   eq(JSON.stringify([pipe.hsn, pipe.purchasePrice, pipe.sellingPrice, pipe.rate, pipe.taxPercent, pipe.unit, pipe.stock, pipe.description]), JSON.stringify(['39172390', 822, 850, 850, 18, 'Ft', 5, 'new']),
     'the empty HSN, prices, GST % and description are filled; unit and stock already set are kept');
-  eq(JSON.stringify([pen.name, pen.hsn, pen.purchasePrice, pen.sellingPrice, pen.taxPercent, pen.unit, pen.description, pen.stock]), JSON.stringify(['DiceCodes Pen ', '9608', 6, 10, 12, 'Nos', 'blue', 40]),
+  eq(JSON.stringify([pen.name, pen.hsn, pen.purchasePrice, pen.sellingPrice, pen.taxPercent, pen.unit, pen.description, pen.stock]), JSON.stringify(['Surya Laser Technologies Pen ', '9608', 6, 10, 12, 'Nos', 'blue', 40]),
     'only the empty purchase price and the untracked stock are filled; every value already there stays');
   eq(r.skipped, 2, 'nothing to fill (the 0% book has its HSN, so 0% is its rate) and a repeat in the file: skipped');
   eq(existing[0].hsn, '', 'the saved list itself is not changed');
@@ -190,14 +190,14 @@ console.log('\n[#130] Files exported from Vyapar (layouts seen in real exports)'
   // Newer "Item Details" sheet: title rows above the header, "Tax Percent"
   // beside "Tax", an Excel date number, a cancelled sale, a Total row.
   const newer = [
-    ['DiceCodes'], ['Sale Report: 01/10/2026 to 31/10/2026'],
+    ['Surya Laser Technologies'], ['Sale Report: 01/10/2026 to 31/10/2026'],
     ['Date', 'Invoice No./Txn No.', 'Party Name', 'Item Name', 'Item Code', 'HSN/SAC', 'Category', 'Description', 'Quantity', 'Unit', 'UnitPrice', 'Discount Percent', 'Discount', 'Tax Percent', 'Tax', 'Transaction Type', 'Amount'],
     ['46325', 'V-1', 'Riya Sharma', 'Pen', 'P1', '9608', 'Stationery', 'Blue ink', '10', 'Nos', '20', '0', '0', '18', '36', 'Sale', '236'],
     ['30/10/2026', 'V-2', 'Arjun', 'Ink', '', '3215', '', '', '1', 'Nos', '100', '0', '0', '12', '12', 'Sale[Cancelled]', '112'],
     ['Total', '', '', '', '', '', '', '', '11', '', '', '', '', '', '48', '', '348'],
   ];
   const sale = [
-    ['DiceCodes'], ['Sale Report'],
+    ['Surya Laser Technologies'], ['Sale Report'],
     ['Date', 'Order No', 'Invoice No', 'Party Name', 'GSTIN', 'Party Phone No.', 'Transaction Type', 'Total Amount', 'Payment Type', 'Received/Paid Amount', 'Balance Due'],
     ['30/10/2026', '', 'V-1', 'Riya Sharma', '', '98765 43210', 'Sale', '236', 'Cash', '100', '136'],
     ['Total', '', '', '', '', '', '', '236', '', '100', '136'],

@@ -73,7 +73,7 @@ https://github.com/albineb007/Surya-Laser-Technologies/issues
 | Linux: any other (64-bit) | `Free-GST-Billing-Linux-x86_64.AppImage` |
 | NAS / home server (Docker) | coming 14 Nov, with safe access from other PCs |
 
-How to install each: https://dicecodes.com/free-gst-software-documentation/install-linux.html
+How to install each: https://github.com/albineb007/Surya-Laser-Technologies
 ```
 
 Never upload a second `.zip`: the in-app updater on Windows takes the

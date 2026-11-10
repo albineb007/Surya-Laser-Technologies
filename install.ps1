@@ -195,19 +195,19 @@ function New-AppShortcut([string]$path, [string]$sys) {
   $sc.WorkingDirectory = $sys
   $sc.WindowStyle = 7
   $sc.IconLocation = "$(Join-Path $sys 'app-icon.ico'),0"
-  $sc.Description = 'Free GST Billing Software'
+  $sc.Description = 'Surya Laser Technologies'
   $sc.Save()
 }
 
 function Install-App {
   Write-Host ''
-  Write-Host '  Free GST Billing - install or update'
+  Write-Host '  Surya Laser Technologies - install or update'
   Write-Host ''
 
   # --- [1/4] -----------------------------------------------------------------
   Step '[1/4] Checking this computer'
   if ([Environment]::OSVersion.Version.Major -lt 10) {
-    Fail 'This computer runs an old Windows.' 'Free GST Billing needs Windows 10 or 11 (Node.js no longer runs on Windows 7 or 8).'
+    Fail 'This computer runs an old Windows.' 'Surya Laser Technologies Billing needs Windows 10 or 11 (Node.js no longer runs on Windows 7 or 8).'
   }
   $dest = Find-Install
   # v1.10.84 - the Windows Setup installs to the same folder this line would

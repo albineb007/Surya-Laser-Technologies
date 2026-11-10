@@ -452,4 +452,4 @@ PRs welcome. The project follows
 ## Need help?
 
 - File an issue: <https://github.com/albineb007/Surya-Laser-Technologies/issues>
-- Email DiceCodes: contact@dicecodes.com
+- Email Surya Laser Technologies: GitHub Issues

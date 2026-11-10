@@ -1,6 +1,6 @@
 ===========================================================
   FREE GST BILLING SOFTWARE
-  By DiceCodes - free, and yours to keep
+  By Surya Laser Technologies - free, and yours to keep
 ===========================================================
 
   Your invoices, clients and data stay on THIS computer.
@@ -61,7 +61,7 @@
 
   STEP-BY-STEP GUIDES, for every computer, with every click
   explained (no technical knowledge needed):
-  https://dicecodes.com/free-gst-software-documentation/install.html
+  https://github.com/albineb007/Surya-Laser-Technologies
 
 
 -----------------------------------------------------------
@@ -243,7 +243,7 @@
       and anything urgent straight away.
 
       The full guide, with every screen explained:
-      https://dicecodes.com/free-gst-software-documentation/
+      https://github.com/albineb007/Surya-Laser-Technologies
 
 
 ===========================================================

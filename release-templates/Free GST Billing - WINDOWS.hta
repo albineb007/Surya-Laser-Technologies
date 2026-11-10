@@ -170,7 +170,7 @@
   <img class="mark" id="mark" alt=""
        onerror="this.style.display='none'; document.getElementById('markFb').style.display='inline-block';" />
   <div class="markFb" id="markFb">B</div>
-  <h1>Free GST Billing</h1>
+  <h1>Surya Laser Technologies</h1>
   <p id="tagline">Free and offline. Your invoices stay on this computer.</p>
 </div>
 
@@ -389,7 +389,7 @@
     if (!runScript('update-windows.ps1', '-InstallTo "' + other.root + '"')) return;
     setState('Updating&hellip;',
       'A black window is updating the copy in <b>' + esc(other.root) + '</b>. When it says ' +
-      '<b>Update complete</b>, open the app from your <b>Free GST Billing</b> shortcut. Your invoices stay where they are.', 'warn');
+      '<b>Update complete</b>, open the app from your <b>Surya Laser Technologies</b> shortcut. Your invoices stay where they are.', 'warn');
     setPrimary(null);
     setSteps('<ol><li>Afterwards this folder is not needed. You can delete it.</li></ol>');
     setMore(null);
@@ -586,8 +586,8 @@
         setSteps(
           '<ol>' +
           '<li>Close this window.</li>' +
-          '<li>Right-click the <b>Free-GST-Billing</b> ZIP and choose <b>Extract All&hellip;</b>.</li>' +
-          '<li>Open the new folder and double-click <b>Free GST Billing - WINDOWS</b>.</li>' +
+          '<li>Right-click the <b>Surya Laser Technologies</b> ZIP and choose <b>Extract All&hellip;</b>.</li>' +
+          '<li>Open the new folder and double-click <b>Surya Laser Technologies</b>.</li>' +
           '</ol>');
         setMore([{ label: 'Download the app again', run: openGitHub }]);
         return;
@@ -613,7 +613,7 @@
           'Keep using that copy so all your invoices stay together. To get the newest version, update it.', 'warn');
         setPrimary('Update the installed copy', 'With the files in this folder - no download',
           function () { updateOther(other); }, true);
-        setSteps('<ol><li>When the update finishes, open the app from your <b>Free GST Billing</b> shortcut as usual.</li>' +
+        setSteps('<ol><li>When the update finishes, open the app from your <b>Surya Laser Technologies</b> shortcut as usual.</li>' +
           '<li>This folder is not needed after that. You can delete it.</li></ol>');
         setMore([
           { label: 'Open the installed copy', run: function () { openOther(other); } },

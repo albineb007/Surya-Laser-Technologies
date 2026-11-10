@@ -839,11 +839,11 @@ export const markUnpaidPatch = (bill) => {
 // The online documentation. Help buttons link straight to the section for
 // their screen, and the sidebar User Guide opens the start (v1.10.75). The
 // build of docs-site checks that every doc="page#section" used in src exists.
-export const DOCS_URL = 'https://dicecodes.com/free-gst-software-documentation/';
+export const DOCS_URL = 'https://github.com/albineb007/Surya-Laser-Technologies';
 export const docsLink = (doc = '') => {
   const [page, section] = String(doc).split('#');
   if (!page || page === 'index') return DOCS_URL + (section ? `#${section}` : '');
-  return `${DOCS_URL}${page}.html${section ? `#${section}` : ''}`;
+  return DOCS_URL + (section ? `#${section}` : '');
 };
 
 // GSTR-1 B2C Large: an inter-state sale to an unregistered buyer above this

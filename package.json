@@ -1,6 +1,6 @@
 {
   "name": "surya-laser-technologies",
-  "version": "1.10.88",
+  "version": "1.10.89",
   "description": "Offline GST invoicing and billing for Surya Laser Technologies. Precision in Every Cut.",
   "author": "Surya Laser Technologies",
   "license": "MIT",
@@ -71,7 +71,7 @@
     "vite",
     "expressjs",
     "india",
-    "diceCodes"
+    "surya-laser-technologies"
   ],
   "type": "module",
   "engines": {

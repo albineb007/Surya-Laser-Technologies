@@ -182,7 +182,7 @@ end;
   the same two) and its own folder: WebView2 profile, window place. }
 function GetAumid(Param: String): String;
 begin
-  if IsTest then Result := 'DiceCodes.FreeGSTBilling.Test' else Result := 'DiceCodes.FreeGSTBilling';
+  if IsTest then Result := 'SuryaLaserTechnologies.FreeGSTBilling.Test' else Result := 'SuryaLaserTechnologies.FreeGSTBilling';
 end;
 
 function HostDataDir(Param: String): String;

@@ -30,11 +30,11 @@ and Windows update scripts are configured to use this repository.
 
 <a href="https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Surya-Laser-Technologies-Setup.exe"><img src="https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20Windows-Setup%20.exe-0078D4?style=for-the-badge&labelColor=334155" alt="Download for Windows (Setup program)" height="40"></a>&nbsp;<a href="https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Surya-Laser-Technologies.zip"><img src="https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20macOS-ZIP-111827?style=for-the-badge&labelColor=334155" alt="Download for macOS (ZIP)" height="40"></a>&nbsp;<a href="https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Surya-Laser-Technologies-Linux-x86_64.AppImage"><img src="https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20Linux-AppImage-E95420?style=for-the-badge&labelColor=334155" alt="Download for Linux (AppImage)" height="40"></a>&nbsp;<a href="https://github.com/albineb007/Surya-Laser-Technologies/releases/latest"><img src="https://img.shields.io/badge/%F0%9F%93%A6%20All-downloads-16a34a?style=for-the-badge&labelColor=334155" alt="All downloads: the latest release" height="40"></a>
 
-<a href="https://dicecodes.com/free-gst-software-documentation/"><img src="https://img.shields.io/badge/%F0%9F%93%96%20Documentation-Read%20the%20guide-2563eb?style=for-the-badge&labelColor=1d4ed8" alt="Read the documentation" height="40"></a>
+<a href="https://github.com/albineb007/Surya-Laser-Technologies"><img src="https://img.shields.io/badge/%F0%9F%93%96%20Documentation-Read%20the%20guide-2563eb?style=for-the-badge&labelColor=1d4ed8" alt="Read the documentation" height="40"></a>
 
 <sub>Each button always gets the newest version · Windows: the Setup program (about 35 MB) · macOS: the ZIP (about 25 MB) · Linux: the AppImage, or the .deb on the <a href="https://github.com/albineb007/Surya-Laser-Technologies/releases/latest">release page</a> · <a href="#download-and-install">step-by-step for every system</a></sub>
 
-<a href="#quick-start--installation"><img src="https://img.shields.io/badge/%E2%9A%A1%20Install-3%20steps-0f766e?style=for-the-badge&labelColor=334155" alt="Install in 3 steps" height="30"></a> <a href="#your-first-invoice-in-5-minutes"><img src="https://img.shields.io/badge/%F0%9F%A7%BE%20First%20invoice-5%20minutes-7c3aed?style=for-the-badge&labelColor=334155" alt="Your first invoice in 5 minutes" height="30"></a> <a href="#screenshots"><img src="https://img.shields.io/badge/%F0%9F%93%B8%20See-screenshots-0369a1?style=for-the-badge&labelColor=334155" alt="Screenshots" height="30"></a> <a href="https://github.com/albineb007/Surya-Laser-Technologies/releases"><img src="https://img.shields.io/badge/%F0%9F%93%A6%20All-releases-475569?style=for-the-badge&labelColor=334155" alt="All releases" height="30"></a> <a href="https://github.com/albineb007/Surya-Laser-Technologies/issues/new/choose"><img src="https://img.shields.io/badge/%F0%9F%90%9B%20Report-a%20problem-b91c1c?style=for-the-badge&labelColor=334155" alt="Report a problem" height="30"></a> <a href="https://dicecodes.com/free-gst-software-documentation/support.html"><img src="https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F%20Support-the%20project-be123c?style=for-the-badge&labelColor=334155" alt="Support the project" height="30"></a>
+<a href="#quick-start--installation"><img src="https://img.shields.io/badge/%E2%9A%A1%20Install-3%20steps-0f766e?style=for-the-badge&labelColor=334155" alt="Install in 3 steps" height="30"></a> <a href="#your-first-invoice-in-5-minutes"><img src="https://img.shields.io/badge/%F0%9F%A7%BE%20First%20invoice-5%20minutes-7c3aed?style=for-the-badge&labelColor=334155" alt="Your first invoice in 5 minutes" height="30"></a> <a href="#screenshots"><img src="https://img.shields.io/badge/%F0%9F%93%B8%20See-screenshots-0369a1?style=for-the-badge&labelColor=334155" alt="Screenshots" height="30"></a> <a href="https://github.com/albineb007/Surya-Laser-Technologies/releases"><img src="https://img.shields.io/badge/%F0%9F%93%A6%20All-releases-475569?style=for-the-badge&labelColor=334155" alt="All releases" height="30"></a> <a href="https://github.com/albineb007/Surya-Laser-Technologies/issues/new/choose"><img src="https://img.shields.io/badge/%F0%9F%90%9B%20Report-a%20problem-b91c1c?style=for-the-badge&labelColor=334155" alt="Report a problem" height="30"></a> <a href="https://github.com/albineb007/Surya-Laser-Technologies"><img src="https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F%20Support-the%20project-be123c?style=for-the-badge&labelColor=334155" alt="Support the project" height="30"></a>
 
 </div>
 
@@ -67,7 +67,7 @@ and Windows update scripts are configured to use this repository.
 
 **That is the complete list.** No analytics, no ads, no error-tracking service, and no server of ours that receives your data.
 
-**[Read the full answer: every address the app connects to, and more ways to check →](https://dicecodes.com/free-gst-software-documentation/security.html)**
+**[Read the full answer: every address the app connects to, and more ways to check →](https://github.com/albineb007/Surya-Laser-Technologies)**
 
 ---
 
@@ -82,7 +82,7 @@ Pick your computer. Every link below always gets the newest version. Your invoic
 3. **Your books:** first time? Leave *Start new books* ticked. Already using the ZIP or the one-line install? Setup finds it and asks: keep using your books where they are, or copy them to `C:\Users\<your name>\Surya Laser Technologies`. **Your old folder is never changed or deleted.**
 4. **Click Install, then Finish.** The app opens full screen in its own window. Closing it keeps it running near the clock; right-click that icon for *Quit*.
 
-No administrator password and no Node.js to install: everything it needs is inside. **Updates:** the app shows *Update to vX* → **Update Now** (no reinstalling). **Removing:** Windows **Settings → Apps → Installed apps → Surya Laser Technologies → Uninstall** (it asks before deleting your books; the answer is No unless you choose Yes). Full guide: [Install on Windows](https://dicecodes.com/free-gst-software-documentation/install.html).
+No administrator password and no Node.js to install: everything it needs is inside. **Updates:** the app shows *Update to vX* → **Update Now** (no reinstalling). **Removing:** Windows **Settings → Apps → Installed apps → Surya Laser Technologies → Uninstall** (it asks before deleting your books; the answer is No unless you choose Yes). Full guide: [Install on Windows](https://github.com/albineb007/Surya-Laser-Technologies).
 
 Other ways on Windows: [one PowerShell line](#option-0-one-line-no-zip-no-smartscreen--gatekeeper-warning-no-npm) (no SmartScreen box) or [the ZIP](#the-zip-one-launcher-per-system).
 
@@ -92,7 +92,7 @@ Other ways on Windows: [one PowerShell line](#option-0-one-line-no-zip-no-smarts
 2. In the **Surya-Laser-Technologies** folder, **Control-click `Surya Laser Technologies - MAC`** → **Open** → **Open**. (macOS 15 or newer without an Open button: Apple menu → System Settings → Privacy & Security → *Open Anyway*.)
 3. Click **Install** in the window that opens. The app opens in your browser at `http://localhost:47371`.
 
-Updates come from the app's **Update** button. **Never drag a new folder over the old one on a Mac**: Finder's Replace swaps the whole folder, including your invoices. Full guide: [Install on a Mac](https://dicecodes.com/free-gst-software-documentation/install-mac.html).
+Updates come from the app's **Update** button. **Never drag a new folder over the old one on a Mac**: Finder's Replace swaps the whole folder, including your invoices. Full guide: [Install on a Mac](https://github.com/albineb007/Surya-Laser-Technologies).
 
 ### Linux: Ubuntu, Linux Mint, Debian (.deb)
 
@@ -108,7 +108,7 @@ Your books are kept in `~/.local/share/free-gst-billing-data`; `sudo apt remove 
 2. Right-click it → **Properties → Permissions** → tick *Allow executing file as program* (or `chmod +x Surya-Laser-Technologies-Linux-x86_64.AppImage`).
 3. Double-click it.
 
-Same books folder as the .deb. Full guide: [Install on Linux or a NAS](https://dicecodes.com/free-gst-software-documentation/install-linux.html).
+Same books folder as the .deb. Full guide: [Install on Linux or a NAS](https://github.com/albineb007/Surya-Laser-Technologies).
 
 ### NAS or a home server
 
@@ -172,13 +172,13 @@ The launcher:
 
 From then on, click the **Surya Laser Technologies** icon on your Desktop: it starts the app and opens it in its own window. To update / backup / restore / move to another PC / stop the server, use the in-app **⚙ Control Panel** in the sidebar (or the launcher in the app folder). No batch files, no CMD windows.
 
-> **☁ Can I host it online (Railway, Render, Supabase)?** Not yet. The app has no login on its server, so anyone who found the address could read or delete your books, and it keeps its data as files, not in a database. [Why, and what to do instead](https://dicecodes.com/free-gst-software-documentation/security.html#host-online). Using it from a phone or tablet on the same Wi-Fi is planned for the update on Saturday 14 November 2026.
+> **☁ Can I host it online (Railway, Render, Supabase)?** Not yet. The app has no login on its server, so anyone who found the address could read or delete your books, and it keeps its data as files, not in a database. [Why, and what to do instead](https://github.com/albineb007/Surya-Laser-Technologies#host-online). Using it from a phone or tablet on the same Wi-Fi is planned for the update on Saturday 14 November 2026.
 
 ---
 
 ## Screenshots
 
-Real screens from the app, with a made-up demo business (DiceCodes, fake GSTIN and bank details).
+Real screens from the app, with a made-up demo business (Surya Laser Technologies, fake GSTIN and bank details).
 
 <table>
   <tr>
@@ -195,7 +195,7 @@ Real screens from the app, with a made-up demo business (DiceCodes, fake GSTIN a
   </tr>
 </table>
 
-More screenshots, next to the steps they show, in the [documentation](https://dicecodes.com/free-gst-software-documentation/).
+More screenshots, next to the steps they show, in the [documentation](https://github.com/albineb007/Surya-Laser-Technologies).
 
 ---
 
@@ -299,7 +299,7 @@ Once you're comfortable with the basics, explore:
 - **GSTR-2B Reconciliation** — download your 2B JSON from gst.gov.in, click Import in our 2B tab — we auto-match against your purchase records and flag mismatches.
 - **TDS / TCS** — Customize → tick TDS or TCS, pick a section (194Q / 206C(1H) / etc.). The Reports view aggregates these for Form 26Q / 27EQ filing.
 
-📖 **Full walkthrough** — see [docs/USER_GUIDE.md](docs/USER_GUIDE.md) or the [online documentation](https://dicecodes.com/free-gst-software-documentation/), which the app's **User Guide** button opens.
+📖 **Full walkthrough** — see [docs/USER_GUIDE.md](docs/USER_GUIDE.md) or the [online documentation](https://github.com/albineb007/Surya-Laser-Technologies), which the app's **User Guide** button opens.
 
 ---
 
@@ -518,7 +518,7 @@ If we priced every 🆕 feature at the going rate on the paid alternatives:
 
 ## Quick Start / Installation
 
-> **New to computers?** Follow the step-by-step guides, with every click explained: [Windows](https://dicecodes.com/free-gst-software-documentation/install.html) · [Mac](https://dicecodes.com/free-gst-software-documentation/install-mac.html) · [Linux / NAS](https://dicecodes.com/free-gst-software-documentation/install-linux.html) · [Updating](https://dicecodes.com/free-gst-software-documentation/update.html) · [Using the Terminal](https://dicecodes.com/free-gst-software-documentation/terminal.html)
+> **New to computers?** Follow the step-by-step guides, with every click explained: [Windows](https://github.com/albineb007/Surya-Laser-Technologies) · [Mac](https://github.com/albineb007/Surya-Laser-Technologies) · [Linux / NAS](https://github.com/albineb007/Surya-Laser-Technologies) · [Updating](https://github.com/albineb007/Surya-Laser-Technologies) · [Using the Terminal](https://github.com/albineb007/Surya-Laser-Technologies)
 
 ### Prerequisites
 
@@ -598,7 +598,7 @@ Every install (the launcher, the one-line command, Mac and Linux) puts a **Surya
 
 ### Online hosting (Railway, Render, Supabase): not yet
 
-The app has no login on its server yet, so it must not be put on the internet. See [Can I put it online?](https://dicecodes.com/free-gst-software-documentation/security.html#host-online).
+The app has no login on its server yet, so it must not be put on the internet. See [Can I put it online?](https://github.com/albineb007/Surya-Laser-Technologies#host-online).
 
 ## How to Self-File GST Returns
 
@@ -721,7 +721,7 @@ The deep-dive material lives in **[docs/](./docs/)**:
 
 ## Why Is This Free?
 
-Surya Laser Technologies is built and maintained by [DiceCodes](mailto:Contact@dicecodes.com). It is:
+Surya Laser Technologies is built and maintained by [Surya Laser Technologies](https://github.com/albineb007/Surya-Laser-Technologies/issues). It is:
 
 - **Open-source** under the MIT license — fork it, modify it, use it commercially
 - **Community-driven** — features are built based on what users actually need
@@ -744,9 +744,8 @@ If the app saves you time, you can help keep it going:
 - ⭐ **Star this repo**, so other businesses find it
 - 💬 **Tell another business** about it
 - 🐛 **[Report a bug](https://github.com/albineb007/Surya-Laser-Technologies/issues/new?template=bug_report.yml) or [ask for a feature](https://github.com/albineb007/Surya-Laser-Technologies/issues/new?template=feature_request.yml)**: fixes and features ship every Saturday
-- 💛 **UPI, any amount:** `princeramgarhiaa-1@okaxis` (also as a QR code in the app, under **Support & About**)
 
-**Work with DiceCodes:** custom software and web apps, customising this app for your business, setup and data migration, support plans, AI integration and automation, and mobile apps. [contact@dicecodes.com](mailto:contact@dicecodes.com)
+**Work with Surya Laser Technologies:** custom software and web apps, customising this app for your business, setup and data migration, support plans, AI integration and automation, and mobile apps. [GitHub Issues](https://github.com/albineb007/Surya-Laser-Technologies/issues)
 
 ---
 
@@ -871,7 +870,7 @@ Find the message you see. **None of these touch your invoices**: they stay in th
 | Forgot the app PIN | In the app folder (next to the launcher), create an empty text file named `RESET-PIN` and reload the app. The PIN is removed; invoices aren't touched. |
 | Linux / Mac / NAS: **"Node.js … is too old"** or **"not installed"** | The message lists the command for your system (`apt`, `dnf`, `pacman`, `apk`, `brew` or nvm). Install Node.js 20, then open the launcher again. |
 
-**Still stuck?** [Report a problem](https://github.com/albineb007/Surya-Laser-Technologies/issues/new?template=bug_report.yml) with the message you see and a screenshot (hide your GSTIN and bank details). If the app doesn't start, add what `node -v` and `npm -v` show in Command Prompt. More answers: [troubleshooting guide](https://dicecodes.com/free-gst-software-documentation/troubleshooting.html).
+**Still stuck?** [Report a problem](https://github.com/albineb007/Surya-Laser-Technologies/issues/new?template=bug_report.yml) with the message you see and a screenshot (hide your GSTIN and bank details). If the app doesn't start, add what `node -v` and `npm -v` show in Command Prompt. More answers: [troubleshooting guide](https://github.com/albineb007/Surya-Laser-Technologies/issues).
 
 ---
 
@@ -917,7 +916,7 @@ CSV import is supported today for clients and products. Direct Tally XML import 
 
 ## Contact & Support
 
-- **Email:** [Contact@dicecodes.com](mailto:Contact@dicecodes.com)
+- **Email:** [GitHub Issues](https://github.com/albineb007/Surya-Laser-Technologies/issues)
 - **Report a problem:** [bug report form](https://github.com/albineb007/Surya-Laser-Technologies/issues/new?template=bug_report.yml) · **Ask for a feature:** [feature form](https://github.com/albineb007/Surya-Laser-Technologies/issues/new?template=feature_request.yml) (fixes and features ship every Saturday)
 - **Releases:** [GitHub Releases](https://github.com/albineb007/Surya-Laser-Technologies/releases)
 - **Discussions:** *(coming soon)*
@@ -934,14 +933,14 @@ This project is licensed under the [MIT License](LICENSE) — free to use, modif
 
 ### Ready to stop paying for billing software?
 
-[**⬇ Download Now**](https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Surya-Laser-Technologies.zip) &nbsp;·&nbsp; [⭐ **Star on GitHub**](https://github.com/albineb007/Surya-Laser-Technologies) &nbsp;·&nbsp; [📖 **Read the User Guide**](docs/USER_GUIDE.md) &nbsp;·&nbsp; [🐛 **Report an Issue**](https://github.com/albineb007/Surya-Laser-Technologies/issues) &nbsp;·&nbsp; [📧 **Email DiceCodes**](mailto:Contact@dicecodes.com)
+[**⬇ Download Now**](https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Surya-Laser-Technologies.zip) &nbsp;·&nbsp; [⭐ **Star on GitHub**](https://github.com/albineb007/Surya-Laser-Technologies) &nbsp;·&nbsp; [📖 **Read the User Guide**](docs/USER_GUIDE.md) &nbsp;·&nbsp; [🐛 **Report an Issue**](https://github.com/albineb007/Surya-Laser-Technologies/issues) &nbsp;·&nbsp; [📧 **Email Surya Laser Technologies**](https://github.com/albineb007/Surya-Laser-Technologies/issues)
 
 ---
 
-**Surya Laser Technologies** by [DiceCodes](mailto:Contact@dicecodes.com) · MIT Licensed · v1.10.42
+**Surya Laser Technologies** by [Surya Laser Technologies](https://github.com/albineb007/Surya-Laser-Technologies/issues) · MIT Licensed · v1.10.42
 
 <sub>Free GST billing software India · Free GST invoice software for small business · Open source GST billing software · Free alternative to Tally Prime Vyapar Zoho Books ClearTax myBillBook Marg ERP · No subscription invoice software · Offline billing software India · GSTR-1 GSTR-3B filing software free · GSTR-2B reconciliation tool free · TDS Form 26Q TCS Form 27EQ software · Section 194Q 206C(1H) TCS calculator with ₹50 lakh threshold · UTGST invoice software · CGST SGST IGST auto calculator · E-way bill JSON generator free · HSN SAC code invoice generator · Bill of Supply generator · Delivery Challan software · Credit Note Debit Note software · Proforma invoice estimate software · Composition scheme invoice · UPI QR invoice maker · Thermal receipt printer software 58mm 80mm · Direct vector thermal print software · POS billing software free India · Retail shop kirana billing software · Restaurant cafe billing software · Freelancer consultant invoice software India · Multi-currency invoice generator (USD EUR GBP AED SGD AUD JPY) 22 countries · Country-aware VAT SST MwSt TVA PPN tax labels · Recurring invoice software · Payment receipt voucher software · Bulk PDF invoice export · Google Drive backup billing software · Automatic daily backup + Trash bin · Multi-business multi-GSTIN switcher · Multi-language invoice Hindi Tamil Marathi Bengali · Dark mode PWA billing app · Rich-text Terms & Conditions with 13 India presets · OCR bill scan tesseract · Ctrl+K command palette · Split-view live PDF preview · Income Tax (ITR) computation old vs new regime 234B 234C · Client credit balance carry-forward · Watermark DUPLICATE DRAFT PDF · Rule 48 multi-copy (Original Duplicate Triplicate) · WhatsApp share invoice PDF · Self-file GST return software · GST invoice software without subscription · No signup no login billing software · Vyapar alternative open source · Tally alternative free · Zoho Books alternative · ClearTax alternative · myBillBook alternative · Marg ERP alternative · Made in India</sub>
 
-Made in India 🇮🇳 · [DiceCodes](https://dicecodes.com)
+Made in India 🇮🇳 · [Surya Laser Technologies](https://github.com/albineb007/Surya-Laser-Technologies)
 
 </div>

@@ -12,20 +12,20 @@ function ok(cond, label, got) {
   else { failed++; console.log(`  FAIL ${label}\n${got}`); }
 }
 
-const profile = { businessName: 'DiceCodes', upiId: 'dicecodes@upi' };
+const profile = { businessName: 'Surya Laser Technologies', upiId: 'surya-laser-technologies@upi' };
 const bill = {
   invoiceNumber: 'DC/2026-27/0007', invoiceDate: '2026-11-05', clientName: 'Demo Traders',
   totalAmount: 1180, status: 'unpaid', data: { details: { dueDate: '2026-11-20' }, invoiceOptions: {} },
 };
 
 const unpaid = invoiceShareMessage(bill, profile);
-ok(unpaid.startsWith('*DiceCodes*'), 'business name first', unpaid);
+ok(unpaid.startsWith('*Surya Laser Technologies*'), 'business name first', unpaid);
 ok(unpaid.includes('Client: Demo Traders'), 'client name', unpaid);
 ok(unpaid.includes('Invoice: *DC/2026-27/0007*'), 'invoice number', unpaid);
 ok(unpaid.includes('05 Nov 2026') && unpaid.includes('Due: 20 Nov 2026'), 'date and due date (local, not shifted a day)', unpaid);
 ok(/Amount due: .*1,180/.test(unpaid), 'amount due', unpaid);
 ok(unpaid.includes('Status: UNPAID'), 'status', unpaid);
-ok(unpaid.includes('Pay by UPI: dicecodes@upi'), 'UPI ID while money is due', unpaid);
+ok(unpaid.includes('Pay by UPI: surya-laser-technologies@upi'), 'UPI ID while money is due', unpaid);
 
 const part = invoiceShareMessage({ ...bill, status: 'partial', payments: [{ amount: 500 }] }, profile);
 ok(/Paid: .*500/.test(part) && /Balance due: .*680/.test(part), 'part paid: paid and balance', part);

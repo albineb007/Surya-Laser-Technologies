@@ -77,7 +77,7 @@ static class Program
             : Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Surya Laser Technologies");
         // The same id is on the Setup's shortcuts ([Icons] AppUserModelID), so a
         // pinned taskbar icon is this program with its own icon.
-        Aumid = testRoot != null ? "DiceCodes.FreeGSTBilling.Test" : "DiceCodes.FreeGSTBilling";
+        Aumid = testRoot != null ? "SuryaLaserTechnologies.FreeGSTBilling.Test" : "SuryaLaserTechnologies.FreeGSTBilling";
         SmokeFile = Environment.GetEnvironmentVariable("FGSB_HOST_SMOKE");
         if (SmokeFile == "") SmokeFile = null;
         TraceFile = Environment.GetEnvironmentVariable("FGSB_HOST_TRACE");

@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 // test-linux-packages.mjs - installs and runs the built Linux packages in
-// clean containers (npm run release:linux first). Demo data only (DiceCodes).
+// clean containers (npm run release:linux first). Demo data only (Surya Laser Technologies).
 //
 //   node scripts/test-linux-packages.mjs [deb] [appimage] [docker]   (default: all)
 //
@@ -42,14 +42,14 @@ fail() { echo "FAIL: $*"; exit 1; }
 id shop >/dev/null 2>&1 || useradd -m -s /bin/sh shop
 H=/home/shop
 as() { runuser -u shop -- env HOME=$H FGSB_NO_BROWSER=1 "$@"; }
-# A fake earlier ZIP install (one-line install's folder) and an unzipped copy, with DiceCodes demo books.
+# A fake earlier ZIP install (one-line install's folder) and an unzipped copy, with Surya Laser Technologies demo books.
 as sh -c '
   for S in "$HOME/.local/share/free-gst-billing/_system" "$HOME/Free-GST-Billing/_system"; do
-    mkdir -p "$S/data/bills" "$S/Saved Invoices/DiceCodes/2026-11"
+    mkdir -p "$S/data/bills" "$S/Saved Invoices/Surya Laser Technologies/2026-11"
     echo "// old server" > "$S/server.js"
-    printf "{\"companyName\":\"DiceCodes\",\"gstin\":\"29ABCDE1234F1ZW\"}" > "$S/data/profile.json"
-    printf "{\"id\":\"INV-1\",\"client\":\"DiceCodes\",\"total\":1180}" > "$S/data/bills/INV-1.json"
-    printf "%%PDF-1.4 demo" > "$S/Saved Invoices/DiceCodes/2026-11/INV-1.pdf"
+    printf "{\"companyName\":\"Surya Laser Technologies\",\"gstin\":\"29ABCDE1234F1ZW\"}" > "$S/data/profile.json"
+    printf "{\"id\":\"INV-1\",\"client\":\"Surya Laser Technologies\",\"total\":1180}" > "$S/data/bills/INV-1.json"
+    printf "%%PDF-1.4 demo" > "$S/Saved Invoices/Surya Laser Technologies/2026-11/INV-1.pdf"
     echo 47371 > "$S/data/port.txt"
   done'
 OLD="$H/.local/share/free-gst-billing $H/Free-GST-Billing"
@@ -70,7 +70,7 @@ check_running() { # <kind>
   grep -q ' 0100007F:B90B ' /proc/net/tcp || fail "not on 127.0.0.1:47371"
   if grep -q ' 00000000:B90B ' /proc/net/tcp || grep -qi ' 00000000000000000000000000000000:B90B ' /proc/net/tcp6 2>/dev/null; then fail "listens on all addresses"; fi
   echo "OK bound to 127.0.0.1 only"
-  post /api/profile '{"companyName":"DiceCodes","gstin":"29ABCDE1234F1ZW"}' | grep -q success || fail "save profile"
+  post /api/profile '{"companyName":"Surya Laser Technologies","gstin":"29ABCDE1234F1ZW"}' | grep -q success || fail "save profile"
   test -f "$H/.local/share/free-gst-billing-data/data/profile.json" || fail "profile not in FGSB_HOME"
   test -d "$H/.local/share/free-gst-billing-data/Saved Invoices" && test -d "$H/.local/share/free-gst-billing-data/Trash" || fail "Saved Invoices/Trash not in FGSB_HOME"
   [ "$(stat -c %U $H/.local/share/free-gst-billing-data/data/profile.json)" = shop ] || fail "books not owned by the user"
@@ -103,8 +103,8 @@ const DEB_SCRIPT = String.raw`
 dpkg -i /pkgs/${DEB} >/tmp/dpkg.log 2>&1 || { cat /tmp/dpkg.log; fail "dpkg -i"; }
 echo "OK dpkg -i (no maintainer scripts: $(ls /var/lib/dpkg/info/free-gst-billing.* | grep -c -E 'postinst|preinst|prerm|postrm') found)"
 dpkg -L free-gst-billing | grep -q '^/home' && fail "package owns files in /home"
-test -x /usr/bin/free-gst-billing && test -f /usr/share/applications/com.dicecodes.free-gst-billing.desktop || fail "launcher/menu entry"
-grep -q '^Name=Free GST Billing$' /usr/share/applications/com.dicecodes.free-gst-billing.desktop || fail "menu name"
+test -x /usr/bin/free-gst-billing && test -f /usr/share/applications/com.surya-laser-technologies.free-gst-billing.desktop || fail "launcher/menu entry"
+grep -q '^Name=Free GST Billing$' /usr/share/applications/com.surya-laser-technologies.free-gst-billing.desktop || fail "menu name"
 [ ! -e /opt/free-gst-billing/data ] || fail "data folder inside /opt"
 echo "OK /usr/bin/free-gst-billing, menu entry 'Free GST Billing', nothing in /home"
 as free-gst-billing > /tmp/launch1.log 2>&1 || { cat /tmp/launch1.log; fail "launch"; }
@@ -170,10 +170,10 @@ async function dockerTest() {
     record('compose: every process runs as a non-root user', uid.trim() !== '' && !uid.split(' ').includes('0'), `uids: ${uid}`);
     const status = JSON.parse(ex(c, ['node', '-e', "fetch('http://127.0.0.1:47371/api/control-panel/status').then(r=>r.text()).then(console.log)"]));
     record('compose: books folder is /data/data, installKind docker', status.dataFolder === '/data/data' && status.installKind === 'docker');
-    ex(c, ['node', '-e', "fetch('http://127.0.0.1:47371/api/profile',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({companyName:'DiceCodes',gstin:'29ABCDE1234F1ZW'})}).then(r=>r.text()).then(console.log)"]);
+    ex(c, ['node', '-e', "fetch('http://127.0.0.1:47371/api/profile',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({companyName:'Surya Laser Technologies',gstin:'29ABCDE1234F1ZW'})}).then(r=>r.text()).then(console.log)"]);
     const vol = `${project}_fgsb-data`;
     const inVol = docker(['run', '--rm', '-v', `${vol}:/v:ro`, 'debian:bookworm-slim', 'sh', '-c', 'cat /v/data/profile.json; ls -d "/v/Saved Invoices" /v/Trash']).stdout;
-    record('compose: books written to the volume', inVol.includes('DiceCodes') && inVol.includes('Saved Invoices') && inVol.includes('Trash'));
+    record('compose: books written to the volume', inVol.includes('Surya Laser Technologies') && inVol.includes('Saved Invoices') && inVol.includes('Trash'));
     const ro = ex(c, ['sh', '-c', 'touch /app/x 2>/dev/null && echo app-writable; touch /x 2>/dev/null && echo root-writable; echo checked']);
     record('compose: program files and root filesystem are read-only', ro === 'checked', ro.replace(/\n/g, ' '));
     const upd = ex(c, ['node', '-e', "fetch('http://127.0.0.1:47371/api/control-panel/launch-script',{method:'POST',headers:{'Content-Type':'application/json'},body:'{\"action\":\"update\"}'}).then(r=>r.text()).then(console.log)"]);
@@ -184,7 +184,7 @@ async function dockerTest() {
     record('compose: Docker health check is defined', ['starting', 'healthy'].includes(health), health);
     docker(['compose', '-p', project, '-f', compose, 'down']);
     const kept = docker(['run', '--rm', '-v', `${vol}:/v:ro`, 'debian:bookworm-slim', 'cat', '/v/data/profile.json']).stdout;
-    record('compose down keeps the books in the volume', kept.includes('DiceCodes'));
+    record('compose down keeps the books in the volume', kept.includes('Surya Laser Technologies'));
     docker(['volume', 'rm', vol]);
 
     // 2. Without FGSB_ALLOW_UNSAFE_LAN: nothing outside the container reaches it,

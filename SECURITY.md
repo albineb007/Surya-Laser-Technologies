@@ -28,7 +28,7 @@ Two private options:
    [Report a vulnerability](https://github.com/albineb007/Surya-Laser-Technologies/security/advisories/new)
    button on the Security tab. Keeps everything in one thread and lets us
    credit you on the published advisory.
-2. **Email** — Contact@dicecodes.com, with `SECURITY` in the subject.
+2. **Email** — GitHub Issues, with `SECURITY` in the subject.
 
 Please include:
 

@@ -7,8 +7,8 @@ export const SITE = {
   folder: 'free-gst-software-documentation',
   // Where the folder is published. Used for canonical links, the sitemap,
   // social previews and llms.txt, which all need full addresses.
-  url: 'https://dicecodes.com/free-gst-software-documentation/',
-  publisher: { name: 'DiceCodes', url: 'https://dicecodes.com' },
+  url: 'https://github.com/albineb007/Surya-Laser-Technologies',
+  publisher: { name: 'Surya Laser Technologies', url: 'https://github.com/albineb007/Surya-Laser-Technologies' },
   version: '1.10.84',
   repo: 'https://github.com/albineb007/Surya-Laser-Technologies',
   // Always the newest release: GitHub resolves this to the latest release's

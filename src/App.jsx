@@ -1098,7 +1098,7 @@ function App() {
           <ControlPanel />
         )}
         </Suspense>
-        {/* Version + DiceCodes line: Dashboard only, so it never takes space on working screens. */}
+        {/* Version + Surya Laser Technologies line: Dashboard only, so it never takes space on working screens. */}
         {currentView === 'dashboard' && <AppFooter />}
         </ErrorBoundary>
       </div>

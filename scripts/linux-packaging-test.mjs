@@ -1,6 +1,6 @@
 // Unit checks for the Linux packages: the FGSB_HOME data folder (server.js)
 // and the earlier-copy finder (packaging/linux/old-installs.mjs), which must
-// never change an earlier copy. Plain asserts; demo data only (DiceCodes).
+// never change an earlier copy. Plain asserts; demo data only (Surya Laser Technologies).
 import assert from 'node:assert/strict';
 import { createHash } from 'node:crypto';
 import { spawn, execFileSync } from 'node:child_process';
@@ -33,9 +33,9 @@ try {
   const home = join(tmp, 'home');
   const oneLine = join(home, '.local', 'share', 'free-gst-billing', '_system');
   put(join(oneLine, 'server.js'), '// old');
-  put(join(oneLine, 'data', 'profile.json'), JSON.stringify({ name: 'DiceCodes', gstin: '29ABCDE1234F1ZW' }));
-  put(join(oneLine, 'data', 'bills', 'INV-1.json'), JSON.stringify({ id: 'INV-1', client: 'DiceCodes' }));
-  put(join(oneLine, 'Saved Invoices', 'DiceCodes', 'INV-1.pdf'), '%PDF-1.4 demo');
+  put(join(oneLine, 'data', 'profile.json'), JSON.stringify({ name: 'Surya Laser Technologies', gstin: '29ABCDE1234F1ZW' }));
+  put(join(oneLine, 'data', 'bills', 'INV-1.json'), JSON.stringify({ id: 'INV-1', client: 'Surya Laser Technologies' }));
+  put(join(oneLine, 'Saved Invoices', 'Surya Laser Technologies', 'INV-1.pdf'), '%PDF-1.4 demo');
   const unzipped = join(home, 'Downloads', 'Free-GST-Billing', '_system');
   put(join(unzipped, 'server.js'), '// old, never used');
   mkdirSync(join(unzipped, 'data', 'bills'), { recursive: true }); // empty: nothing to report

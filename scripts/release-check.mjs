@@ -86,7 +86,7 @@ else console.log('  - Windows Setup not built (npm run release:exe after release
 
 console.log('\nDocs ZIP');
 const docsZip = join(ROOT, 'release-build', `docs-v${version}.zip`);
-if (!existsSync(docsZip)) bad('docs ZIP exists', 'Run npm run docs:zip, then upload it to dicecodes.com.');
+if (!existsSync(docsZip)) bad('docs ZIP exists', 'Run npm run docs:zip, then upload it to github.com/albineb007/Surya-Laser-Technologies.');
 else {
   const e = zipEntries(docsZip) || [];
   check('every path uses "/" (ERR-061: links 404 on the host)', e.length > 0 && !e.some((x) => x.name.includes('\\')), 'Rebuild with npm run docs:zip.');

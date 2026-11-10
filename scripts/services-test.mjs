@@ -104,7 +104,7 @@ console.log('\n[#143] Unit NA: a service with no quantity');
   eq(getUnitUQC('NA'), 'NA', 'NA is a unit with UQC NA');
   eq(hsnUqc({ unit: 'NA', hsn: '8443' }), 'NA', 'GSTR-1 reports UQC NA even when the code is not a 99 SAC');
   const ewb = generateEWayBillJSON(
-    { gstin: '29ABCDE1234F1ZW', businessName: 'DiceCodes', state: 'Karnataka', pin: '560001' }, { name: 'Buyer', state: 'Karnataka', pin: '560002' },
+    { gstin: '29ABCDE1234F1ZW', businessName: 'Surya Laser Technologies', state: 'Karnataka', pin: '560001' }, { name: 'Buyer', state: 'Karnataka', pin: '560002' },
     { invoiceNumber: 'DC/1', invoiceDate: '2026-11-07' }, [{ name: 'Setup fee', hsn: '998313', quantity: 1, unit: 'NA', rate: 500, taxPercent: 18 }],
     { subtotal: 500, cgst: 45, sgst: 45, igst: 0, total: 590 }, 'tax-invoice');
   eq(ewb.billLists?.[0]?.itemList?.[0]?.qtyUnit ?? ewb.itemList?.[0]?.qtyUnit, 'OTH', 'E-way bill gets OTH, not NA (not an e-way bill unit)');

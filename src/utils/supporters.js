@@ -7,10 +7,10 @@
 export const SUPPORTERS_URL = 'https://raw.githubusercontent.com/albineb007/Surya-Laser-Technologies/main/supporters.json';
 
 // The note UPI apps fill in when the QR is scanned, so the maintainer can see
-// who paid: "Free GST Billing support - DiceCodes". Kept to letters,
+// who paid: "Surya Laser Technologies support - Surya Laser Technologies". Kept to letters,
 // digits, spaces, "." and "-" (some UPI apps refuse anything else) and to 50
 // characters, which every app accepts.
-const NOTE_BASE = 'Free GST Billing support';
+const NOTE_BASE = 'Surya Laser Technologies support';
 export const upiNote = (businessName = '') => {
   const name = String(businessName || '').replace(/[^A-Za-z0-9 .-]+/g, ' ').replace(/\s+/g, ' ').trim();
   if (!name) return NOTE_BASE;

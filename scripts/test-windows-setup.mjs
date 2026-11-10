@@ -12,7 +12,7 @@
 //   A  no earlier copy: new books; the app starts from the installed node.exe;
 //      the in-app "Update now" installs the newer Setup; uninstall keeps the
 //      books; installing again finds them; uninstall /DELETEBOOKS=yes.
-//   B  an earlier ZIP copy (DiceCodes demo, 3 invoices, running, with Desktop
+//   B  an earlier ZIP copy (Surya Laser Technologies demo, 3 invoices, running, with Desktop
 //      and Startup icons): "keep"; a second server on the same books is
 //      refused; update; uninstall.
 //   C  the same earlier copy: "move" (copy + check, its own port, taskbar pin
@@ -164,7 +164,7 @@ function stopTestServers() {
   ps(`Get-CimInstance Win32_Process -Filter "Name='node.exe'" -OperationTimeoutSec 10 | Where-Object { $_.ExecutablePath -and $_.CommandLine -and $_.CommandLine.ToLower().Contains('${BASE.toLowerCase().replace(/['\u2018\u2019\u201A\u201B]/g, (c) => c + c)}') } | ForEach-Object { Stop-Process -Id $_.ProcessId -Force }`);
 }
 
-// An earlier ZIP copy: the release layout + DiceCodes demo books (3 invoices,
+// An earlier ZIP copy: the release layout + Surya Laser Technologies demo books (3 invoices,
 // one saved PDF, one file in Trash), its server running from its own folder,
 // a Desktop icon on its launcher and a Startup icon - all inside root.
 let zipStage = null;
@@ -186,7 +186,7 @@ async function makeOldZipCopy(root, opts = {}) {
   fs.writeFileSync(path.join(sys, 'Trash', 'deleted-note.txt'), 'demo');
   if (!running) {
     fs.mkdirSync(path.join(sys, 'data', 'bills'), { recursive: true });
-    fs.writeFileSync(path.join(sys, 'data', 'profile.json'), JSON.stringify({ businessName: 'DiceCodes', gstin: '29ABCDE1234F1ZW' }));
+    fs.writeFileSync(path.join(sys, 'data', 'profile.json'), JSON.stringify({ businessName: 'Surya Laser Technologies', gstin: '29ABCDE1234F1ZW' }));
     for (let n = 1; n <= invoices; n += 1) {
       const f = path.join(sys, 'data', 'bills', `INV-00${n}.json`);
       fs.writeFileSync(f, JSON.stringify({ id: `INV-00${n}`, invoiceNumber: `INV-00${n}`, invoiceDate: `2026-10-0${n}`, clientName: 'Demo Client', totalAmount: n * 1180 }));
@@ -197,13 +197,13 @@ async function makeOldZipCopy(root, opts = {}) {
   const srv = startNode(path.join(sys, 'server.js'));
   if (!await until(() => answers(OLD_PORT), 30000)) throw new Error(`The earlier copy did not start: ${srv.out}`);
   const post = (p, body, q = '') => fetch(`http://127.0.0.1:${OLD_PORT}${p}${q}`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(body) });
-  await post('/api/profile', { businessName: 'DiceCodes', gstin: '29ABCDE1234F1ZW', state: 'Karnataka', address: 'Bengaluru' });
+  await post('/api/profile', { businessName: 'Surya Laser Technologies', gstin: '29ABCDE1234F1ZW', state: 'Karnataka', address: 'Bengaluru' });
   await post('/api/clients', { id: 'c1', name: 'Demo Client', gstin: '29AAAAA0000A1Z5' });
   for (const n of [1, 2, 3]) {
     await post('/api/bills', { id: `INV-00${n}`, invoiceNumber: `INV-00${n}`, invoiceDate: `2026-11-0${n}`, clientName: 'Demo Client', status: 'unpaid', totalAmount: n * 1180, payments: [], items: [],
-      data: { profile: { businessName: 'DiceCodes', gstin: '29ABCDE1234F1ZW' }, details: { invoiceNumber: `INV-00${n}` }, client: { name: 'Demo Client' }, totals: { total: n * 1180 } } });
+      data: { profile: { businessName: 'Surya Laser Technologies', gstin: '29ABCDE1234F1ZW' }, details: { invoiceNumber: `INV-00${n}` }, client: { name: 'Demo Client' }, totals: { total: n * 1180 } } });
   }
-  await fetch(`http://127.0.0.1:${OLD_PORT}/api/save-pdf?name=INV-001.pdf&client=Demo%20Client&month=November%202026`, { method: 'POST', headers: { 'Content-Type': 'application/pdf' }, body: '%PDF-1.4 DiceCodes demo' });
+  await fetch(`http://127.0.0.1:${OLD_PORT}/api/save-pdf?name=INV-001.pdf&client=Demo%20Client&month=November%202026`, { method: 'POST', headers: { 'Content-Type': 'application/pdf' }, body: '%PDF-1.4 Surya Laser Technologies demo' });
   await sleep(7000); // the daily backup (5 s after start) is the server's last write
   if (icons) {
     icon(path.join(root, 'Desktop'), 'Free GST Billing.lnk', 'C:\\Windows\\System32\\mshta.exe', `"${path.join(old, 'Free GST Billing - WINDOWS.hta')}"`);
@@ -253,7 +253,7 @@ try {
   ok(fs.existsSync(path.join(A, 'Desktop', 'Free GST Billing.lnk')) && fs.existsSync(path.join(A, 'Programs', 'Free GST Billing.lnk')) && !fs.existsSync(path.join(A, 'Startup', 'Free GST Billing.lnk')),
     'A: Desktop and Start-menu icons (in the test folder), no Startup icon');
   ok(lnk(path.join(A, 'Desktop', 'Free GST Billing.lnk')).trim() === path.join(appOf(A), 'Free GST Billing.exe'), 'A: the icon opens the app in its own window (Free GST Billing.exe)');
-  ok(aumidOf(path.join(A, 'Programs', 'Free GST Billing.lnk')) === 'DiceCodes.FreeGSTBilling.Test', 'A: the Start-menu icon carries the window\'s taskbar id (test: DiceCodes.FreeGSTBilling.Test)');
+  ok(aumidOf(path.join(A, 'Programs', 'Free GST Billing.lnk')) === 'SuryaLaserTechnologies.FreeGSTBilling.Test', 'A: the Start-menu icon carries the window\'s taskbar id (test: SuryaLaserTechnologies.FreeGSTBilling.Test)');
   const status = await (await answers(NEW_PORT, '/api/control-panel/status')).json();
   ok(status.installed === true && status.actions.update === true && status.actions.move === false, 'A: the app knows it is a Setup copy (update by Setup, no Move)');
   fs.copyFileSync(UPGRADE, path.join(A, 'Free-GST-Billing-Windows-Setup.exe'));
@@ -487,7 +487,7 @@ try {
   const s1 = await until(() => readSmoke(smoke1), 180000) || {};
   ok(s1.mode === 'webview2' && s1.url === `http://localhost:${NEW_PORT}/`, `H: the Desktop icon opens the app in its window (WebView2 ${s1.runtime}, ${s1.url})`, JSON.stringify(s1));
   ok(/^Dashboard - /.test(s1.title1 || '') && /^Settings - /.test(s1.title2 || ''), `H: the window title follows the page ("${s1.title1}" -> "${s1.title2}")`);
-  ok(s1.aumid === 'DiceCodes.FreeGSTBilling.Test' && aumidOf(iconH) === s1.aumid, 'H: the window and its icon have the same taskbar id');
+  ok(s1.aumid === 'SuryaLaserTechnologies.FreeGSTBilling.Test' && aumidOf(iconH) === s1.aumid, 'H: the window and its icon have the same taskbar id');
   ok(s1.userdata === path.join(hostData, 'WebView2') && fs.existsSync(s1.userdata) && !fs.existsSync(path.join(appH, 'WebView2')) && !fs.existsSync(path.join(H, 'Documents')),
     'H: its WebView2 profile is in (test) LocalAppData\\Free GST Billing - not in the program folder or Documents');
   ok(await until(() => !hostPids(appH) && fs.existsSync(path.join(hostData, 'window.txt')), 30000), 'H: the window closed and kept its size and place (window.txt)');
@@ -636,7 +636,7 @@ try {
 } finally {
   stopTestServers();
   await sleep(1000);
-  // The test windows' jump lists (taskbar id DiceCodes.FreeGSTBilling.Test) name this run's folder.
+  // The test windows' jump lists (taskbar id SuryaLaserTechnologies.FreeGSTBilling.Test) name this run's folder.
   const jd = path.join(process.env.APPDATA || '', 'Microsoft', 'Windows', 'Recent', 'CustomDestinations');
   try { for (const f of fs.readdirSync(jd)) { if (fs.readFileSync(path.join(jd, f)).indexOf(Buffer.from(BASE, 'utf16le')) >= 0) fs.rmSync(path.join(jd, f), { force: true }); } } catch { /* none */ }
   for (const root of ['A', 'A-second', 'B', 'C', 'D', 'D2', 'E', 'F', path.join('G', 'Rām\'s ‘Shop’ दुकान'), 'H']) {
