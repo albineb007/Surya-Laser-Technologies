@@ -6,9 +6,9 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Windows%20%7C%20macOS%20%7C%20Linux-blue.svg)](#quick-start--installation)
-[![Latest release](https://img.shields.io/github/v/release/IamRamgarhia/Free-GST-Billing-Software?label=Latest&color=orange)](https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest)
+[![Latest release](https://img.shields.io/github/v/release/albineb007/Surya-Laser-Technologies?label=Latest&color=orange)](https://github.com/albineb007/Surya-Laser-Technologies/releases/latest)
 [![Desktop icon](https://img.shields.io/badge/Desktop-one--click%20icon-purple.svg)](#the-free-gst-billing-icon)
-[![GitHub Stars](https://img.shields.io/github/stars/IamRamgarhia/Free-GST-Billing-Software?style=social)](https://github.com/IamRamgarhia/Free-GST-Billing-Software)
+[![GitHub Stars](https://img.shields.io/github/stars/albineb007/Surya-Laser-Technologies?style=social)](https://github.com/albineb007/Surya-Laser-Technologies)
 [![Countries](https://img.shields.io/badge/Countries-22-blue.svg)](#key-features)
 [![GST](https://img.shields.io/badge/GST-Compliant-success.svg)](#clipboard-gst-compliance--filing)
 
@@ -22,18 +22,19 @@ Your data never leaves your computer. No cloud and no limits. Open source, so yo
 
 The application is branded for **Surya Laser Technologies**, uses the logo in
 `Image/Surya logo.jpg`, and defaults the first-run location to India. Before
-publishing releases, set `VITE_UPDATE_REPO` to the new GitHub repository URL;
-the in-app updater and Windows update scripts will then use that repository.
+publishing releases, use
+`https://github.com/albineb007/Surya-Laser-Technologies`. The in-app updater
+and Windows update scripts are configured to use this repository.
 
 **A free invoice builder and invoice maker** for shop owners, freelancers, consultants, traders and small businesses in India: make a GST invoice, quotation (proforma / estimate), bill of supply, credit note or delivery challan in minutes and save it as a PDF. Free billing software and a free, open-source alternative to Tally, Vyapar, Zoho and myBillBook.
 
-<a href="https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest/download/Free-GST-Billing-Windows-Setup.exe"><img src="https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20Windows-Setup%20.exe-0078D4?style=for-the-badge&labelColor=334155" alt="Download for Windows (Setup program)" height="40"></a>&nbsp;<a href="https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest/download/Free-GST-Billing.zip"><img src="https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20macOS-ZIP-111827?style=for-the-badge&labelColor=334155" alt="Download for macOS (ZIP)" height="40"></a>&nbsp;<a href="https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest/download/Free-GST-Billing-Linux-x86_64.AppImage"><img src="https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20Linux-AppImage-E95420?style=for-the-badge&labelColor=334155" alt="Download for Linux (AppImage)" height="40"></a>&nbsp;<a href="https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest"><img src="https://img.shields.io/badge/%F0%9F%93%A6%20All-downloads-16a34a?style=for-the-badge&labelColor=334155" alt="All downloads: the latest release" height="40"></a>
+<a href="https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Surya-Laser-Technologies-Setup.exe"><img src="https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20Windows-Setup%20.exe-0078D4?style=for-the-badge&labelColor=334155" alt="Download for Windows (Setup program)" height="40"></a>&nbsp;<a href="https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Surya-Laser-Technologies.zip"><img src="https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20macOS-ZIP-111827?style=for-the-badge&labelColor=334155" alt="Download for macOS (ZIP)" height="40"></a>&nbsp;<a href="https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Surya-Laser-Technologies-Linux-x86_64.AppImage"><img src="https://img.shields.io/badge/%E2%AC%87%EF%B8%8F%20Linux-AppImage-E95420?style=for-the-badge&labelColor=334155" alt="Download for Linux (AppImage)" height="40"></a>&nbsp;<a href="https://github.com/albineb007/Surya-Laser-Technologies/releases/latest"><img src="https://img.shields.io/badge/%F0%9F%93%A6%20All-downloads-16a34a?style=for-the-badge&labelColor=334155" alt="All downloads: the latest release" height="40"></a>
 
 <a href="https://dicecodes.com/free-gst-software-documentation/"><img src="https://img.shields.io/badge/%F0%9F%93%96%20Documentation-Read%20the%20guide-2563eb?style=for-the-badge&labelColor=1d4ed8" alt="Read the documentation" height="40"></a>
 
-<sub>Each button always gets the newest version · Windows: the Setup program (about 35 MB) · macOS: the ZIP (about 25 MB) · Linux: the AppImage, or the .deb on the <a href="https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest">release page</a> · <a href="#download-and-install">step-by-step for every system</a></sub>
+<sub>Each button always gets the newest version · Windows: the Setup program (about 35 MB) · macOS: the ZIP (about 25 MB) · Linux: the AppImage, or the .deb on the <a href="https://github.com/albineb007/Surya-Laser-Technologies/releases/latest">release page</a> · <a href="#download-and-install">step-by-step for every system</a></sub>
 
-<a href="#quick-start--installation"><img src="https://img.shields.io/badge/%E2%9A%A1%20Install-3%20steps-0f766e?style=for-the-badge&labelColor=334155" alt="Install in 3 steps" height="30"></a> <a href="#your-first-invoice-in-5-minutes"><img src="https://img.shields.io/badge/%F0%9F%A7%BE%20First%20invoice-5%20minutes-7c3aed?style=for-the-badge&labelColor=334155" alt="Your first invoice in 5 minutes" height="30"></a> <a href="#screenshots"><img src="https://img.shields.io/badge/%F0%9F%93%B8%20See-screenshots-0369a1?style=for-the-badge&labelColor=334155" alt="Screenshots" height="30"></a> <a href="https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases"><img src="https://img.shields.io/badge/%F0%9F%93%A6%20All-releases-475569?style=for-the-badge&labelColor=334155" alt="All releases" height="30"></a> <a href="https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/new/choose"><img src="https://img.shields.io/badge/%F0%9F%90%9B%20Report-a%20problem-b91c1c?style=for-the-badge&labelColor=334155" alt="Report a problem" height="30"></a> <a href="https://dicecodes.com/free-gst-software-documentation/support.html"><img src="https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F%20Support-the%20project-be123c?style=for-the-badge&labelColor=334155" alt="Support the project" height="30"></a>
+<a href="#quick-start--installation"><img src="https://img.shields.io/badge/%E2%9A%A1%20Install-3%20steps-0f766e?style=for-the-badge&labelColor=334155" alt="Install in 3 steps" height="30"></a> <a href="#your-first-invoice-in-5-minutes"><img src="https://img.shields.io/badge/%F0%9F%A7%BE%20First%20invoice-5%20minutes-7c3aed?style=for-the-badge&labelColor=334155" alt="Your first invoice in 5 minutes" height="30"></a> <a href="#screenshots"><img src="https://img.shields.io/badge/%F0%9F%93%B8%20See-screenshots-0369a1?style=for-the-badge&labelColor=334155" alt="Screenshots" height="30"></a> <a href="https://github.com/albineb007/Surya-Laser-Technologies/releases"><img src="https://img.shields.io/badge/%F0%9F%93%A6%20All-releases-475569?style=for-the-badge&labelColor=334155" alt="All releases" height="30"></a> <a href="https://github.com/albineb007/Surya-Laser-Technologies/issues/new/choose"><img src="https://img.shields.io/badge/%F0%9F%90%9B%20Report-a%20problem-b91c1c?style=for-the-badge&labelColor=334155" alt="Report a problem" height="30"></a> <a href="https://dicecodes.com/free-gst-software-documentation/support.html"><img src="https://img.shields.io/badge/%E2%9D%A4%EF%B8%8F%20Support-the%20project-be123c?style=for-the-badge&labelColor=334155" alt="Support the project" height="30"></a>
 
 </div>
 
@@ -72,46 +73,46 @@ the in-app updater and Windows update scripts will then use that repository.
 
 ## Download and install
 
-Pick your computer. Every link below always gets the newest version. Your invoices stay on your computer, whichever you pick. All files are also on the [latest release](https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest) page, under **Assets**.
+Pick your computer. Every link below always gets the newest version. Your invoices stay on your computer, whichever you pick. All files are also on the [latest release](https://github.com/albineb007/Surya-Laser-Technologies/releases/latest) page, under **Assets**.
 
 ### Windows 10 / 11: the Setup program (recommended)
 
-1. **[Download `Free-GST-Billing-Windows-Setup.exe`](https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest/download/Free-GST-Billing-Windows-Setup.exe)** (about 35 MB).
+1. **[Download `Surya-Laser-Technologies-Setup.exe`](https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Surya-Laser-Technologies-Setup.exe)** (about 35 MB).
 2. **Double-click it** in your Downloads folder. If Windows says *"Windows protected your PC"*, click **More info**, then **Run anyway** (the Setup is new and not yet signed; nothing is wrong with it).
-3. **Your books:** first time? Leave *Start new books* ticked. Already using the ZIP or the one-line install? Setup finds it and asks: keep using your books where they are, or copy them to `C:\Users\<your name>\Free GST Billing`. **Your old folder is never changed or deleted.**
+3. **Your books:** first time? Leave *Start new books* ticked. Already using the ZIP or the one-line install? Setup finds it and asks: keep using your books where they are, or copy them to `C:\Users\<your name>\Surya Laser Technologies`. **Your old folder is never changed or deleted.**
 4. **Click Install, then Finish.** The app opens full screen in its own window. Closing it keeps it running near the clock; right-click that icon for *Quit*.
 
-No administrator password and no Node.js to install: everything it needs is inside. **Updates:** the app shows *Update to vX* → **Update Now** (no reinstalling). **Removing:** Windows **Settings → Apps → Installed apps → Free GST Billing → Uninstall** (it asks before deleting your books; the answer is No unless you choose Yes). Full guide: [Install on Windows](https://dicecodes.com/free-gst-software-documentation/install.html).
+No administrator password and no Node.js to install: everything it needs is inside. **Updates:** the app shows *Update to vX* → **Update Now** (no reinstalling). **Removing:** Windows **Settings → Apps → Installed apps → Surya Laser Technologies → Uninstall** (it asks before deleting your books; the answer is No unless you choose Yes). Full guide: [Install on Windows](https://dicecodes.com/free-gst-software-documentation/install.html).
 
 Other ways on Windows: [one PowerShell line](#option-0-one-line-no-zip-no-smartscreen--gatekeeper-warning-no-npm) (no SmartScreen box) or [the ZIP](#the-zip-one-launcher-per-system).
 
 ### macOS
 
-1. **[Download `Free-GST-Billing.zip`](https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest/download/Free-GST-Billing.zip)** (about 25 MB). Double-click it to unpack.
-2. In the **Free-GST-Billing** folder, **Control-click `Free GST Billing - MAC`** → **Open** → **Open**. (macOS 15 or newer without an Open button: Apple menu → System Settings → Privacy & Security → *Open Anyway*.)
+1. **[Download `Surya-Laser-Technologies.zip`](https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Surya-Laser-Technologies.zip)** (about 25 MB). Double-click it to unpack.
+2. In the **Surya-Laser-Technologies** folder, **Control-click `Surya Laser Technologies - MAC`** → **Open** → **Open**. (macOS 15 or newer without an Open button: Apple menu → System Settings → Privacy & Security → *Open Anyway*.)
 3. Click **Install** in the window that opens. The app opens in your browser at `http://localhost:47371`.
 
 Updates come from the app's **Update** button. **Never drag a new folder over the old one on a Mac**: Finder's Replace swaps the whole folder, including your invoices. Full guide: [Install on a Mac](https://dicecodes.com/free-gst-software-documentation/install-mac.html).
 
 ### Linux: Ubuntu, Linux Mint, Debian (.deb)
 
-1. On the [latest release](https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest) page, under **Assets**, download **`free-gst-billing_<version>_amd64.deb`**.
+1. On the [latest release](https://github.com/albineb007/Surya-Laser-Technologies/releases/latest) page, under **Assets**, download **`free-gst-billing_<version>_amd64.deb`**.
 2. Double-click it, or in a Terminal: `sudo apt install ~/Downloads/free-gst-billing_*_amd64.deb`
-3. Open **Free GST Billing** from your applications menu.
+3. Open **Surya Laser Technologies** from your applications menu.
 
 Your books are kept in `~/.local/share/free-gst-billing-data`; `sudo apt remove free-gst-billing` leaves them. To update, install the new .deb the same way.
 
 ### Linux: any 64-bit system (AppImage)
 
-1. **[Download `Free-GST-Billing-Linux-x86_64.AppImage`](https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest/download/Free-GST-Billing-Linux-x86_64.AppImage)**.
-2. Right-click it → **Properties → Permissions** → tick *Allow executing file as program* (or `chmod +x Free-GST-Billing-Linux-x86_64.AppImage`).
+1. **[Download `Surya-Laser-Technologies-Linux-x86_64.AppImage`](https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Surya-Laser-Technologies-Linux-x86_64.AppImage)**.
+2. Right-click it → **Properties → Permissions** → tick *Allow executing file as program* (or `chmod +x Surya-Laser-Technologies-Linux-x86_64.AppImage`).
 3. Double-click it.
 
 Same books folder as the .deb. Full guide: [Install on Linux or a NAS](https://dicecodes.com/free-gst-software-documentation/install-linux.html).
 
 ### NAS or a home server
 
-Use the ZIP with `Free GST Billing - LINUX.sh` (steps below), or the one-line `install.sh`. A Docker image comes with secure phone and tablet access in a later update.
+Use the ZIP with `Surya Laser Technologies - LINUX.sh` (steps below), or the one-line `install.sh`. A Docker image comes with secure phone and tablet access in a later update.
 
 ---
 
@@ -122,10 +123,10 @@ Use the ZIP with `Free GST Billing - LINUX.sh` (steps below), or the one-line `i
 The download ZIP holds a **launcher for each system**, a plain-English **`READ ME FIRST.txt`**, and a `_system/` folder with everything else. Extract the ZIP, double-click the launcher for your computer, click **Install** — it sets itself up, needs no administrator rights, and opens the app in your browser when it is done.
 
 ```
-Free-GST-Billing/
-├── Free GST Billing - WINDOWS.hta    ← Windows: double-click this
-├── Free GST Billing - MAC.command    ← macOS
-├── Free GST Billing - LINUX.sh       ← Linux / NAS
+Surya-Laser-Technologies/
+├── Surya Laser Technologies - WINDOWS.hta    ← Windows: double-click this
+├── Surya Laser Technologies - MAC.command    ← macOS
+├── Surya Laser Technologies - LINUX.sh       ← Linux / NAS
 ├── READ ME FIRST.txt                 ← step-by-step, in plain English
 └── _system/                          ← the app (hidden after install)
 ```
@@ -138,13 +139,13 @@ Free-GST-Billing/
 </p>
 
 ```
-1. Download the ZIP → https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest/download/Free-GST-Billing.zip
+1. Download the ZIP → https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Surya-Laser-Technologies.zip
 2. Right-click the ZIP → Extract All → pick a folder you'll remember
 3. Open the EXTRACTED folder. Each launcher is named after the system it is for
    — double-click yours:
-       Free GST Billing - WINDOWS.hta     (opens a window with buttons)
-       Free GST Billing - MAC.command     (opens Terminal)
-       Free GST Billing - LINUX.sh        (opens Terminal — chmod +x first if needed)
+       Surya Laser Technologies - WINDOWS.hta     (opens a window with buttons)
+       Surya Laser Technologies - MAC.command     (opens Terminal)
+       Surya Laser Technologies - LINUX.sh        (opens Terminal — chmod +x first if needed)
 ```
 
 > ⚠ **Extract the ZIP first.** Windows lets you double-click the launcher
@@ -155,11 +156,11 @@ Free-GST-Billing/
 **Prefer one command?** Paste this into PowerShell — no admin rights needed:
 
 ```powershell
-[Net.ServicePointManager]::SecurityProtocol='Tls12'; irm https://raw.githubusercontent.com/IamRamgarhia/Free-GST-Billing-Software/main/install.ps1 | iex
+[Net.ServicePointManager]::SecurityProtocol='Tls12'; irm https://raw.githubusercontent.com/albineb007/Surya-Laser-Technologies/main/install.ps1 | iex
 ```
 
 It fetches the latest release, installs it to
-`%LOCALAPPDATA%\Programs\Free GST Billing`, installs Node.js if you do not have
+`%LOCALAPPDATA%\Programs\Surya Laser Technologies`, installs Node.js if you do not have
 it, and creates the Desktop shortcut. See [Option 1b](#option-1b-install-into-another-folder)
 for how to choose a different folder.
 
@@ -169,7 +170,7 @@ The launcher:
 - Creates a **Desktop shortcut** + **Start-Menu entry** so you never open the folder again
 - Starts the server and opens your browser at **http://localhost:47371**
 
-From then on, click the **Free GST Billing** icon on your Desktop: it starts the app and opens it in its own window. To update / backup / restore / move to another PC / stop the server, use the in-app **⚙ Control Panel** in the sidebar (or the launcher in the app folder). No batch files, no CMD windows.
+From then on, click the **Surya Laser Technologies** icon on your Desktop: it starts the app and opens it in its own window. To update / backup / restore / move to another PC / stop the server, use the in-app **⚙ Control Panel** in the sidebar (or the launcher in the app folder). No batch files, no CMD windows.
 
 > **☁ Can I host it online (Railway, Render, Supabase)?** Not yet. The app has no login on its server, so anyone who found the address could read or delete your books, and it keeps its data as files, not in a database. [Why, and what to do instead](https://dicecodes.com/free-gst-software-documentation/security.html#host-online). Using it from a phone or tablet on the same Wi-Fi is planned for the update on Saturday 14 November 2026.
 
@@ -202,7 +203,7 @@ More screenshots, next to the steps they show, in the [documentation](https://di
 
 - [Download and install](#download-and-install) — *Windows Setup, Mac, Linux (.deb, AppImage), NAS*
 - [The ZIP](#the-zip-one-launcher-per-system) — *one launcher per system*
-- [Why Choose Free GST Billing Software?](#why-choose-free-gst-billing-software)
+- [Why Choose Surya Laser Technologies?](#why-choose-free-gst-billing-software)
 - [Your First Invoice in 5 Minutes](#your-first-invoice-in-5-minutes) — *start here if you're new*
 - [Key Features](#key-features)
   - [Invoicing & Billing](#receipt-invoicing--billing)
@@ -212,9 +213,9 @@ More screenshots, next to the steps they show, in the [documentation](https://di
   - [Sharing & Export](#outbox_tray-sharing--export)
   - [Customization](#gear-customization)
 - [Quick Start / Installation](#quick-start--installation)
-- [The Free GST Billing icon](#the-free-gst-billing-icon)
+- [The Surya Laser Technologies icon](#the-free-gst-billing-icon)
 - [How to Self-File GST Returns](#how-to-self-file-gst-returns)
-- [Free GST Billing Software vs Paid Alternatives](#-comparison-free-gst-billing-software-vs-paid-alternatives)
+- [Surya Laser Technologies vs Paid Alternatives](#-comparison-free-gst-billing-software-vs-paid-alternatives)
 - [Tech Stack](#tech-stack)
 - [Roadmap](#roadmap)
 - [Documentation](#books-documentation)
@@ -239,8 +240,8 @@ You need: Windows 10/11 PC, ~50 MB free disk, your business name + bank details 
 
 1. **[Download for your computer](#download-and-install)**: Windows, the Setup program; Mac, the ZIP; Linux, the .deb or the AppImage. Each link always gets the latest version.
    (Do **not** use the green *Code -> Download ZIP* button: that gives the source code without the built app.)
-2. **Windows:** double-click `Free-GST-Billing-Windows-Setup.exe` → (if asked) **More info → Run anyway** → **Install** → **Finish**. **Mac / Linux:** follow the three steps for your system in [Download and install](#download-and-install).
-3. The app opens by itself, and a **Free GST Billing** icon is on your Desktop (or in your applications menu) for next time.
+2. **Windows:** double-click `Surya-Laser-Technologies-Setup.exe` → (if asked) **More info → Run anyway** → **Install** → **Finish**. **Mac / Linux:** follow the three steps for your system in [Download and install](#download-and-install).
+3. The app opens by itself, and a **Surya Laser Technologies** icon is on your Desktop (or in your applications menu) for next time.
 
 
 ### Step 2 — Set up your business profile (1 minute)
@@ -302,9 +303,9 @@ Once you're comfortable with the basics, explore:
 
 ---
 
-## Why Choose Free GST Billing Software?
+## Why Choose Surya Laser Technologies?
 
-Most billing software in India — Zoho Invoice, Vyapar, Tally, myBillBook — charges you monthly, stores your financial data on their servers, and locks you in. **Free GST Billing Software is the open-source alternative that changes everything.**
+Most billing software in India — Zoho Invoice, Vyapar, Tally, myBillBook — charges you monthly, stores your financial data on their servers, and locks you in. **Surya Laser Technologies is the open-source alternative that changes everything.**
 
 - **Completely free** — no subscription, no premium tier, no hidden charges, no "free trial" that expires
 - **100% offline** — runs on localhost, works without internet after installation
@@ -315,11 +316,11 @@ Most billing software in India — Zoho Invoice, Vyapar, Tally, myBillBook — c
 
 > **If you're paying for billing software, you can stop now.**
 
-### 📊 Comparison: Free GST Billing Software vs Paid Alternatives
+### 📊 Comparison: Surya Laser Technologies vs Paid Alternatives
 
 Every 🆕 row below is a feature we shipped in v1.10 that competitors either paywall, cripple in the free tier, or don't offer at all.
 
-| Feature | **Free GST Billing Software** | Tally Prime | Vyapar | Zoho Books | ClearTax GST |
+| Feature | **Surya Laser Technologies** | Tally Prime | Vyapar | Zoho Books | ClearTax GST |
 |---|---|---|---|---|---|
 | **Price** | ✅ **Free forever** | ₹22,500–₹67,500 one-time | ₹2,599+/year | ₹899–₹2,999/month | ~₹3,599/year+ |
 | **GST invoices (CGST/SGST/IGST)** | ✅ | ✅ | ✅ | ✅ | ✅ |
@@ -527,30 +528,30 @@ If we priced every 🆕 feature at the going rate on the paid alternatives:
 
 ### Windows: the Setup program (recommended)
 
-Download [`Free-GST-Billing-Windows-Setup.exe`](https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest/download/Free-GST-Billing-Windows-Setup.exe), double-click it, and click **Install**. Everything it needs is inside; no administrator password. Step by step: [Download and install](#download-and-install).
+Download [`Surya-Laser-Technologies-Setup.exe`](https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Surya-Laser-Technologies-Setup.exe), double-click it, and click **Install**. Everything it needs is inside; no administrator password. Step by step: [Download and install](#download-and-install).
 
 ### Option 0: one line (no ZIP, no SmartScreen / Gatekeeper warning, no npm)
 
 **Windows:** press **Windows + R**, paste, press **Enter**:
 
 ```
-powershell -ExecutionPolicy Bypass -c "[Net.ServicePointManager]::SecurityProtocol='Tls12'; irm https://raw.githubusercontent.com/IamRamgarhia/Free-GST-Billing-Software/main/install.ps1 | iex"
+powershell -ExecutionPolicy Bypass -c "[Net.ServicePointManager]::SecurityProtocol='Tls12'; irm https://raw.githubusercontent.com/albineb007/Surya-Laser-Technologies/main/install.ps1 | iex"
 ```
 
 **Mac / Linux:** open Terminal, paste, press **Return**:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/IamRamgarhia/Free-GST-Billing-Software/main/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/albineb007/Surya-Laser-Technologies/main/install.sh | bash
 ```
 
-It checks the computer, downloads the release (packages included), installs to `%LOCALAPPDATA%\Programs\Free GST Billing` / `~/Applications/Free GST Billing` / `~/.local/share/free-gst-billing`, adds an icon (Desktop + Start menu, a Mac app, a Linux menu entry) and opens the app in its own window. **The same line updates or repairs** an existing install in place: `_system/data` is backed up first and never touched. Remove with `-Uninstall` (Windows: `& ([scriptblock]::Create((irm <url>/install.ps1))) -Uninstall`) or `| bash -s -- --uninstall`; data is only deleted if you type `DELETE`.
+It checks the computer, downloads the release (packages included), installs to `%LOCALAPPDATA%\Programs\Surya Laser Technologies` / `~/Applications/Surya Laser Technologies` / `~/.local/share/free-gst-billing`, adds an icon (Desktop + Start menu, a Mac app, a Linux menu entry) and opens the app in its own window. **The same line updates or repairs** an existing install in place: `_system/data` is backed up first and never touched. Remove with `-Uninstall` (Windows: `& ([scriptblock]::Create((irm <url>/install.ps1))) -Uninstall`) or `| bash -s -- --uninstall`; data is only deleted if you type `DELETE`.
 
 ### Option 1: Windows — extract, then double-click the launcher (no terminal)
 
-1. **Download the ZIP** → [click here](https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest/download/Free-GST-Billing.zip) or grab the latest from [Releases](https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases)
+1. **Download the ZIP** → [click here](https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Surya-Laser-Technologies.zip) or grab the latest from [Releases](https://github.com/albineb007/Surya-Laser-Technologies/releases)
 2. **Extract** it anywhere (e.g. `Documents\FreeGSTBill`) — right-click the ZIP → *Extract All*
-3. Open the extracted folder and **double-click** `Free GST Billing - WINDOWS.hta`
-4. Click **Install** once. When it finishes, the app opens by itself at **http://localhost:47371**, and a **Free GST Billing** icon is put on your Desktop and in the Start menu
+3. Open the extracted folder and **double-click** `Surya Laser Technologies - WINDOWS.hta`
+4. Click **Install** once. When it finishes, the app opens by itself at **http://localhost:47371**, and a **Surya Laser Technologies** icon is put on your Desktop and in the Start menu
 
 That's it. The launcher installs Node.js if you don't have it. From then on, click the Desktop icon: it starts the app and opens it. Update, Backup, Restore, Move to another PC and Stop Server are in the app's **⚙ Control Panel**, and in the launcher in the app folder.
 
@@ -566,8 +567,8 @@ That's it. The launcher installs Node.js if you don't have it. From then on, cli
 The one-line install (Option 0) takes the folder from `FREEGSTBILL_DIR`. In PowerShell:
 
 ```powershell
-$env:FREEGSTBILL_DIR = 'D:\Apps\Free GST Billing'
-[Net.ServicePointManager]::SecurityProtocol='Tls12'; irm https://raw.githubusercontent.com/IamRamgarhia/Free-GST-Billing-Software/main/install.ps1 | iex
+$env:FREEGSTBILL_DIR = 'D:\Apps\Surya Laser Technologies'
+[Net.ServicePointManager]::SecurityProtocol='Tls12'; irm https://raw.githubusercontent.com/albineb007/Surya-Laser-Technologies/main/install.ps1 | iex
 ```
 
 On Mac / Linux: `curl -fsSL .../install.sh | FREEGSTBILL_DIR=/srv/free-gst-billing bash`. If the app is already in that folder it is updated in place; the data folder is never touched.
@@ -577,8 +578,8 @@ On Mac / Linux: `curl -fsSL .../install.sh | FREEGSTBILL_DIR=/srv/free-gst-billi
 ### Option 2: macOS / Linux (Developer Setup)
 
 ```bash
-git clone https://github.com/IamRamgarhia/Free-GST-Billing-Software.git
-cd Free-GST-Billing-Software
+git clone https://github.com/albineb007/Surya-Laser-Technologies.git
+cd Surya-Laser-Technologies
 npm install
 npm start                # production build + serve on http://localhost:47371
 ```
@@ -589,9 +590,9 @@ For live-reload development:
 npm run dev              # dev server on http://localhost:5173 · API on http://localhost:47371
 ```
 
-### The Free GST Billing icon
+### The Surya Laser Technologies icon
 
-Every install (the launcher, the one-line command, Mac and Linux) puts a **Free GST Billing** icon on your computer: the blue **B**, on the Desktop and in the Start menu on Windows. Click it every day: it starts the app if it is not running and opens it in its own window. Update, backup, restart and stop are in the app's **⚙ Control Panel**.
+Every install (the launcher, the one-line command, Mac and Linux) puts a **Surya Laser Technologies** icon on your computer: the blue **B**, on the Desktop and in the Start menu on Windows. Click it every day: it starts the app if it is not running and opens it in its own window. Update, backup, restart and stop are in the app's **⚙ Control Panel**.
 
 > Use only this icon. Don't use the browser's own **Install app** button (in Chrome or Edge's address bar): that icon opens a window but cannot start the app, so after a restart it only shows "Needs a Quick Start". If you already have one, right-click it and choose **Uninstall**.
 
@@ -601,7 +602,7 @@ The app has no login on its server yet, so it must not be put on the internet. S
 
 ## How to Self-File GST Returns
 
-Free GST Billing Software auto-generates all the data you need for GSTR-1 and GSTR-3B filing. Here's the workflow:
+Surya Laser Technologies auto-generates all the data you need for GSTR-1 and GSTR-3B filing. Here's the workflow:
 
 ```
 Step 1 ──► Enter invoices throughout the month as you normally would
@@ -647,43 +648,43 @@ One update every Saturday. Dates are plans: if a week fills up, the least-used i
 - [x] **A Windows Setup program**: installs like any other program, opens in its own window, stays near the clock when closed, updates itself; your earlier copy is never changed
 - [x] **Linux packages**: `.deb` for Ubuntu, Linux Mint and Debian, and an AppImage for any 64-bit Linux
 - [x] **Invoices, Cancelled and Trash tabs**; Delete moves invoices to the Trash for 30 days (restore or delete forever)
-- [x] **Import from Vyapar, Tally and Excel** ([#130](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/130), [#131](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/131)); imported invoices add new items to Products ([#170](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/170))
-- [x] **Profit & Loss counts the cost of goods sold** ([#146](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/146))
-- [x] **Size billing (Sq.ft)** for glass, mirror and flex shops ([#140](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/140)), **your own fields on invoices** ([#126](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/126)), **unit NA** for services ([#143](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/143)), a **customer phone box** ([#129](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/129))
+- [x] **Import from Vyapar, Tally and Excel** ([#130](https://github.com/albineb007/Surya-Laser-Technologies/issues/130), [#131](https://github.com/albineb007/Surya-Laser-Technologies/issues/131)); imported invoices add new items to Products ([#170](https://github.com/albineb007/Surya-Laser-Technologies/issues/170))
+- [x] **Profit & Loss counts the cost of goods sold** ([#146](https://github.com/albineb007/Surya-Laser-Technologies/issues/146))
+- [x] **Size billing (Sq.ft)** for glass, mirror and flex shops ([#140](https://github.com/albineb007/Surya-Laser-Technologies/issues/140)), **your own fields on invoices** ([#126](https://github.com/albineb007/Surya-Laser-Technologies/issues/126)), **unit NA** for services ([#143](https://github.com/albineb007/Surya-Laser-Technologies/issues/143)), a **customer phone box** ([#129](https://github.com/albineb007/Surya-Laser-Technologies/issues/129))
 - [x] **GSTR-1 file**: exports, nil-rated / exempt and deemed exports; **income tax for 2026-27**
-- [x] **Search invoices by order ID, AWB, phone or GSTIN** ([#172](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/172)); **delete many products at once** ([#177](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/177)); **Settings in 6 tabs**
+- [x] **Search invoices by order ID, AWB, phone or GSTIN** ([#172](https://github.com/albineb007/Surya-Laser-Technologies/issues/172)); **delete many products at once** ([#177](https://github.com/albineb007/Surya-Laser-Technologies/issues/177)); **Settings in 6 tabs**
 
 ### :rocket: Next update: Saturday 14 November 2026
 
-- [ ] **Phone and tablet on the same Wi-Fi**: pair with a QR code and a PIN, encrypted ([#142](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/142), [#115](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/115), [#118](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/118)), and a Docker image for a NAS
-- [ ] **Sales orders → invoice**, with a dispatch status on each order: open, partly dispatched, dispatched, invoiced ([#135](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/135), [#112](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/112))
-- [ ] **Barcode**: a barcode on each product, scan with a USB scanner on New Invoice, print labels, and print labels for a whole purchase (one per unit bought) ([#137](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/137), [#158](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/158))
-- [ ] **Running-feet (RFT) lines** taken from the glass lines on the same invoice ([#140](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/140))
-- [ ] **Discount on purchase bills** ([#171](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/171)) and an optional **serial number on each purchase line** ([#160](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/160))
-- [ ] **TDS / TCS under the Income-tax Act, 2025, part 1**: new section and table numbers, rates and thresholds ([#180](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/180))
+- [ ] **Phone and tablet on the same Wi-Fi**: pair with a QR code and a PIN, encrypted ([#142](https://github.com/albineb007/Surya-Laser-Technologies/issues/142), [#115](https://github.com/albineb007/Surya-Laser-Technologies/issues/115), [#118](https://github.com/albineb007/Surya-Laser-Technologies/issues/118)), and a Docker image for a NAS
+- [ ] **Sales orders → invoice**, with a dispatch status on each order: open, partly dispatched, dispatched, invoiced ([#135](https://github.com/albineb007/Surya-Laser-Technologies/issues/135), [#112](https://github.com/albineb007/Surya-Laser-Technologies/issues/112))
+- [ ] **Barcode**: a barcode on each product, scan with a USB scanner on New Invoice, print labels, and print labels for a whole purchase (one per unit bought) ([#137](https://github.com/albineb007/Surya-Laser-Technologies/issues/137), [#158](https://github.com/albineb007/Surya-Laser-Technologies/issues/158))
+- [ ] **Running-feet (RFT) lines** taken from the glass lines on the same invoice ([#140](https://github.com/albineb007/Surya-Laser-Technologies/issues/140))
+- [ ] **Discount on purchase bills** ([#171](https://github.com/albineb007/Surya-Laser-Technologies/issues/171)) and an optional **serial number on each purchase line** ([#160](https://github.com/albineb007/Surya-Laser-Technologies/issues/160))
+- [ ] **TDS / TCS under the Income-tax Act, 2025, part 1**: new section and table numbers, rates and thresholds ([#180](https://github.com/albineb007/Surya-Laser-Technologies/issues/180))
 - [ ] **Dashboard totals for a chosen month or year**
 
 ### :calendar: Later in November
 
-- **21 November:** purchase return / debit note ([#168](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/168)), matching your bank statement against sales and purchases ([#175](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/175)), price levels (MRP / wholesale / retail), credit-limit warning, stock adjustment and reorder → purchase order, locking a filed period with edit history
-- **28 November:** balance sheet and trial balance, fixed assets and depreciation, item variants, serial / IMEI and warranty tracking ([#122](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/122)), batch and expiry
+- **21 November:** purchase return / debit note ([#168](https://github.com/albineb007/Surya-Laser-Technologies/issues/168)), matching your bank statement against sales and purchases ([#175](https://github.com/albineb007/Surya-Laser-Technologies/issues/175)), price levels (MRP / wholesale / retail), credit-limit warning, stock adjustment and reorder → purchase order, locking a filed period with edit history
+- **28 November:** balance sheet and trial balance, fixed assets and depreciation, item variants, serial / IMEI and warranty tracking ([#122](https://github.com/albineb007/Surya-Laser-Technologies/issues/122)), batch and expiry
 
 ### :mag: Being studied
 
-Each needs care to stay simple for everyone else: a marketplace order import ([#172](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/172)), purchase bills from GSTR-2B ([#175](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/175)), a fast POS counter screen ([#169](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/169)), admin and employee logins ([#155](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/155)), an Android app ([#118](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/118)), rental billing ([#163](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/163)), paid / unpaid expenses ([#165](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/165)).
+Each needs care to stay simple for everyone else: a marketplace order import ([#172](https://github.com/albineb007/Surya-Laser-Technologies/issues/172)), purchase bills from GSTR-2B ([#175](https://github.com/albineb007/Surya-Laser-Technologies/issues/175)), a fast POS counter screen ([#169](https://github.com/albineb007/Surya-Laser-Technologies/issues/169)), admin and employee logins ([#155](https://github.com/albineb007/Surya-Laser-Technologies/issues/155)), an Android app ([#118](https://github.com/albineb007/Surya-Laser-Technologies/issues/118)), rental billing ([#163](https://github.com/albineb007/Surya-Laser-Technologies/issues/163)), paid / unpaid expenses ([#165](https://github.com/albineb007/Surya-Laser-Technologies/issues/165)).
 
 ### :no_entry: Not planned
 
-These would need an online account, a paid GST provider (GSP) or a server of ours, and would send your data out of your computer: filing or fetching data directly from the GST portal ([#139](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/139), [#173](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/173)), live bank feeds, payment-gateway links, an online store or Shopify sync, a customer portal, cloud sync. The app stays free, offline and private.
+These would need an online account, a paid GST provider (GSP) or a server of ours, and would send your data out of your computer: filing or fetching data directly from the GST portal ([#139](https://github.com/albineb007/Surya-Laser-Technologies/issues/139), [#173](https://github.com/albineb007/Surya-Laser-Technologies/issues/173)), live bank feeds, payment-gateway links, an online store or Shopify sync, a customer portal, cloud sync. The app stays free, offline and private.
 
-> **Want a feature?** [Ask for it here](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/new?template=feature_request.yml) and let us know.
+> **Want a feature?** [Ask for it here](https://github.com/albineb007/Surya-Laser-Technologies/issues/new?template=feature_request.yml) and let us know.
 
 ### :calendar: A new update every Saturday
 
 Every **Saturday** we release one update with that week's fixes and new features. The app tells you when it is ready (**Update** in the sidebar) and keeps your data. Anything urgent, such as the app not opening, is fixed straight away.
 
-- 🐛 **[Report a problem](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/new?template=bug_report.yml)**: the version, your computer and the steps help us fix it the same week.
-- 💡 **[Ask for a feature](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/new?template=feature_request.yml)**: we read every request each week, and the ones most people ask for come first. Add a 👍 to an [open request](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues) to vote for it.
+- 🐛 **[Report a problem](https://github.com/albineb007/Surya-Laser-Technologies/issues/new?template=bug_report.yml)**: the version, your computer and the steps help us fix it the same week.
+- 💡 **[Ask for a feature](https://github.com/albineb007/Surya-Laser-Technologies/issues/new?template=feature_request.yml)**: we read every request each week, and the ones most people ask for come first. Add a 👍 to an [open request](https://github.com/albineb007/Surya-Laser-Technologies/issues) to vote for it.
 
 You get a reply on the issue when it ships. How the week runs: [docs/WEEKLY_RELEASES.md](./docs/WEEKLY_RELEASES.md).
 
@@ -720,7 +721,7 @@ The deep-dive material lives in **[docs/](./docs/)**:
 
 ## Why Is This Free?
 
-Free GST Billing Software is built and maintained by [DiceCodes](mailto:Contact@dicecodes.com). It is:
+Surya Laser Technologies is built and maintained by [DiceCodes](mailto:Contact@dicecodes.com). It is:
 
 - **Open-source** under the MIT license — fork it, modify it, use it commercially
 - **Community-driven** — features are built based on what users actually need
@@ -742,7 +743,7 @@ If the app saves you time, you can help keep it going:
 
 - ⭐ **Star this repo**, so other businesses find it
 - 💬 **Tell another business** about it
-- 🐛 **[Report a bug](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/new?template=bug_report.yml) or [ask for a feature](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/new?template=feature_request.yml)**: fixes and features ship every Saturday
+- 🐛 **[Report a bug](https://github.com/albineb007/Surya-Laser-Technologies/issues/new?template=bug_report.yml) or [ask for a feature](https://github.com/albineb007/Surya-Laser-Technologies/issues/new?template=feature_request.yml)**: fixes and features ship every Saturday
 - 💛 **UPI, any amount:** `princeramgarhiaa-1@okaxis` (also as a QR code in the app, under **Support & About**)
 
 **Work with DiceCodes:** custom software and web apps, customising this app for your business, setup and data migration, support plans, AI integration and automation, and mobile apps. [contact@dicecodes.com](mailto:contact@dicecodes.com)
@@ -794,7 +795,7 @@ We welcome contributions from the community. Here's how you can help:
 5. **Open** a Pull Request
 
 You can also contribute by:
-- Reporting bugs via [GitHub Issues](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues)
+- Reporting bugs via [GitHub Issues](https://github.com/albineb007/Surya-Laser-Technologies/issues)
 - Suggesting features
 - Improving documentation
 - Sharing the project with other businesses
@@ -819,7 +820,7 @@ PDFs and JSON backups will auto-upload to your own Google Drive after every down
 ## Project Structure
 
 ```
-Free-GST-Billing-Software/
+Surya-Laser-Technologies/
 ├── server.js                     # Express API server (default port 47371, auto-scans if busy)
 ├── src/
 │   ├── App.jsx                   # Root layout, sidebar navigation, dark mode
@@ -853,30 +854,30 @@ Find the message you see. **None of these touch your invoices**: they stay in th
 
 | You see | What to do |
 |---|---|
-| **"Some files are missing"** or **"extract the ZIP first"** | The app can't run from inside the ZIP. Right-click the ZIP → **Extract All**, open the new folder, then double-click **Free GST Billing - WINDOWS**. |
+| **"Some files are missing"** or **"extract the ZIP first"** | The app can't run from inside the ZIP. Right-click the ZIP → **Extract All**, open the new folder, then double-click **Surya Laser Technologies - WINDOWS**. |
 | **"Windows protected your PC"** | The app isn't code-signed (a certificate costs about $300 a year). Click **More info → Run anyway**. |
-| Mac: **"could not be executed because you do not have appropriate access privileges"** | Open **Terminal**, type `chmod +x ` (with a space), drag **Free GST Billing - MAC** into the window, press Enter, and open it again. Downloads from v1.10.82 don't need this. |
+| Mac: **"could not be executed because you do not have appropriate access privileges"** | Open **Terminal**, type `chmod +x ` (with a space), drag **Surya Laser Technologies - MAC** into the window, press Enter, and open it again. Downloads from v1.10.82 don't need this. |
 | Mac: **"cannot be opened because Apple cannot check it"** / **"unidentified developer"** | The app isn't signed by Apple. **Control-click** the file → **Open** → **Open**, once. Or **System Settings → Privacy & Security → Open Anyway**. |
 | **"Node.js … is too old"**, **`npm ERR!`**, or a file named **`npm-debug.log`** in `_system` | The PC has an old Node.js. **v1.10.81 and later fix this themselves**: click **Install** or **Open App** again. On an older version: install **Node.js LTS** from [nodejs.org](https://nodejs.org), delete **only** `_system\node_modules`, then click **Install**. Never delete `_system\data`. |
 | **"could not install the app's dependencies"** / **"cannot reach the internet"** | The first install needs the internet. Check the connection; in an office, a proxy or firewall may block `registry.npmjs.org`. Click **Install** again: it carries on where it stopped. |
 | **"Still starting…"** / **"The server has not answered in 90 seconds"** | The first start after an install or update is slow while antivirus checks the new files. Wait a minute and open <http://localhost:47371>. Still nothing? Close the black window and open the app again from its icon. |
-| **"Free GST Billing is already installed on this computer, in: …"** | You extracted a new ZIP into a new folder. Your invoices are in the folder it names: click **Update the installed copy** in the launcher, then delete the new folder. |
-| **"The app cannot write to its own folder"** | Don't keep it in `C:\Program Files`. Move the whole Free-GST-Billing folder to Documents or `D:\` and open it from there. |
+| **"Surya Laser Technologies is already installed on this computer, in: …"** | You extracted a new ZIP into a new folder. Your invoices are in the folder it names: click **Update the installed copy** in the launcher, then delete the new folder. |
+| **"The app cannot write to its own folder"** | Don't keep it in `C:\Program Files`. Move the whole Surya-Laser-Technologies folder to Documents or `D:\` and open it from there. |
 | **"Drive … is almost full"** | The install needs about 400 MB free. Empty the Recycle Bin or delete old downloads. |
 | **"Node.js was downloaded but will not run"** | Antivirus removed it. Add the app folder to its exclusions and click **Install** again. |
 | **"Install Node.js LTS now?"** (winget) | The app couldn't download Node.js itself and offers Windows' own installer. Type **Y** to accept (Windows may ask permission), or install it yourself from the page it opens. |
-| **"Cannot connect to server"**, **"This site can't be reached"**, or a blank page | The app isn't running. Click the **Free GST Billing** icon on your Desktop. |
+| **"Cannot connect to server"**, **"This site can't be reached"**, or a blank page | The app isn't running. Click the **Surya Laser Technologies** icon on your Desktop. |
 | The update finished but nothing changed | Reload the page with **Ctrl + F5**. |
 | Forgot the app PIN | In the app folder (next to the launcher), create an empty text file named `RESET-PIN` and reload the app. The PIN is removed; invoices aren't touched. |
 | Linux / Mac / NAS: **"Node.js … is too old"** or **"not installed"** | The message lists the command for your system (`apt`, `dnf`, `pacman`, `apk`, `brew` or nvm). Install Node.js 20, then open the launcher again. |
 
-**Still stuck?** [Report a problem](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/new?template=bug_report.yml) with the message you see and a screenshot (hide your GSTIN and bank details). If the app doesn't start, add what `node -v` and `npm -v` show in Command Prompt. More answers: [troubleshooting guide](https://dicecodes.com/free-gst-software-documentation/troubleshooting.html).
+**Still stuck?** [Report a problem](https://github.com/albineb007/Surya-Laser-Technologies/issues/new?template=bug_report.yml) with the message you see and a screenshot (hide your GSTIN and bank details). If the app doesn't start, add what `node -v` and `npm -v` show in Command Prompt. More answers: [troubleshooting guide](https://dicecodes.com/free-gst-software-documentation/troubleshooting.html).
 
 ---
 
 ## Frequently Asked Questions
 
-### Is Free GST Billing Software really free?
+### Is Surya Laser Technologies really free?
 Yes — MIT licensed open-source software. No subscription, no premium tier, no "free trial" that expires, no usage limits. The full feature set is available to every user forever. We make zero rupees from this directly.
 
 ### Can I use it as a simple free invoice maker?
@@ -892,7 +893,7 @@ The software generates **GSTR-1**, **GSTR-3B**, and **GSTR-2B reconciliation** d
 Yes, completely. After installation everything runs on `localhost:47371` on your computer. The only optional internet-using features are Google Drive backup, the in-app update notifier (checks GitHub for new versions), and WhatsApp sharing.
 
 ### Can I bill international clients?
-Yes. Free GST Billing Software supports **22 countries** with locale-correct currency formatting, country-aware tax labels (GST / VAT / SST / MwSt / TVA / PPN / Sales Tax), and amount-in-words in the right currency name (Dollars, Dirhams, Pounds, Rand, Naira, Pesos, etc.). Set your Region Preference in Settings to *International* or *Both*.
+Yes. Surya Laser Technologies supports **22 countries** with locale-correct currency formatting, country-aware tax labels (GST / VAT / SST / MwSt / TVA / PPN / Sales Tax), and amount-in-words in the right currency name (Dollars, Dirhams, Pounds, Rand, Naira, Pesos, etc.). Set your Region Preference in Settings to *International* or *Both*.
 
 ### What invoice formats are supported?
 **Tax Invoice**, **Proforma / Estimate**, **Bill of Supply** (for exempt goods or non-GST sellers), **Composition scheme invoice** (with Rule 46A declaration), **Credit Note**, **Delivery Challan**.
@@ -901,7 +902,7 @@ Yes. Free GST Billing Software supports **22 countries** with locale-correct cur
 Yes. You can add unlimited business profiles (each with its own GSTIN, bank accounts, logo, signature, and country setting) under **Settings → Business Profile → Add New Profile**, and switch between them from the business name at the top of the sidebar. Each one can have its own invoice numbering.
 
 ### Does it run on Mac or Linux?
-The `.hta` launcher is Windows-only, but the app itself works on macOS and Linux — a NAS included — from the release ZIP (`Free GST Billing - LINUX.sh`) or via `npm install` + `npm start`. See the [Quick Start](#quick-start--installation) section. From v1.10.66, **Control Panel → Update Now** also works on Linux / NAS installs made from the release ZIP (it needs `unzip` or python3); restart the app, or its container, afterwards.
+The `.hta` launcher is Windows-only, but the app itself works on macOS and Linux — a NAS included — from the release ZIP (`Surya Laser Technologies - LINUX.sh`) or via `npm install` + `npm start`. See the [Quick Start](#quick-start--installation) section. From v1.10.66, **Control Panel → Update Now** also works on Linux / NAS installs made from the release ZIP (it needs `unzip` or python3); restart the app, or its container, afterwards.
 
 ### What happens to my data when the app updates?
 Updates only refresh the app code and dependencies. Your `data/` folder (invoices, clients, products, settings) and `Saved Invoices/` PDF archive are **never touched**. The updater also saves a backup ZIP to `Documents\FreeGSTBill Backups` before it changes anything.
@@ -917,8 +918,8 @@ CSV import is supported today for clients and products. Direct Tally XML import 
 ## Contact & Support
 
 - **Email:** [Contact@dicecodes.com](mailto:Contact@dicecodes.com)
-- **Report a problem:** [bug report form](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/new?template=bug_report.yml) · **Ask for a feature:** [feature form](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues/new?template=feature_request.yml) (fixes and features ship every Saturday)
-- **Releases:** [GitHub Releases](https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases)
+- **Report a problem:** [bug report form](https://github.com/albineb007/Surya-Laser-Technologies/issues/new?template=bug_report.yml) · **Ask for a feature:** [feature form](https://github.com/albineb007/Surya-Laser-Technologies/issues/new?template=feature_request.yml) (fixes and features ship every Saturday)
+- **Releases:** [GitHub Releases](https://github.com/albineb007/Surya-Laser-Technologies/releases)
 - **Discussions:** *(coming soon)*
 
 ---
@@ -933,11 +934,11 @@ This project is licensed under the [MIT License](LICENSE) — free to use, modif
 
 ### Ready to stop paying for billing software?
 
-[**⬇ Download Now**](https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest/download/Free-GST-Billing.zip) &nbsp;·&nbsp; [⭐ **Star on GitHub**](https://github.com/IamRamgarhia/Free-GST-Billing-Software) &nbsp;·&nbsp; [📖 **Read the User Guide**](docs/USER_GUIDE.md) &nbsp;·&nbsp; [🐛 **Report an Issue**](https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues) &nbsp;·&nbsp; [📧 **Email DiceCodes**](mailto:Contact@dicecodes.com)
+[**⬇ Download Now**](https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Surya-Laser-Technologies.zip) &nbsp;·&nbsp; [⭐ **Star on GitHub**](https://github.com/albineb007/Surya-Laser-Technologies) &nbsp;·&nbsp; [📖 **Read the User Guide**](docs/USER_GUIDE.md) &nbsp;·&nbsp; [🐛 **Report an Issue**](https://github.com/albineb007/Surya-Laser-Technologies/issues) &nbsp;·&nbsp; [📧 **Email DiceCodes**](mailto:Contact@dicecodes.com)
 
 ---
 
-**Free GST Billing Software** by [DiceCodes](mailto:Contact@dicecodes.com) · MIT Licensed · v1.10.42
+**Surya Laser Technologies** by [DiceCodes](mailto:Contact@dicecodes.com) · MIT Licensed · v1.10.42
 
 <sub>Free GST billing software India · Free GST invoice software for small business · Open source GST billing software · Free alternative to Tally Prime Vyapar Zoho Books ClearTax myBillBook Marg ERP · No subscription invoice software · Offline billing software India · GSTR-1 GSTR-3B filing software free · GSTR-2B reconciliation tool free · TDS Form 26Q TCS Form 27EQ software · Section 194Q 206C(1H) TCS calculator with ₹50 lakh threshold · UTGST invoice software · CGST SGST IGST auto calculator · E-way bill JSON generator free · HSN SAC code invoice generator · Bill of Supply generator · Delivery Challan software · Credit Note Debit Note software · Proforma invoice estimate software · Composition scheme invoice · UPI QR invoice maker · Thermal receipt printer software 58mm 80mm · Direct vector thermal print software · POS billing software free India · Retail shop kirana billing software · Restaurant cafe billing software · Freelancer consultant invoice software India · Multi-currency invoice generator (USD EUR GBP AED SGD AUD JPY) 22 countries · Country-aware VAT SST MwSt TVA PPN tax labels · Recurring invoice software · Payment receipt voucher software · Bulk PDF invoice export · Google Drive backup billing software · Automatic daily backup + Trash bin · Multi-business multi-GSTIN switcher · Multi-language invoice Hindi Tamil Marathi Bengali · Dark mode PWA billing app · Rich-text Terms & Conditions with 13 India presets · OCR bill scan tesseract · Ctrl+K command palette · Split-view live PDF preview · Income Tax (ITR) computation old vs new regime 234B 234C · Client credit balance carry-forward · Watermark DUPLICATE DRAFT PDF · Rule 48 multi-copy (Original Duplicate Triplicate) · WhatsApp share invoice PDF · Self-file GST return software · GST invoice software without subscription · No signup no login billing software · Vyapar alternative open source · Tally alternative free · Zoho Books alternative · ClearTax alternative · myBillBook alternative · Marg ERP alternative · Made in India</sub>
 

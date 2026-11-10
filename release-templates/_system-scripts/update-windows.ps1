@@ -95,7 +95,7 @@ Add-Type -AssemblyName System.IO.Compression.FileSystem
 
 # The extract may contain either the pretty release structure
 # (root has Free GST Billing - WINDOWS.hta + _system/) or the source zipball
-# (root has IamRamgarhia-Free-GST-Billing-Software-HASH/).
+# (root has albineb007-Surya-Laser-Technologies-HASH/).
 $extracted = Get-ChildItem -Path $tmp -Directory | Select-Object -First 1
 $candidateSystem = Join-Path $extracted.FullName '_system'
 if (Test-Path $candidateSystem) {

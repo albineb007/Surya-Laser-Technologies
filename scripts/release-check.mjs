@@ -13,7 +13,7 @@ import { fileURLToPath } from 'node:url';
 import { parseSupporters } from '../src/utils/supporters.js';
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url));
-const REPO = 'IamRamgarhia/Free-GST-Billing-Software';
+const REPO = 'albineb007/Surya-Laser-Technologies';
 const offline = process.argv.includes('--offline');
 const read = (p) => readFileSync(join(ROOT, p), 'utf8');
 let failed = 0;

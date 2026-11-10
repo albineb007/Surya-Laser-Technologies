@@ -96,7 +96,7 @@ Upload the exe to the same GitHub release as the ZIP, under exactly this name:
 ```bash
 gh release upload v<NEW> release-build/Free-GST-Billing-Windows-Setup.exe
 curl -sIL -o /dev/null -w "%{http_code}\n" \
-  https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest/download/Free-GST-Billing-Windows-Setup.exe
+  https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Free-GST-Billing-Windows-Setup.exe
 ```
 
 An installed copy's **Update now** reads the latest release from the GitHub API,

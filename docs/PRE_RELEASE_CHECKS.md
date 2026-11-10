@@ -69,7 +69,7 @@ npm run release:check    # everything below marked [auto]
 - [ ] Secrets scan of the diff, then commit and push to `main`.
 - [ ] `gh release create v<ver>` with **one** file named **`Free-GST-Billing.zip`**, and the notes.
 - [ ] Swap the v1.10.44 asset to the new ZIP.
-- [ ] `gh api repos/IamRamgarhia/Free-GST-Billing-Software/releases/latest` shows the new tag and one asset; the README download link returns 200.
+- [ ] `gh api repos/albineb007/Surya-Laser-Technologies/releases/latest` shows the new tag and one asset; the README download link returns 200.
 - [ ] Upload the docs ZIP to dicecodes.com, extract it, and **open the live docs** and click three links (it must say the new version).
 
 ## 7. After

@@ -11,13 +11,13 @@ const key = (...k) => k.map((x) => `<kbd>${x}</kbd>`).join(' + ');
 // v1.10.83 - the one-line install. A file fetched by PowerShell or curl gets
 // no "downloaded from the internet" mark, so Windows and macOS show no
 // warning; the same line installs, updates and repairs.
-const RAW = 'https://raw.githubusercontent.com/IamRamgarhia/Free-GST-Billing-Software/main';
+const RAW = 'https://raw.githubusercontent.com/albineb007/Surya-Laser-Technologies/main';
 const WIN_LINE = `powershell -ExecutionPolicy Bypass -c "[Net.ServicePointManager]::SecurityProtocol='Tls12'; irm ${RAW}/install.ps1 | iex"`;
 const WIN_REMOVE = `powershell -ExecutionPolicy Bypass -c "[Net.ServicePointManager]::SecurityProtocol='Tls12'; &amp; ([scriptblock]::Create((irm ${RAW}/install.ps1))) -Uninstall"`;
 const UNIX_LINE = `curl -fsSL ${RAW}/install.sh | bash`;
 const UNIX_REMOVE = `curl -fsSL ${RAW}/install.sh | bash -s -- --uninstall`;
 // The .deb's name carries the version, so it is linked through the release page.
-const RELEASES = 'https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest';
+const RELEASES = 'https://github.com/albineb007/Surya-Laser-Technologies/releases/latest';
 
 const which = `
 <div class="note tip"><strong>Which guide is mine?</strong>
@@ -50,7 +50,7 @@ ${which}
 <h2>Install with the Setup program (recommended)</h2>
 <p>Installs like any other Windows program: an icon in the Start menu and on the Desktop, the app in a window of its own (closing it keeps it running near the clock), updates from inside the app, and removal in Windows Settings. No administrator password.</p>
 <ol class="steps">
-  <li><strong>Download it</strong><a class="download" href="https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest/download/Free-GST-Billing-Windows-Setup.exe">Download Free-GST-Billing-Windows-Setup.exe</a> (about 35 MB).</li>
+  <li><strong>Download it</strong><a class="download" href="https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Free-GST-Billing-Windows-Setup.exe">Download Free-GST-Billing-Windows-Setup.exe</a> (about 35 MB).</li>
   <li><strong>Open it</strong>Double-click <code>Free-GST-Billing-Windows-Setup.exe</code> in your Downloads folder.</li>
   <li><strong>If Windows says "Windows protected your PC"</strong>That blue box is SmartScreen. It appears because the Setup is new and not yet signed with a paid certificate, not because anything is wrong with it. Click ${ui('More info')}, then ${ui('Run anyway')}.</li>
   <li><strong>Answer "Your books"</strong>Your books are your invoices, clients, products and settings. Setup asks where they should be kept:

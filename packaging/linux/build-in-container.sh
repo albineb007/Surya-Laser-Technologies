@@ -52,7 +52,7 @@ Installed-Size: $(du -sk "$R/opt" "$R/usr" | awk '{s += $1} END {print s}')
 Section: misc
 Priority: optional
 Recommends: xdg-utils, zip
-Homepage: https://github.com/IamRamgarhia/Free-GST-Billing-Software
+Homepage: https://github.com/albineb007/Surya-Laser-Technologies
 Description: Free GST billing and invoicing software for India
  GST tax invoices, credit notes, delivery challans, GSTR-1 / GSTR-3B
  exports, e-Way Bill and reports. Runs on this computer only (127.0.0.1)

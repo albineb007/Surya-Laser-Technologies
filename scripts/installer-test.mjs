@@ -213,7 +213,7 @@ try {
     [['dist/assets/old-1234.js', 'node_modules/gone-package/index.js'], true, false], 'After an update: only stale files in dist, node_modules and src go; home.txt and the rest stay');
 
   // ---- review M5: what the updater accepts ------------------------------
-  eq(['https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/download/v1/x.exe', 'https://objects.githubusercontent.com/a', 'https://release-assets.githubusercontent.com/b',
+  eq(['https://github.com/albineb007/Surya-Laser-Technologies/releases/download/v1/x.exe', 'https://objects.githubusercontent.com/a', 'https://release-assets.githubusercontent.com/b',
     'http://github.com/x', 'https://evil.example/x', 'https://github.com.evil.example/x'].map(allowedDownloadUrl), [true, true, true, false, false, false], 'Downloads only over https, only from GitHub\'s release hosts');
   const exe = Buffer.concat([Buffer.from('MZ'), Buffer.alloc(100)]);
   const sum = crypto.createHash('sha256').update(exe).digest('hex');

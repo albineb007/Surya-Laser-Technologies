@@ -57,7 +57,7 @@ new file instead of the old one). Your books in
 
 ### Something went wrong?
 Open an issue with a screenshot of the error:
-https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues
+https://github.com/albineb007/Surya-Laser-Technologies/issues
 ```
 
 ### The download table (every release, under the How to update block)
@@ -130,7 +130,7 @@ gh release create v<NEW> "release-build/Free-GST-Billing.zip" \
   --target main --title "v<NEW> — <short user-facing summary>" \
   --notes-file <notes>
 curl -sIL -o /dev/null -w "%{http_code}\n" \
-  https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/latest/download/Free-GST-Billing.zip
+  https://github.com/albineb007/Surya-Laser-Technologies/releases/latest/download/Free-GST-Billing.zip
 
 # 4b. The Windows Setup (docs/WINDOWS_SETUP.md), on the same release, under
 #     exactly this name: an installed copy's Update now downloads
@@ -139,7 +139,7 @@ npm run release:exe
 gh release upload v<NEW> "release-build/Free-GST-Billing-Windows-Setup.exe"
 
 # 5. Verify what the in-app updater will actually see
-gh api repos/IamRamgarhia/Free-GST-Billing-Software/releases/latest \
+gh api repos/albineb007/Surya-Laser-Technologies/releases/latest \
   --jq '{tag: .tag_name, asset: .assets[0].name}'
 ```
 
