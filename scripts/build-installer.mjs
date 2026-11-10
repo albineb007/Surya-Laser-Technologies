@@ -29,7 +29,7 @@ const ROOT = resolve(fileURLToPath(import.meta.url), '..', '..');
 const arg = (name) => process.argv.find((a) => a.startsWith(`--${name}=`))?.split('=').slice(1).join('=');
 const OUT_DIR = resolve(ROOT, arg('outDir') || 'release-build');
 const STAGE_ROOT = join(ROOT, 'release-build', 'installer-stage');
-const APP = join(STAGE_ROOT, 'Free-GST-Billing', '_system');
+const APP = join(STAGE_ROOT, 'Surya-Laser-Technologies', '_system');
 const CACHE = join(ROOT, '.installer-cache');
 
 const fail = (msg) => { console.error(`\n  x ${msg}\n`); process.exit(1); };
@@ -128,7 +128,7 @@ if (arg('version')) {
   // WPF's assemblies (part of .NET Framework 4) for the taskbar jump list only.
   const wpf = ['WPF\\PresentationFramework.dll', 'WPF\\PresentationCore.dll', 'WPF\\WindowsBase.dll', 'System.Xaml.dll'].map((f) => `/r:${join(fw, f)}`);
   run(csc, ['/nologo', '/target:winexe', '/platform:x64', '/optimize+', `/win32icon:${join(APP, 'app-icon.ico')}`,
-    `/out:${join(APP, 'Free GST Billing.exe')}`, `/r:${join(APP, 'Microsoft.Web.WebView2.Core.dll')}`, ...wpf,
+    `/out:${join(APP, 'Surya-Laser-Technologies.exe')}`, `/r:${join(APP, 'Microsoft.Web.WebView2.Core.dll')}`, ...wpf,
     `/r:${join(APP, 'Microsoft.Web.WebView2.WinForms.dll')}`, '/r:System.Windows.Forms.dll', '/r:System.Drawing.dll', '/r:System.Web.Extensions.dll',
     join(ROOT, 'installer', 'host', 'FreeGSTBilling.cs')]);
 }
@@ -163,12 +163,12 @@ run(iscc, ['/Q', `/DAppVersion=${version}`, `/DStageDir=${APP}`, `/DNodeExe=${no
   join(ROOT, 'installer', 'free-gst-billing.iss')]);
 rmSync(STAGE_ROOT, { recursive: true, force: true });
 
-const setup = join(OUT_DIR, 'Free-GST-Billing-Windows-Setup.exe');
+const setup = join(OUT_DIR, 'Surya-Laser-Technologies-Setup.exe');
 if (!existsSync(setup)) fail(`${setup} was not made.`);
 // GitHub publishes each release asset's SHA-256 (the updater checks it); this
 // file is for people who check by hand.
 const setupSha = createHash('sha256').update(readFileSync(setup)).digest('hex');
-writeFileSync(`${setup}.sha256`, `${setupSha}  Free-GST-Billing-Windows-Setup.exe\n`);
+writeFileSync(`${setup}.sha256`, `${setupSha}  Surya-Laser-Technologies-Setup.exe\n`);
 console.log(`  SHA-256 ${setupSha}`);
 console.log(`\n  OK  ${setup}`);
 console.log(`      ${(statSync(setup).size / 1024 / 1024).toFixed(1)} MB, version ${version}, Node.js ${nodeVersion}, unsigned (SmartScreen: More info -> Run anyway)\n`);

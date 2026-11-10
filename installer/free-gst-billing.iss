@@ -60,13 +60,13 @@
 
 [Setup]
 AppId={code:GetAppId}
-AppName=Free GST Billing
+AppName=Surya Laser Technologies
 AppVersion={#AppVersion}
-AppVerName=Free GST Billing {#AppVersion}
-AppPublisher=DiceCodes
-AppPublisherURL=https://github.com/IamRamgarhia/Free-GST-Billing-Software
-AppSupportURL=https://github.com/IamRamgarhia/Free-GST-Billing-Software/issues
-AppUpdatesURL=https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases
+AppVerName=Surya Laser Technologies {#AppVersion}
+AppPublisher=Surya Laser Technologies
+AppPublisherURL=https://github.com/REPLACE_WITH_YOUR_GITHUB_USERNAME/Surya-Laser-Technologies
+AppSupportURL=https://github.com/REPLACE_WITH_YOUR_GITHUB_USERNAME/Surya-Laser-Technologies/issues
+AppUpdatesURL=https://github.com/REPLACE_WITH_YOUR_GITHUB_USERNAME/Surya-Laser-Technologies/releases
 DefaultDirName={code:GetAppDir}
 UsePreviousAppDir=no
 UsePreviousLanguage=no
@@ -76,10 +76,10 @@ PrivilegesRequired=lowest
 ; Review M1: two Setups at once never run (one could undo the other's copy).
 SetupMutex=FreeGSTBillingSetup
 OutputDir={#OutputDir}
-OutputBaseFilename=Free-GST-Billing-Windows-Setup
+OutputBaseFilename=Surya-Laser-Technologies-Setup
 SetupIconFile={#StageDir}\app-icon.ico
 UninstallDisplayIcon={app}\app-icon.ico
-UninstallDisplayName=Free GST Billing
+UninstallDisplayName=Surya Laser Technologies
 Compression=lzma2/max
 SolidCompression=yes
 WizardStyle=modern
@@ -89,8 +89,8 @@ MinVersion=10.0
 CloseApplications=no
 RestartApplications=no
 VersionInfoVersion={#AppVersion}
-VersionInfoProductName=Free GST Billing
-VersionInfoCompany=DiceCodes
+VersionInfoProductName=Surya Laser Technologies
+VersionInfoCompany=Surya Laser Technologies
 
 [Tasks]
 Name: desktopicon; Description: "Put a Free GST Billing icon on the Desktop"
@@ -113,13 +113,13 @@ Source: "{#StageDir}\*"; DestDir: "{app}"; Flags: ignoreversion recursesubdirs c
 ; WebView2 (without WebView2: Edge's app window, as before). The same
 ; AppUserModelID as the window, so a pinned taskbar icon is this program.
 [Icons]
-Name: "{code:IconDir|programs}\Free GST Billing"; Filename: "{app}\Free GST Billing.exe"; WorkingDir: "{app}"; IconFilename: "{app}\app-icon.ico"; Comment: "Free GST Billing Software"; AppUserModelID: "{code:GetAumid}"
-Name: "{code:IconDir|desktop}\Free GST Billing"; Filename: "{app}\Free GST Billing.exe"; WorkingDir: "{app}"; IconFilename: "{app}\app-icon.ico"; Comment: "Free GST Billing Software"; AppUserModelID: "{code:GetAumid}"; Tasks: desktopicon; Check: DesktopOK
+Name: "{code:IconDir|programs}\Surya Laser Technologies"; Filename: "{app}\Surya-Laser-Technologies.exe"; WorkingDir: "{app}"; IconFilename: "{app}\app-icon.ico"; Comment: "Precision in Every Cut"; AppUserModelID: "{code:GetAumid}"
+Name: "{code:IconDir|desktop}\Surya Laser Technologies"; Filename: "{app}\Surya-Laser-Technologies.exe"; WorkingDir: "{app}"; IconFilename: "{app}\app-icon.ico"; Comment: "Precision in Every Cut"; AppUserModelID: "{code:GetAumid}"; Tasks: desktopicon; Check: DesktopOK
 ; At Windows start-up: the server starts and the app waits near the clock (/tray).
-Name: "{code:IconDir|startup}\Free GST Billing"; Filename: "{app}\Free GST Billing.exe"; Parameters: "/tray"; WorkingDir: "{app}"; IconFilename: "{app}\app-icon.ico"; Comment: "Free GST Billing Software"; AppUserModelID: "{code:GetAumid}"; Tasks: startup
+Name: "{code:IconDir|startup}\Surya Laser Technologies"; Filename: "{app}\Surya-Laser-Technologies.exe"; Parameters: "/tray"; WorkingDir: "{app}"; IconFilename: "{app}\app-icon.ico"; Comment: "Precision in Every Cut"; AppUserModelID: "{code:GetAumid}"; Tasks: startup
 
 [Run]
-Filename: "{app}\Free GST Billing.exe"; WorkingDir: "{app}"; Description: "Open Free GST Billing now"; Flags: postinstall nowait skipifsilent; Check: MayStart
+Filename: "{app}\Surya-Laser-Technologies.exe"; WorkingDir: "{app}"; Description: "Open Surya Laser Technologies now"; Flags: postinstall nowait skipifsilent; Check: MayStart
 ; A silent run (an update started from the app): start the server, open no
 ; second window - the app's window reloads by itself.
 Filename: "{win}\System32\WindowsPowerShell\v1.0\powershell.exe"; Parameters: "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -File ""{app}\start-windows.ps1"" -NoWindow -Hidden"; WorkingDir: "{app}"; Flags: nowait runhidden; Check: MayStartSilent
@@ -142,7 +142,7 @@ Type: dirifempty; Name: "{code:HostDataDir}"
 const
   TestPortDefault = '47461';
   LogName = 'Free GST Billing - install log.txt';
-  IconName = 'Free GST Billing.lnk';
+  IconName = 'Surya Laser Technologies.lnk';
 
 var
   TestRoot, TestPort, AppDirValue: String;
@@ -429,7 +429,7 @@ var
   F, Dest: String;
 begin
   Result := '';
-  AddStr(Names, 'Free GST Billing.exe');
+  AddStr(Names, 'Surya-Laser-Technologies.exe');
   AddStr(Names, 'Microsoft.Web.WebView2.Core.dll');
   AddStr(Names, 'Microsoft.Web.WebView2.WinForms.dll');
   AddStr(Names, 'WebView2Loader.dll');
@@ -704,12 +704,12 @@ begin
   AddCandidatesFrom(IconDir('taskbar'), C, False);
   AddStr(C, BooksHome);
   if IsTest then begin
-    AddStr(C, TestRoot + '\Programs\Free GST Billing');
+    AddStr(C, TestRoot + '\Programs\Surya Laser Technologies');
     AddGstFolders(TestRoot + '\Downloads', C);
     AddGstFolders(TestRoot + '\Desktop', C);
     AddGstFolders(TestRoot + '\Documents', C);
   end else begin
-    AddStr(C, ExpandConstant('{localappdata}\Programs\Free GST Billing'));
+    AddStr(C, ExpandConstant('{localappdata}\Programs\Surya Laser Technologies'));
     AddGstFolders(ExpandConstant('{%USERPROFILE}\Downloads'), C);
     AddGstFolders(ExpandConstant('{userdesktop}'), C);
     AddGstFolders(ExpandConstant('{userdocs}'), C);

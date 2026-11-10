@@ -163,12 +163,12 @@ export const patchInvoiceDefaults = async (patch) => {
   } catch { /* offline: the browser copy above still applies */ }
 };
 
-// ---- Region preference: 'india' | 'international' | 'both' (default 'both') ----
+// ---- Region preference: 'india' | 'international' | 'both' (default 'india') ----
 // Drives which countries appear in pickers and whether GST-only flows show up in the UI.
 // Stored in localStorage for instant boot — server copy is async-best-effort.
 const REGION_KEY = 'gst_regionMode';
 export const getRegionMode = () => {
-  try { return localStorage.getItem(REGION_KEY) || 'both'; } catch { return 'both'; }
+  try { return localStorage.getItem(REGION_KEY) || 'india'; } catch { return 'india'; }
 };
 export const setRegionMode = (mode) => {
   if (!['india', 'international', 'both'].includes(mode)) return;

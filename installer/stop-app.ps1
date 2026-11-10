@@ -18,7 +18,7 @@
 #   -Out   write "stopped=..." to this file (Setup runs this with -File and
 #          separate arguments, never a -Command string: a folder name with
 #          curly quotes cannot break or change the command)
-#   -CloseWindow  also close the app's own window (Free GST Billing.exe) of
+#   -CloseWindow  also close the app's own window (Surya-Laser-Technologies.exe) of
 #          THIS program folder, also when it is hidden near the clock: its
 #          "close" event first, then by its id (uninstall only: an update
 #          leaves the window open and it reloads)
@@ -33,7 +33,7 @@ $Sys = $Sys.TrimEnd('\')
 $closed = ''
 if ($CloseWindow) {
   # Only windows whose exe is in this folder (an update may have renamed it to *.old).
-  $wins = @(Get-Process -Name 'Free GST Billing' -ErrorAction SilentlyContinue | Where-Object { $_.Path -and ((Split-Path -Parent $_.Path).TrimEnd('\') -eq $Sys) })
+  $wins = @(Get-Process -Name 'Surya-Laser-Technologies' -ErrorAction SilentlyContinue | Where-Object { $_.Path -and ((Split-Path -Parent $_.Path).TrimEnd('\') -eq $Sys) })
   # The window listens for this (installer\host\FreeGSTBilling.cs: the same name rule).
   # Closing it by message would only hide it near the clock.
   $h = [Security.Cryptography.SHA1]::Create().ComputeHash([Text.Encoding]::UTF8.GetBytes($Sys.ToLowerInvariant()))

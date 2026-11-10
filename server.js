@@ -21,6 +21,7 @@ import { resolveAppHome } from './src/utils/appHome.js';
 import { makeDir, makeDirAsync } from './src/utils/makeDir.js';
 import { LOCK_NAME, acquireLock, writeLock, releaseLock, portIdentity } from './src/utils/serverLock.js';
 import { SETUP_NAME, allowedDownloadUrl, checkSetupBytes, setupAssetFrom } from './src/utils/setupDownload.js';
+const UPDATE_REPOSITORY = process.env.VITE_UPDATE_REPO || 'https://github.com/REPLACE_WITH_YOUR_GITHUB_USERNAME/Surya-Laser-Technologies';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // v1.10.84 - data/, Saved Invoices/ and Trash/ live in APP_HOME: the folder
@@ -1438,8 +1439,8 @@ app.get('/api/check-update', async (req, res) => {
     const ctrl = new AbortController();
     const t = setTimeout(() => ctrl.abort(), 4000);
     const [pkgRes, relRes] = await Promise.all([
-      fetch('https://raw.githubusercontent.com/IamRamgarhia/Free-GST-Billing-Software/main/package.json', { signal: ctrl.signal }).catch(() => null),
-      fetch('https://api.github.com/repos/IamRamgarhia/Free-GST-Billing-Software/releases/latest', {
+      fetch(`${UPDATE_REPOSITORY.replace('https://github.com/', 'https://raw.githubusercontent.com/')}/main/package.json`, { signal: ctrl.signal }).catch(() => null),
+      fetch(`${UPDATE_REPOSITORY.replace('https://github.com/', 'https://api.github.com/repos/')}/releases/latest`, {
         signal: ctrl.signal,
         headers: { 'Accept': 'application/vnd.github+json', 'User-Agent': 'FreeGSTBill-update-check' },
       }).catch(() => null),
@@ -1678,7 +1679,7 @@ async function updateWithSetup() {
   } else {
     let asset;
     try {
-      const rel = await fetch('https://api.github.com/repos/IamRamgarhia/Free-GST-Billing-Software/releases/latest', {
+      const rel = await fetch(`${UPDATE_REPOSITORY.replace('https://github.com/', 'https://api.github.com/repos/')}/releases/latest`, {
         signal: AbortSignal.timeout(20000), headers: { Accept: 'application/vnd.github+json', 'User-Agent': 'FreeGSTBill-updater' },
       });
       asset = rel.ok ? setupAssetFrom(await rel.json()) : null;

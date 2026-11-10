@@ -22,16 +22,16 @@ import sharp from 'sharp';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.resolve(__dirname, '..');
-const SRC_SVG = path.join(ROOT, 'public', 'favicon.svg');
+const SRC_IMAGE = path.join(ROOT, 'Image', 'Surya logo.jpg');
 const OUT_DIR = path.join(ROOT, 'public', 'icons');
 
-if (!fs.existsSync(SRC_SVG)) {
-  console.error(`FATAL: source SVG missing at ${SRC_SVG}`);
+if (!fs.existsSync(SRC_IMAGE)) {
+  console.error(`FATAL: source logo missing at ${SRC_IMAGE}`);
   process.exit(1);
 }
 if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 
-const svgBuffer = fs.readFileSync(SRC_SVG);
+const logoBuffer = fs.readFileSync(SRC_IMAGE);
 
 // Maskable icons need a solid-color safe zone around the artwork
 // because Android's adaptive-icon shape (circle, squircle, teardrop…)
@@ -41,7 +41,7 @@ async function renderPng(size, purpose) {
   if (purpose === 'maskable') {
     // Pre-render the SVG at 62% inside a solid #1e40af background.
     const inner = Math.round(size * 0.62);
-    const innerPng = await sharp(svgBuffer).resize(inner, inner).png().toBuffer();
+    const innerPng = await sharp(logoBuffer).resize(inner, inner).png().toBuffer();
     const gap = Math.round((size - inner) / 2);
     return sharp({
       create: { width: size, height: size, channels: 4, background: '#1e40af' },
@@ -50,7 +50,7 @@ async function renderPng(size, purpose) {
       .png()
       .toBuffer();
   }
-  return sharp(svgBuffer).resize(size, size).png().toBuffer();
+  return sharp(logoBuffer).resize(size, size).png().toBuffer();
 }
 
 const targets = [
@@ -104,11 +104,7 @@ const ICO_OUT = path.join(ROOT, 'release-templates', '_system-scripts', 'app-ico
 // The same blue, the same letter, nothing that cannot survive being six
 // pixels tall. Kept beside favicon.svg rather than replacing it: the web app
 // is never rendered at 16px.
-const SIMPLE_SVG = Buffer.from(`<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="13" fill="#2563eb"/>
-  <text x="32" y="47" text-anchor="middle" font-family="Segoe UI,Arial,sans-serif"
-        font-weight="700" font-size="44" fill="#fff">B</text>
-</svg>`);
+const SIMPLE_SVG = logoBuffer;
 
 // An uncompressed icon image: a BITMAPINFOHEADER whose height is doubled
 // (colour rows plus the mask), bottom-up BGRA rows, then a 1bpp AND mask.
@@ -145,7 +141,7 @@ for (const size of ICO_SMALL) images.push({ size, buf: await icoBitmap(SIMPLE_SV
 for (const size of ICO_LARGE) {
   images.push(size === 256
     ? { size, buf: await renderPng(256, 'any'), png: true }
-    : { size, buf: await icoBitmap(svgBuffer, size), png: false });
+    : { size, buf: await icoBitmap(logoBuffer, size), png: false });
 }
 
 const header = Buffer.alloc(6);
@@ -172,4 +168,3 @@ for (const { size, buf } of images) {
 const ico = Buffer.concat([header, ...entries, ...images.map((i) => i.buf)]);
 fs.writeFileSync(ICO_OUT, ico);
 console.log(`Wrote ${path.relative(ROOT, ICO_OUT)} (${images.map((i) => i.size).join(', ')} px, ${(ico.length / 1024).toFixed(1)} KB)`);
-

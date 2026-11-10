@@ -5,6 +5,7 @@
 // server, so it works offline.
 import { useEffect, useState } from 'react';
 import { Heart } from 'lucide-react';
+import { BRAND_NAME, BRAND_TAGLINE } from '../brand';
 
 export default function AppFooter({ onOpenSupport }) {
   const [version, setVersion] = useState('');
@@ -25,9 +26,9 @@ export default function AppFooter({ onOpenSupport }) {
         padding: '0.3rem 0.85rem', borderRadius: 999, background: 'var(--card-bg)', border: '1px solid var(--border)',
         backdropFilter: 'blur(12px)',
       }}>
-        <span>Free GST Billing{version ? ` v${version}` : ''}</span>
+        <span>{BRAND_NAME}{version ? ` v${version}` : ''}</span>
         <span aria-hidden="true">·</span>
-        <a href="https://dicecodes.com" target="_blank" rel="noopener noreferrer" style={link}>by DiceCodes</a>
+        <span>{BRAND_TAGLINE}</span>
         <span aria-hidden="true">·</span>
         <button type="button" onClick={onOpenSupport}
           style={{ ...link, background: 'none', border: 0, padding: 0, font: 'inherit', fontWeight: 600, cursor: 'pointer', display: 'inline-flex', alignItems: 'center', gap: 3 }}>

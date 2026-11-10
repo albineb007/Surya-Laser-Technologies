@@ -293,7 +293,7 @@ static class Program
     {
         Smoke("mode=fallback\r\nwhy=" + why + "\r\n");
         try { Process.Start(Launcher("-AppWindow -Hidden")); }
-        catch (Exception e) { MessageBox.Show("Free GST Billing could not start: " + e.Message, "Free GST Billing", MessageBoxButtons.OK, MessageBoxIcon.Error); }
+        catch (Exception e) { MessageBox.Show("Surya Laser Technologies could not start: " + e.Message, "Surya Laser Technologies", MessageBoxButtons.OK, MessageBoxIcon.Error); }
     }
 
     // Runs the launcher; returns { url or null, everything it printed }.
@@ -363,16 +363,16 @@ class MainForm : Form
     public MainForm(string runtime, string eventName)
     {
         this.runtime = runtime;
-        Text = "Free GST Billing";
+        Text = "Surya Laser Technologies";
         BackColor = Splash.Back;
         try { Icon = new Icon(Path.Combine(Program.AppDir, "app-icon.ico")); } catch (Exception) { }
         // The icon near the clock: click = the window; right-click = Open / Quit.
         tray.Icon = Icon;
-        tray.Text = "Free GST Billing";
+        tray.Text = "Surya Laser Technologies";
         ContextMenuStrip menu = new ContextMenuStrip();
         ToolStripItem version = menu.Items.Add(VersionText());
         version.Enabled = false;
-        ToolStripItem open = menu.Items.Add("Open Free GST Billing", null, delegate { ShowFromTray(); });
+        ToolStripItem open = menu.Items.Add("Open Surya Laser Technologies", null, delegate { ShowFromTray(); });
         open.Font = new Font(open.Font, FontStyle.Bold);
         menu.Items.Add("Check for updates", null, delegate { CheckForUpdates(); });
         menu.Items.Add("Open books folder", null, delegate { OpenBooksFolder(); });

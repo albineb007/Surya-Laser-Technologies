@@ -5,6 +5,7 @@ import { getStatesForCountry, getCountryConfig, detectCountryFromBrowser, create
 import { toast } from './Toast';
 import HelpButton from './HelpButton';
 import SafePrivateNote from './SafePrivateNote';
+import { BRAND_NAME, BRAND_TAGLINE, BRAND_LOGO } from '../brand';
 
 const STEPS = [
   { id: 'welcome', title: 'Welcome', icon: FileText },
@@ -18,9 +19,9 @@ export default function WelcomeGuide({ onComplete }) {
   // v1.10.74 - region starts as India (below), so the country must too; the
   // browser country is only used when "Outside India" is picked.
   const [profile, setProfile] = useState({
-    businessName: '', address: '', city: '', pin: '', state: '', country: 'India', gstin: '', pan: '',
+    businessName: BRAND_NAME, address: '', city: '', pin: '', state: '', country: 'India', gstin: '', pan: '',
     email: '', phone: '', bankName: '', accountNumber: '', ifsc: '', swift: '',
-    logo: '', signature: '', upiId: '', googleClientId: '', googleDriveFolder: 'GST Billing Invoices',
+    logo: BRAND_LOGO, signature: '', upiId: '', googleClientId: '', googleDriveFolder: 'GST Billing Invoices',
     // v1.10.83 - asked here, with the logo; on unless they untick it.
     showInMenu: true,
   });
@@ -116,12 +117,12 @@ export default function WelcomeGuide({ onComplete }) {
           {/* Step 0: Welcome */}
           {step === 0 && (
             <div style={{ textAlign: 'center' }}>
-              <div style={{ width: '64px', height: '64px', borderRadius: '16px', background: 'var(--primary)', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1.5rem' }}>
-                <FileText size={32} color="white" />
+              <div style={{ width: '96px', height: '96px', borderRadius: '16px', overflow: 'hidden', margin: '0 auto 1.5rem', background: '#09091a' }}>
+                <img src={BRAND_LOGO} alt={BRAND_NAME} style={{ width: '100%', height: '100%', objectFit: 'cover' }} />
               </div>
-              <h1 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Welcome to Free GST Billing Software <HelpButton title="Welcome" doc="first-run#welcome" size={16} /></h1>
+              <h1 style={{ fontSize: '1.75rem', fontWeight: 700, marginBottom: '0.75rem', color: 'var(--text-primary)' }}>Welcome to {BRAND_NAME} <HelpButton title="Welcome" doc="first-run#welcome" size={16} /></h1>
               <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', lineHeight: 1.6 }}>
-                Free, open-source GST billing software that runs 100% on your computer. Your data never leaves your machine.
+                GST billing and invoicing for {BRAND_NAME}. {BRAND_TAGLINE}. Your data stays on your computer.
               </p>
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginBottom: '2rem', textAlign: 'left' }}>

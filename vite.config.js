@@ -58,9 +58,9 @@ export default defineConfig({
       registerType: 'prompt',
       includeAssets: ['favicon.svg', 'og-preview.png'],
       manifest: {
-        name: 'Free GST Billing Software',
-        short_name: 'GST Billing',
-        description: 'Open-source, offline GST invoicing for India and 21 other countries. Tax invoices, GSTR-1 / GSTR-3B / GSTR-2B, TDS / TCS, multi-currency, multi-account payments, recurring billing. Your data stays on your computer. Free forever.',
+        name: 'Surya Laser Technologies',
+        short_name: 'Surya Laser',
+        description: 'Offline invoicing and GST billing for Surya Laser Technologies. Precision in Every Cut.',
         theme_color: '#1e40af',
         background_color: '#f8fafc',
         display: 'standalone',

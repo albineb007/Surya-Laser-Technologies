@@ -254,7 +254,7 @@ if (TestServerUp -p $port) {
 # v1.10.84 - the books folder may be on a drive that is not connected.
 if ($HomeMissing) {
   Write-Host "  home.txt in $SystemDir is missing or empty, so the app does not know where your books are." -ForegroundColor Yellow
-  Write-Host '  Run Free-GST-Billing-Windows-Setup.exe again to repair it. Your books are not changed.'
+  Write-Host '  Run Surya-Laser-Technologies-Setup.exe again to repair it. Your books are not changed.'
   Exit-WithProblem
 }
 if (-not (Test-Path -LiteralPath $HomeDir)) {

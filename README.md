@@ -1,6 +1,6 @@
 <div align="center">
 
-# Free GST Billing Software — Free Forever, Works Offline, No Tracking
+# Surya Laser Technologies — Precision in Every Cut
 
 ### The only GST invoicing software you'll never have to pay for.
 
@@ -17,6 +17,13 @@
 **Free forever. Works on your computer, even offline. No tracking. No ads. No signup.**
 
 Your data never leaves your computer. No cloud and no limits. Open source, so you can [check every claim yourself](#dont-trust-us-check-it-in-2-minutes).
+
+### Client branding and releases
+
+The application is branded for **Surya Laser Technologies**, uses the logo in
+`Image/Surya logo.jpg`, and defaults the first-run location to India. Before
+publishing releases, set `VITE_UPDATE_REPO` to the new GitHub repository URL;
+the in-app updater and Windows update scripts will then use that repository.
 
 **A free invoice builder and invoice maker** for shop owners, freelancers, consultants, traders and small businesses in India: make a GST invoice, quotation (proforma / estimate), bill of supply, credit note or delivery challan in minutes and save it as a PDF. Free billing software and a free, open-source alternative to Tally, Vyapar, Zoho and myBillBook.
 

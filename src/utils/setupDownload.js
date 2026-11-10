@@ -11,9 +11,10 @@
 // Standalone on purpose (Node built-ins only): server.js imports it and the
 // release ZIP ships it (build-release-zip.mjs).
 import crypto from 'crypto';
+import { UPDATE_REPOSITORY } from '../brand.js';
 
-export const SETUP_NAME = 'Free-GST-Billing-Windows-Setup.exe';
-const REPO_DOWNLOADS = 'https://github.com/IamRamgarhia/Free-GST-Billing-Software/releases/download/';
+export const SETUP_NAME = 'Surya-Laser-Technologies-Setup.exe';
+const REPO_DOWNLOADS = `${UPDATE_REPOSITORY}/releases/download/`;
 export const DOWNLOAD_HOSTS = ['github.com', 'objects.githubusercontent.com', 'release-assets.githubusercontent.com'];
 
 export function allowedDownloadUrl(url) {
