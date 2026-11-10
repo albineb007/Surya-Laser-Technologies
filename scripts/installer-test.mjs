@@ -223,8 +223,8 @@ try {
   eq(checkSetupBytes(Buffer.from('<html>'), {}).ok, false, 'Not a Windows program (an error page): refused');
   eq(checkSetupBytes(exe, { size: 102 }), { ok: true, checked: 'size only (no SHA-256 published)' }, 'No SHA-256 published: the gap is said');
   eq(setupAssetFrom({ assets: [{ name: 'Surya-Laser-Technologies.zip' }, { name: 'Surya-Laser-Technologies-Setup.exe', size: 9, digest: `sha256:${sum}`,
-    browser_download_url: 'https://github.com/REPLACE_WITH_YOUR_GITHUB_USERNAME/Surya-Laser-Technologies/releases/download/v1.10.85/Surya-Laser-Technologies-Setup.exe' }] }),
-  { url: 'https://github.com/REPLACE_WITH_YOUR_GITHUB_USERNAME/Surya-Laser-Technologies/releases/download/v1.10.85/Surya-Laser-Technologies-Setup.exe', size: 9, sha256: sum }, 'The Setup is found in the release, with its size and SHA-256');
+    browser_download_url: 'https://github.com/albineb007/Surya-Laser-Technologies/releases/download/v1.10.85/Surya-Laser-Technologies-Setup.exe' }] }),
+  { url: 'https://github.com/albineb007/Surya-Laser-Technologies/releases/download/v1.10.85/Surya-Laser-Technologies-Setup.exe', size: 9, sha256: sum }, 'The Setup is found in the release, with its size and SHA-256');
   eq(setupAssetFrom({ assets: [{ name: 'Surya-Laser-Technologies-Setup.exe', browser_download_url: 'https://github.com/someone-else/x/releases/download/v1/Surya-Laser-Technologies-Setup.exe' }] }), null, 'A Setup from another repository is never used');
 
   // ---- review M6: folder names with spaces, apostrophes and Hindi -------

@@ -6,5 +6,5 @@ export const BRAND_LOGO = '/surya-logo.jpg';
 export const UPDATE_REPOSITORY = (
   import.meta.env?.VITE_UPDATE_REPO
     ? import.meta.env.VITE_UPDATE_REPO
-    : 'https://github.com/REPLACE_WITH_YOUR_GITHUB_USERNAME/Surya-Laser-Technologies'
+    : 'https://github.com/albineb007/Surya-Laser-Technologies'
 );

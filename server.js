@@ -21,7 +21,7 @@ import { resolveAppHome } from './src/utils/appHome.js';
 import { makeDir, makeDirAsync } from './src/utils/makeDir.js';
 import { LOCK_NAME, acquireLock, writeLock, releaseLock, portIdentity } from './src/utils/serverLock.js';
 import { SETUP_NAME, allowedDownloadUrl, checkSetupBytes, setupAssetFrom } from './src/utils/setupDownload.js';
-const UPDATE_REPOSITORY = process.env.VITE_UPDATE_REPO || 'https://github.com/REPLACE_WITH_YOUR_GITHUB_USERNAME/Surya-Laser-Technologies';
+const UPDATE_REPOSITORY = process.env.VITE_UPDATE_REPO || 'https://github.com/albineb007/Surya-Laser-Technologies';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 // v1.10.84 - data/, Saved Invoices/ and Trash/ live in APP_HOME: the folder

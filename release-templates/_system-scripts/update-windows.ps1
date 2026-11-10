@@ -63,7 +63,7 @@ if ($FromFolder) {
 # --- Step 2: Find latest release ---
 Write-Host '  Checking latest release from GitHub...'
 try {
-  $repo = 'REPLACE_WITH_YOUR_GITHUB_USERNAME/Surya-Laser-Technologies'
+  $repo = 'albineb007/Surya-Laser-Technologies'
   $api = Invoke-RestMethod -Uri "https://api.github.com/repos/$repo/releases/latest" -Headers @{ 'User-Agent' = 'SuryaLaserTechnologies-Updater' }
   $tag = $api.tag_name
   $zipAsset = $api.assets | Where-Object { $_.name -like '*.zip' } | Select-Object -First 1
